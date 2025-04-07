@@ -1,0 +1,80 @@
+---
+title: 'Conectar o WhatsApp Business'
+order: 1
+---
+
+# Conectar o WhatsApp Business no Ducke CRM
+
+import { Callout } from 'nextra/components'
+
+Neste tutorial, você aprenderá como conectar sua conta do WhatsApp Business ao seu Ducke CRM.
+
+## Passo 1: Crie um App no Facebook
+
+1. Acesse [developers.facebook.com](https://developers.facebook.com).
+2. Crie um novo aplicativo:
+   - Selecione o portfólio de negócios que deseja conectar ao app e clique em **Next**.
+   - Escolha **Other** como tipo de produto e clique em **Next**.
+   - Selecione **Business** como tipo de app e clique em **Next**.
+3. Forneça um nome para seu app e um e-mail de contato.
+4. Escolha o portfólio de negócios.
+5. Clique no botão verde **Create App**.
+
+## Passo 2: Configure o WhatsApp no Seu App
+
+1. Na página **Add Products to Your App**, localize o ícone do WhatsApp e clique em **Set Up**.
+2. Na barra lateral, clique na aba **Configuration**.
+3. Na janela de configuração:
+   - Cole a callback URL e o token de verificação fornecidos pelo seu Ducke CRM (localizados em **Channels > WhatsApp**).
+   - Clique em **Verify and Save**.
+4. Verifique se aparece uma mensagem de sucesso (verde) na janela de integração do TIXAE.
+5. Role até a seção **Webhook fields**:
+   - Localize a aba **messages** e inscreva-se nela.
+
+## Passo 3: Configuração da API
+
+1. Clique na aba **API Setup** na barra lateral.
+2. Na página de configuração da API, você encontrará:
+   - **ID do Número de Telefone**
+   - **ID da Conta do WhatsApp Business**
+   - Um botão **Generate Token**
+   - Uma lista para escolher um número de telefone para teste
+3. Adicione seu número de telefone e selecione-o para teste.
+4. Clique em **Generate Token** para criar um token de acesso temporário.
+5. Copie o token, o ID do telefone e o ID da conta de negócios.
+6. Cole esses dados na janela de integração do TIXAE.
+7. *(Opcional)* Clique no botão **Send Message** no painel do app para enviar uma mensagem de teste para o número selecionado.
+
+## Passo 4: Gere um Token de Acesso Permanente
+
+1. Acesse [business.facebook.com](https://business.facebook.com).
+2. Na barra lateral, clique em **Settings** (Configurações) na parte inferior.
+3. Vá para a aba **Users** (Usuários) e clique em **System Users** (Usuários do Sistema).
+4. Clique no botão **Add** para criar um novo usuário do sistema:
+   - Digite um nome para o usuário do sistema.
+   - Escolha a função do usuário (por exemplo, **Admin**).
+   - Clique em **Create System User**.
+5. Para o usuário recém-criado:
+   - Clique no ícone de três pontos e selecione **Assign Assets** (Atribuir Ativos).
+   - No diálogo, selecione o tipo de ativo como **Apps**.
+   - Escolha o app que você criou.
+   - Na aba **Assign Permissions** (Atribuir Permissões), selecione **Full Control** (Controle Total).
+   - Clique em **Assign Assets**.
+6. Ainda para o usuário do sistema, clique no botão **Generate Token**:
+   - Selecione o app criado e clique em **Next**.
+   - Escolha **Never** para a expiração do token e clique em **Next**.
+   - Nas permissões, selecione **whatsapp_business_management** e **whatsapp_business_messaging**.
+   - Clique em **Next**, depois clique em **Copy** para copiar o token gerado e finalize clicando em **Done**.
+
+## Passo 5: Atualize o Token e Teste a Integração
+
+1. Retorne a [developers.facebook.com/apps](https://developers.facebook.com/apps).
+2. Na janela **API Setup** do seu app, cole o novo token permanente no campo **Access Token**.
+3. Atualize o token na janela de integração do Ducke CRM com este novo token.
+4. Envie uma mensagem do seu telefone para o número de WhatsApp de teste.
+5. Verifique na janela de conversas do Ducke CRM se a mensagem aparece.
+6. Se a conversa aparecer, parabéns! Você conectou com sucesso o WhatsApp ao seu Ducke CRM.
+
+---
+
+Você pode seguir os mesmos passos para conectar outra conta do WhatsApp Business ao seu Ducke CRM. Imagens e capturas de tela estão disponíveis no tutorial para ajudar em cada etapa.
