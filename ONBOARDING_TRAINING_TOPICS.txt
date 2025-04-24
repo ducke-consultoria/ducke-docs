@@ -1,0 +1,90 @@
+1. Introdução ao Ducke CRM
+   1.1 Criação de Conta
+   1.2 Configuração de Operação
+   1.3 Primeiro Acesso
+   1.4 Personalização de Tema (Modo Escuro/Claro)
+
+2. Conceitos Básicos do CRM
+   2.1 Entendendo Grupos e Origens
+      2.1.1 O que são Grupos?
+      2.1.2 O que são Origens?
+      2.1.3 Como Criar Grupos
+      2.1.4 Como Criar Origens
+      2.1.5 Diferentes Casos de Uso para Grupos/Origens
+
+3. Gestão de Leads
+   3.1 Criação de Leads
+      3.1.1 Criação Manual de Lead
+      3.1.2 Importação em Massa via Planilha
+      3.1.3 Campos de Informação do Lead
+   3.2 Gestão de Status do Lead
+      3.2.1 Leads Abertos
+      3.2.2 Leads Ganhos
+      3.2.3 Leads Perdidos
+   3.3 Organização de Leads
+      3.3.1 Uso de Tags
+      3.3.2 Classificação de Leads
+      3.3.3 Histórico de Leads
+
+4. Gestão de Contatos
+   4.1 Adicionando Contatos
+   4.2 Múltiplos Contatos por Lead
+   4.3 Gestão de Informações de Contato
+   4.4 Histórico de Contatos
+
+5. Gestão de Agendamentos
+   5.1 Criando Agendamentos
+      5.1.1 Tipos de Atividade
+      5.1.2 Configuração de Duração
+      5.1.3 Atribuição de Usuários
+   5.2 Status de Agendamento
+      5.2.1 Agendamentos Abertos
+      5.2.2 Agendamentos Concluídos
+      5.2.3 Agendamentos Cancelados
+   5.3 Grupos e Origens de Agendamento
+   5.4 Notificações de Agendamento
+   5.5 Histórico de Agendamentos
+
+6. Notas e Arquivos
+   6.1 Adicionando Notas
+   6.2 Anexos de Arquivos
+   6.3 Gestão de Documentos
+   6.4 Histórico de Alterações
+
+7. Gestão de Calendário
+   7.1 Visualizações do Calendário
+   7.2 Agendamento de Compromissos
+   7.3 Grupos de Calendário
+   7.4 Origens de Calendário
+   7.5 Acompanhamento de Status de Agendamentos
+
+8. Integração de Comunicação
+   8.1 Integração com WhatsApp
+      8.1.1 Configuração do WhatsApp Oficial
+      8.1.2 Configuração do WhatsApp Business
+      8.1.3 Gestão de Mensagens
+   8.2 Integrações Futuras (Instagram)
+
+9. Gestão de Usuários
+   9.1 Perfis de Usuário
+   9.2 Níveis de Acesso
+   9.3 Gestão de Equipes
+   9.4 Responsabilidades do Usuário
+
+10. Configuração do Sistema
+    10.1 Configuração de Tipos de Atividade
+    10.2 Configuração de Motivos de Perda
+    10.3 Configuração de Links e Agendamentos
+    10.4 Gestão de Dispositivos
+
+11. Suporte e Ajuda
+    11.1 Suporte Humanizado
+    11.2 Recursos de Ajuda Rápida
+    11.3 Acesso à Documentação
+    11.4 Sessões de Treinamento
+
+12. Recursos Avançados
+    12.1 Assistente Inteligente
+    12.2 Gestão de Campanhas
+    12.3 Envio em Massa
+    12.4 Automação de Marketing 

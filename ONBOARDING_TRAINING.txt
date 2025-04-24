@@ -1,0 +1,591 @@
+Raphael Zappacosta
+É um resumão. Por quê? Porque depois que você vai entrando na plataforma, você vai tendo essas dúvidas e você vai falando com a gente. A gente tem um suporte humanizado, você vai falar direto com a Emily. A gente está integrando com calma também um suporte, a gente fala robotizado, mas a qualquer momento a gente está vendo isso. Então, toda dúvida que você não conseguir resolver com ele, automaticamente a Emily já vai estar em contato com você.
+
+Leonardo Marchi
+Beleza.
+
+Raphael Zappacosta
+Deixa eu compartilhar aqui. A gente vai conversar, vamos lá. É,
+
+Leonardo Marchi
+deixa eu te perguntar. Você acha que em umas meia hora a gente consegue conversar?
+
+Raphael Zappacosta
+Conseguimos, conseguimos passar tudo sim. Pode ficar tranquilo. Tem um
+
+Leonardo Marchi
+compromisso depois.
+
+Raphael Zappacosta
+Não. Tá, fica tranquilo, fica tranquilo. A gente pode marcar uma outra, porque você vai ter dúvida. A hora que você entrar, você vai ter dúvida.
+
+Leonardo Marchi
+Mas só botar em prática, né, surge as dúvidas.
+
+Raphael Zappacosta
+Exato. Mas pelo menos você sabe mais ou menos onde estão as coisas, tá? Tá. Bom. A primeira coisa que você vai fazer, né, depois que você acessar o link nosso, tá? Eu tô numa base de teste aqui, então, eu vou mandar o link pra você depois, tá? Eu tô numa base que você pode ver aqui, dev, traço, que é o lugar onde os clientes, ou até mesmo o time interno nosso, usa pra estressar a plataforma, pra criar qualquer coisa e tudo mais, tá? Mas vamos pro que é interessante, tá? Como que eu cadastro, como que eu se cadastro na plataforma? Tem o botão de cadastrar aqui em cima, né? É o primeiro passo que você vai fazer Ele vai pedir o criar conta Um nome, e-mail e senha E aí você pode criar um nome qualquer Então, um nome, um e-mail qualquer Aqui eu tenho, como eu estou na base test ele aceita qualquer coisa E uma senha qualquer Feito isso, ele vai levar você para uma... para uma tela de operação, onde você pode cadastrar uma operação nova. Como que eu cadastro uma operação nova? É só criar e cadastrar a operação. E o que é uma operação mais importante? É, vamos dizer, a sua empresa, a sua operação, seu ambiente de trabalho. Pode ser o nome da empresa, por exemplo. Pode ser... Às vezes tem cliente que tem mais de uma operação separada, com dados separados, então isso fica à mercê de vocês. O que a gente recomenda para não ficar perdido? O nome da empresa. Então, por exemplo, posso gastar aqui, sei lá, Doug. E aí o nome de grupo e origem, eu recomendo começar com o nome da empresa e depois a gente vai falar o que é um grupo e origem. Uma vez que você confirmou, o sistema vai ver sua operação e isso só vai aparecer a primeira vez que você entra na plataforma. Clicou em continuar, você está dentro da plataforma, né? E aqui você já pode começar a criar ou criar suas leads, seus agendamentos e tudo mais, a gente vai passar um por um. Por enquanto, entendido o que é uma operação, basicamente, sua empresa, seu ambiente de trabalho dentro do CRM, tá? Vamos lá, próximo ponto, né? Na aba lateral...
+
+Leonardo Marchi
+Uma pergunta, será que é mais fácil a gente fazer nesse começo passo a passo ou não? Eu faço um computador e vai junto ou não?
+
+Raphael Zappacosta
+Podemos fazer, né? Se você tiver com tempo, podemos fazer dessa forma. Se você, igual você falou, está com o tempo meio acelerado, eu posso fazer um catadão e aí depois a gente faz uma outra... Eu
+
+Leonardo Marchi
+acho que a gente vai apanhar muito se a gente fazer assim. Se a gente fazer passo a passo, qualquer coisa se... Se eu for demorar, eu tento ver se eu agendo um compromisso pra depois. Mas eu acho que passo a passo a gente vai fazer melhor. E
+
+Raphael Zappacosta
+eu
+
+Leonardo Marchi
+uma vez só já...
+
+Raphael Zappacosta
+Sim, pode ser. Quer abrir aí? Você tem o link, né?
+
+Leonardo Marchi
+Não, não tenho. Você vai mandar ele pelo WhatsApp ou você manda pela plataforma aí?
+
+Raphael Zappacosta
+Posso mandar aqui no Meet.
+
+Leonardo Marchi
+Aí eu copio e mando pelo meu WhatsApp. É esse aqui que você mandou?
+
+Raphael Zappacosta
+Isso, crm.duque.com.br.
+
+Leonardo Marchi
+Pronto, já acessei. Agora tem testar agora e quero uma demonstração. Testar agora?
+
+Raphael Zappacosta
+É, ou se você
+
+Leonardo Marchi
+encadastrar tem
+
+Raphael Zappacosta
+que entrar. Lá na direita em cadastrar, lá em cima.
+
+Leonardo Marchi
+Beleza. Estou cadastrando. Essa senha para me criar uma senha de acesso, é isso, né?
+
+Raphael Zappacosta
+Isso, uma senha de acesso.
+
+Leonardo Marchi
+Apareceu nenhuma operação encontrada. Criar operação.
+
+Raphael Zappacosta
+Isso mesmo. Aí você vai em criar operação. E você vai cair naquela telinha que a gente acabou de passar agora,
+
+Leonardo Marchi
+tem
+
+Raphael Zappacosta
+três campos.
+
+Leonardo Marchi
+Tá, eu vou preencher os campos aqui.
+
+Raphael Zappacosta
+Isso. Pode colocar os três no nome da empresa por enquanto, é meio que irrelevante agora, a gente vê
+
+Leonardo Marchi
+depois. Obrigada. Pronto, eu consegui entrar na plataforma.
+
+Raphael Zappacosta
+Beleza. Você muito provavelmente está nessa tela aqui, certo?
+
+Leonardo Marchi
+Peraí, a minha tá toda preta, mas parece que é a mesma, deixa
+
+Raphael Zappacosta
+eu ver. Ah, sim, é. Lá em cima no canto superior direito, você consegue trocar entre o tema escuro e o claro, tá?
+
+Leonardo Marchi
+Beleza.
+
+Raphael Zappacosta
+Depende, às vezes tem gente que gosta de trabalhar à noite, prefere o tema escuro, enfim, tem essa facilidade,
+
+Leonardo Marchi
+tá? Tá.
+
+Raphael Zappacosta
+Vamos lá. Vou explicar o conceito do CRM, a forma que ele trabalha. Uma vez que a gente entendeu isso, na verdade, todo o resto do sistema vai ficar fácil. O
+
+Leonardo Marchi
+lado
+
+Raphael Zappacosta
+esquerdo, que a gente vê aqui, grupos, ele é o segredo do nosso CRM. A gente trabalha com uma coisa que chama, vamos dizer, uma organização que chama grupos e origens. O que são grupos e o que são origens? Grupos, são grupos dentro da minha operação, dentro da minha empresa. Exemplo, eu posso ter, por exemplo, o meu grupo, que é o meu setor comercial, o meu setor de marketing, o meu setor, talvez, de produção de conteúdo, o meu
+
+Leonardo Marchi
+setor de vendas.
+
+Raphael Zappacosta
+Então,
+
+Leonardo Marchi
+é como se fosse a
+
+Raphael Zappacosta
+área ali na sua empresa. E as origens estão dentro desses setores, que podem ser um ou vários setores. Você tem setores ilimitados aí, tá?
+
+Leonardo Marchi
+Então, por exemplo, eu criei um grupo direto e no grupo eu tenho isso?
+
+Raphael Zappacosta
+Isso. Então, por exemplo, aqui no meu caso, eu chamei minha operação de Duke, né? Eu posso ver aqui em cima no canto direito, e criei um grupo e uma origem de Duke, tá? Esse grupo eu posso criar outros, né? Eu posso falar que eu quero meu grupo Marketing, por exemplo, né? Ou meu grupo Vendas, né? Então, eu posso criar, clicando aqui em grupos no maiszinho, eu posso criar um grupo Low. Quando eu crio um grupo novo, né, vendas, por exemplo. Por exemplo,
+
+Leonardo Marchi
+eu vou criar um grupo agora, vendas, porque é a parte que a gente fica aqui no escritório, só para vir fazer também, aprender. Isso,
+
+Raphael Zappacosta
+manda ver. Então clica no mais lá em cima, em grupos, e aí você digita o nome do grupo. Começamos ali com vendas, um exemplo legal. Você vai ver que ele criou outra maletinha aqui, vendas E eu tenho agora, em cima de vendas, algumas opções aqui Eu tenho um maizinho, quando você coloca o mouse em cima ele fica um maizinho Esse maizinho você pode clicar e ele vai dar a opção de você criar uma origem O que é uma origem? A origem é a origem das leads, de onde vêm as suas leads, os seus possíveis clientes. Ou até mesmo, se você quer trabalhar um pós-venda, os seus clientes, de onde são esses clientes. Exemplo, na Duke, por exemplo, vou usar o exemplo nosso. A gente tem uma origem que é a origem de tráfego pago WhatsApp. que são as leads que vêm através do WhatsApp e através do Pago. A gente tem origem Instagram, a gente tem origem de...
+
+Leonardo Marchi
+Ah, entendi. Então, tipo assim, eu crio uma origem para me conseguir depois selecionar. Por exemplo, essa origem veio anúncios sobre o Instagram. Veio as pessoas através do Instagram. Ah, essa daqui é pessoas de indicação. Tipo isso, a origem.
+
+Raphael Zappacosta
+Da onde veio. Então, por exemplo, cria uma origem para a gente ver. Por exemplo, eu vou criar aqui. O
+
+Leonardo Marchi
+que é do Instagram.
+
+Raphael Zappacosta
+Esse é um modo de organização, tá? Existem outros modos, um exemplo, né? A própria Três Pontos, um modo interessante, que ao invés deles usarem as origens como, de fato, uma origem da Lead, eles usam como... Eles usaram o tempo dessa forma, tá? Como um projeto, uma campanha. Então, por exemplo, ele tem a campanha de vendas de tal produto, de tal cliente, aí eles usam uma origem por campanha, por exemplo, Ou por grupo, ou por projeto, ou por parceiro Então, por mais que chama grupo e origem Você pode setorizar isso ou dividir isso de acordo com a sua operação Na Duque, a gente usa dessa forma Como origem mesmo de onde vem as leads Mas você, às vezes, a sua operação Você quer manter tudo em um funil só, você quer separar Enfim, de novo, isso é muito pessoal Isso é muito da operação da empresa,
+
+Leonardo Marchi
+né?
+
+Raphael Zappacosta
+Quando você criou, por exemplo, uma origem, você clicou e selecionou ela, você vai ver que já tem um funil de vendas aqui, com alguns estágios padronizados. Esses estágios podem ser editados. Como eu edito um estágio de lead? Eu posso vir aqui no lápis, clico no lápis em cima da origem que eu quero editar, E aí eu tenho aqui em cima estágios. Eu vou pular essas outras configurações aqui da origem, porque por enquanto a gente não precisa se preocupar muito com elas. Pra estágios, e aqui em estágios eu tenho os grupos. Vamos dizer que minha operação é bem simplificada, ou vamos dizer que eu tô trabalhando só com pós-venda. Cada origem eu posso ter um funil de câmeras diferente. Então vamos dizer que aqui eu quero só vamos dizer, novos, conexão e se fechou ou não, ou novos, negociação ou fechado. Eu posso deletar as que eu não quero, né? Toda vez que eu for deletar uma um estágio, eu tenho que escolher para onde eu quero enviar esses negócios. Então, por exemplo, eu vou fazer um exemplo aqui, mas você pode editar depois, quando você sentir necessidade. Vou enviar para todos que estão de prospecção, conexão e decisão, para novos, só para mostrar o Terano para você. Uma vez que eu salvei, pronto, eu tenho um funil bem simplificado agora. Três estágios. Onde isso é interessante? Na dupla a gente usa isso para controlar os nossos clientes, né? Os clientes novos, os clientes que estão em onboarding e os clientes que estão rodando, né? Então a gente usa dessa forma. É uma opção, né? Ou uma opção de algum grupo, uma operação comercial mais simplificada, né? Pô, eu sei as leads que eu não falei ainda, as que eu tô em negociação e as que eu fechei.
+
+Leonardo Marchi
+Ah, então aí nessa tela aí, essas três telas no meio, praticamente é onde vai chegar as mensagens dos clientes. Ali eu consegui separar. Por exemplo, agora você pôs um que está fechado, um que não está fechado, um que vai fechar. Isso, exato.
+
+Raphael Zappacosta
+Aqui você consegue colocar, criar suas leads. Se você tiver integrado, por exemplo, com o WhatsApp oficial, as leads vão cair automaticamente na origem que você escolher. É uma opção legal se você decidir usar a integração nossa com o WhatsApp oficial. Então, uma opção interessante. Isso vai, obviamente, depender se você vai usar o WhatsApp ou não. Indiferente disso, você pode usar esse fúnel de vendas aqui da forma que você quiser. Por exemplo, você tem duas maneiras além... Por exemplo, você tem três maneiras no caso. Essa lead pode vir pelo WhatsApp automaticamente, se você estiver integrado com ele, você pode criar ela manualmente ou você pode importar um banco de leads, por exemplo, em planilha.
+
+Leonardo Marchi
+Tá, esse em planilha eu não vou ter. Acho interessante deixar vinculado o WhatsApp, entendeu? Conforme vai chegando, a gente vai separando pela plataforma.
+
+Raphael Zappacosta
+Sim, a gente pode fazer um treinamento depois separado, a gente pode fazer um só para a integração do WhatsApp, tá? que aí a gente consegue ter um número, por exemplo, você consegue separar o número do WhatsApp para vir esse atendimento e você consegue fazer esse atendimento pela plataforma. Essa parte legal, vamos chegar lá ainda também nisso, tá? Mesmo sem integração, se você for, vamos dizer que você quer usar o WhatsApp normal ou você quer usar alguma outra plataforma ou você tem em venda balcão, enfim, você quer cadastrar sozinho aqui, né? Você tem duas maneiras, ou clicar aqui nesse adicionar negócio, ou aqui em cima na direita em negócio. Ele vai abrir uma janela simplificada de criação de lead, uma janela rápida de criação de lead. Essa janela faz três perguntas para você. Qual etapa você quer? Qual estágio da lead você quer adicionar? Exemplo, novos, negociação ou fechado, que são essas minhas etapas aqui da tela. O nome do negócio que você quer adicionar, da lead, por exemplo, podemos adicionar aqui, vamos dizer, três pontos. A desconto que é a nossa lead. E um telefone. Então, você consegue adicionar um telefone que ele já vai criar um contato para essa lead automaticamente. É o mínimo que a gente precisa para ter uma lead no sistema, um telefone e um nome.
+
+Leonardo Marchi
+Se você clicar
+
+Raphael Zappacosta
+em salvar, vai adicionar essa lead e você já vai ver ela por aqui. A outra opção É a opção de adicionar via planilha Então você consegue baixar o modelo de importação aqui Você clica em múltiplo, você consegue baixar o modelo de importação E você consegue copiar de alguma base e preencher 1.000 leads 1.500 leads, 2.000 leads De uma vez você consegue inserir isso no sistema Então quem faz prospecção ativa, por exemplo Isso é muito importante para não ficar colocando um por um Sobe tudo na planilha. Então ele já sobe com todas as informações que você precisa. De novo, a gente tem um treinamento só para fazer essa subida de planilha. Qual que é a parte legal? A parte legal é que às vezes você pode pegar, às vezes você já tem um WhatsApp e você quer extrair todos os contatos desse WhatsApp e subir no sistema para fazer um... ou um pós-venda ou um remarketing, por exemplo. Você quer oferecer promoções para essa galera ou fazer um marketing direcionado para quem já foi seu cliente ou quem já falou no WhatsApp com você. Então você consegue subir isso muito rapidamente no
+
+Leonardo Marchi
+sistema. O sistema é limitado? Se eu quiser colocar 3 mil contatos vai salvar tudo? Você
+
+Raphael Zappacosta
+pode colocar quantos contatos você quiser. Hoje a gente tem cliente nosso que em 2, 3 meses já tinha mais de 15 mil leads no sistema. Não tem limite. O que a gente não sabe ainda, até quando não vamos ter limites, é na parte de anexo de arquivo. Mas mesmo se a gente tiver limite, teria que ser um valor muito, muito grande. Então, por isso que até hoje a gente não colocou limite nem em leads, nem em anexos. Já vou falar para você o que seria os anexos. Ainda aqui, posso passar para a parte de leads agora? Pode, continuar aqui. Então, funcionamento básico do Kanban, tá? Pra mover uma lead, eu posso só arrastar uma lead, né? De um funil pro outro, e você consegue mover ela.
+
+Leonardo Marchi
+Sem
+
+Raphael Zappacosta
+segredo algum.
+
+Leonardo Marchi
+Deixa eu só criar uma também, pra mim fazer passo a passo. Sim,
+
+Raphael Zappacosta
+sim.
+
+Leonardo Marchi
+Só uma, eu vou cadastrar eu mesmo aqui, só pra... Pronto, já criei.
+
+Raphael Zappacosta
+Beleza. Então, vamos lá. Aqui você consegue navegar. A gente tem alguns atalhos aqui, vou falar depois o que são eles. E se você clicar na lead, você tem nosso cadastro de lead. Aqui você tem listada, campo a campo, todas as informações sobre essa lead. No
+
+Leonardo Marchi
+caso, cadastrar meu cliente certinho, deixa salvo.
+
+Raphael Zappacosta
+Isso, você pode colocar quem é o usuário do sistema que é responsável pelo seu cliente. Se você tiver vários usuários, você segrega ele, depois a gente vai entrar na parte de usuários, na parte de criação de equipes e times. Ou você pode deixar sem ninguém, quer dizer que é pra todo mundo.
+
+Leonardo Marchi
+Deixa eu só falar um negócio pra eles ali, pra mim não perder um minutinho. Voltei.
+
+Raphael Zappacosta
+Beleza, vamos lá. Então, vou passar rapidamente campo a campo, tá? Só os que não são muito intuitivos, tá? Usuário, então, quem é responsável pela lead, tá? Pode ser mais...
+
+Leonardo Marchi
+Por exemplo, o meu vendedor X é responsável por esse cliente, né?
+
+Raphael Zappacosta
+Isso, às vezes você quer separar em carteiras e clientes diferente.
+
+Leonardo Marchi
+Para não confundir, tá?
+
+Raphael Zappacosta
+Isso, e aí dependendo da hierarquia de usuários ou de times, depois a gente vai falar sobre isso, um não vê a lead do outro. Então isso é bem interessante, porque aí não tem briga, por exemplo, todos conseguem ter essas leads separadas, se você quiser. Então nome primário, nome secundário, né? O que é nome primário e nome
+
+Leonardo Marchi
+secundário? Um porcento. Peraí, meu celular tá com um porcento, deixa eu botar pra cá.
+
+Raphael Zappacosta
+Tranquilo. Vamos
+
+Leonardo Marchi
+desligar e flasca tudo. Pronto, tá carregando, acho que não vai desligar não.
+
+Raphael Zappacosta
+Tá, então nome primário e nome secundário. O que é nome primário e nome secundário, tá? Imagina o nome fantasia e a razão social, tá? Por que primária e secundária e não razão social e fantasia? Porque cada cliente prefere usar esses nomes de uma maneira diferente. Tem clientes que usam o nome fantasia como a verdade absoluta dele. Tem clientes que usam a razão social. Então, o nome primário, ele é um nome que aparece aqui no nome principal da lead, né? Ele aparece no card, né? E na pesquisa geral lá em cima, a gente tem também essa pesquisa geral, o login lá em cima, ele é o nome, né? que vai aparecer na pesquisa geral também, tá? Então, ele é o nome principal do meu cliente, seja qual ele eu escolha, tá? Nome secundário é um nome adicional que vai sair em relatórios, mas não necessariamente vai mostrar em todo o sistema. Descrição, se tiver alguma informação adicional, CNPJ, CPF, segmento, endereço, bairro, CEB, país, tranquilo, estado, cidade, né? quantidade de funcionários, faturamento, faturamento até valor, e o motivo de perda, caso eu tenha perdido esse cliente por algum motivo. Então, uma vez que você perde o cliente, você pode informar o motivo de perda, você pode configurar esse motivo de perda depois, a gente vai entrar nisso também. Uma vez editado, só salvar lá embaixo. Então, esses são os dados principais da LIDL. Contatos. Eu posso ter uma lead com vários contatos. Exemplo, há três pontos. Eu posso ter o Caio, né? Por exemplo, eu vou clicar em editar aqui e eu posso ter, por exemplo, o Caio, tem um contato de três pontos. Porém, eu posso ter o contato do Tiago, por exemplo, né? Que pode ser outro número, né? Então, pode ser outro número ou pode ser um e-mail, né? Então, você pode ter vários contatos da mesma lead. Então, esse é o jeito que a gente tramava.
+
+Leonardo Marchi
+E
+
+Raphael Zappacosta
+aí, beleza?
+
+Leonardo Marchi
+Beleza.
+
+Raphael Zappacosta
+Histórico. O que é o histórico? O histórico é todo, vamos dizer, não vou falar que é um relatório, mas é o que o próprio nome diz. São todas as coisas que mudaram nessa lite. desde quando ela foi adicionada. Então, aqui, por exemplo, eu adicionei um contato, quem adicionou? Está aqui nome, porque eu acidentalmente criei meu nome como nome. Então, quem foi o... Adicionei um contato, quem foi e quando foi. Mudei o nome primário de um contato três pontos, de três pontos para cá, quando foi e quem foi que fez. mudem, um estágio de novos para negociação. Então aqui você tem todo o histórico dessa lead, tá? Tudo que você quiser saber da lead aparece aqui. Tem
+
+Leonardo Marchi
+uma pergunta, quando ela sabe quando é outra pessoa que está o tirando? Pelo computador que ela vai tá?
+
+Raphael Zappacosta
+Pelo acesso do usuário, então
+
+Leonardo Marchi
+cada um tem
+
+Raphael Zappacosta
+seu e-mail e senha,
+
+Leonardo Marchi
+né? Então
+
+Raphael Zappacosta
+ele vai saber quem que alterou. Agendamentos, tá? Em agendamentos, todo agendamento que você tiver para essa lead vai aparecer aqui. No caso, a gente não tem nenhum, né? Então tá em branco, a gente vai mostrar já, tá? Aqui em cima, a gente tem alguns atalhos. Percebe-se que alguns desses atalhos aqui, a gente tem aqui também, né? O único que não está lá é esse aqui, que é o quê? Se eu quiser mover uma lead de uma origem para outra, ou de um grupo para outro, então eu posso escolher um grupo que eu quero mover, a origem e qual estágio daquele grupo eu quero mover ela. Eu posso copiar ela para outra origem, ou outro grupo, enfim. Ou eu posso deletar essa lead. Então, com exceção desse atalho aqui, todos os outros atalhos, Eles estão aqui dentro e eu vou mostrar o que é cada um deles, tá? O primeiro atalho é se eu quero colocar uma tag nessa lead O que é uma tag? É uma etiqueta que me informa de alguma coisa Exemplo, três pontos Eu quero colocar ela como marketing, sei lá Porque ela é uma empresa de marketing Então eu posso clicar aqui e dar um enter Eu marquei uma tagzinha Para que serve essa tag? Eu consigo... Facilmente, eu atualizei aqui, eu consigo facilmente ver aqui no meu Kanban que é marketing. Eu consigo bater o olho e ver uma classificação qualquer que eu quero fazer com essa lead. Se eu quiser classificar essa lead de alguma forma. Exemplos de uso. Setor da empresa ou área que a empresa atua. Outros exemplos de uso. Às vezes você não vai diferenciar o que veio de tráfego pago, o que veio de indicação e tudo mais, e você quer colocar aqui, por exemplo, tráfego pago ou Instagram, vamos dizer. Aqui tem várias formas de você adicionar isso, tá? Então, meio que se você clicar em cima, você remove, mas meio que isso aqui você faz da maneira que você achar melhor, tá? Então, elas são reutilizáveis, obviamente, você pode Escolher uma que já existe ou digitar aqui a que você quer, tá?
+
+Leonardo Marchi
+Tá.
+
+Raphael Zappacosta
+Beleza? Beleza. Hoje a gente não tem a pesquisa por tags, tá? Mas isso está sendo desenvolvido, né? Foi pedido de alguns clientes e a gente quer que aqui em cima você possa procurar por tags E você pode filtrar todas as tags que você quer, né? Você pode filtrar aqui no vídeo.
+
+Leonardo Marchi
+É interessante, né? Faltou isso, né? Por exemplo, eu uso bastante as etiquetas lá do WhatsApp Business, sabe? Aí,
+
+Raphael Zappacosta
+normalmente,
+
+Leonardo Marchi
+ali é mais fácil, né? E seria quase igual, né?
+
+Raphael Zappacosta
+É, sim. Aqui você consegue fazer a mesma coisa. Isso tá próximo, tá? Eu acho que nas próximas semanas, aí. na próxima semana a gente já vai ter esse filtro por textos, tá? Isso tá bem maduro já, a gente tá em testes ainda. Mas falta pouquinho. Mas você pegou a ideia, dessa mesma forma. Aqui é para iniciar um atendimento, né? Então, se eu clicar aqui, ele me leva direto para a tela do atendimento. Nesse caso, eu não tenho nenhum canal cadastrado aí, nenhuma integração. Então, nessa base aqui, eu não consigo. Mas se eu for numa base aqui nossa, né, dessa base de exemplo, Deixa eu vir aqui em negócio. Se eu vier aqui, por exemplo, nessa base, que é um exemplo meu, e eu clicar aqui, por exemplo, vou pegar esse exemplo, Isadora, e eu clicar aqui em iniciar atendimento, ele me leva para um chat, um chat aqui bem parecido com o WhatsApp. Nesse caso, tem integração com o WhatsApp, tem um número meu. Então, eu consigo vir direto para o chat aqui. Então, se a gente avançar, se você quiser usar a integração com o WhatsApp, a gente faz um treinamento só para a parte da integração, só para a parte de atendimento. Mas é basicamente isso. Então, vamos voltar nos três pontos. Hoje, ele leva para essa outra janela. Em algumas semanas, a gente vai ter o atendimento direto ali para abrir uma janelinha separada aqui. Então, vocês vão ver mudar isso um pouquinho. Mas, enfim, isso é um papo para um próximo treinamento, tá? Beleza. Terceiro
+
+Leonardo Marchi
+ícone
+
+Raphael Zappacosta
+aqui é criar um agendamento. Então, por exemplo, tenho uma reunião com a Três Pontos, só preciso lembrar de alguma coisa, ou um pós-venda, ou um remarketing. Eu ofereci um serviço para o meu cliente agora e eu sei que ele vai precisar de uma manutenção daqui a 30 dias. Eu não vou anotar no papelzinho, eu tenho um agendamento dentro do sistema. E é para isso que serve essa parte de agendamento também. Então, pode ser N coisas aqui. Então, eu vou escolher uma origem, um usuário, uma atividade, uma duração do meu agendamento, uma descrição, data e horário.
+
+Leonardo Marchi
+O
+
+Raphael Zappacosta
+que eu recomendo que a gente faça agora junto? Criar uma origem para o agendamento e uma atividade padrão que você possa usar o mínimo possível. Então, vamos lá e me segue nessa parte aqui só para a gente poder já ter o agendamento funcionando, tá bom? Tá,
+
+Leonardo Marchi
+faz aí. Vamos
+
+Raphael Zappacosta
+fazer?
+
+Leonardo Marchi
+Espera aí. Tá, pode fazer então.
+
+Raphael Zappacosta
+Lá em cima em configurações, se você clica em configurações, configurações novamente.
+
+Leonardo Marchi
+Tchau tchau. Como que você chegou nessa parte de configuração? Volta um pouco pra mim.
+
+Raphael Zappacosta
+Aqui em cima, ó. Aqui no topo da tela tem um botão. Do lado de Comunicações tem Configurações. Você tem esse botão?
+
+Leonardo Marchi
+Não. Tá Operação e Comunicação.
+
+Raphael Zappacosta
+Análise, Operações e Comunicações só?
+
+Leonardo Marchi
+Isso. Não tem a Configuração. Tá. É
+
+Raphael Zappacosta
+porque a gente acabou de criar a operação, tá? Vai em Sair. Clica aqui em cima na direita em Sair. Depois clica em entrar novamente e coloca seu usuário e senhor. Isso só acontece no primeiro acesso, tá bom?
+
+Leonardo Marchi
+Agora apareceu a configuração.
+
+Raphael Zappacosta
+Beleza, legal. Configurações. Algumas coisas que a gente vai precisar se preocupar agora, depois a gente vai ter treinamento, né? A gente vai ter tanto... tem tanto documentação escrita como treinamento, se vocês optarem para cada uma dessas funcionalidades, mas vamos focar só na parte do agendamento, pra gente deixar ele redondo,
+
+Leonardo Marchi
+tá?
+
+Raphael Zappacosta
+Vem aqui em tipos de atividade, tá?
+
+Leonardo Marchi
+Tipos de atividade.
+
+Raphael Zappacosta
+Criar tipo de atividade. Deixa eu ver onde você
+
+Leonardo Marchi
+foi.
+
+Raphael Zappacosta
+em cima no canto superior direito, criar tipo de atividade. E aí, por enquanto, cria uma atividade com nome de padrão. Então, você pode escolher aqui um nome da atividade e selecionar o usuário.
+
+Leonardo Marchi
+Por enquanto... Padrão, só para... Padrão,
+
+Raphael Zappacosta
+só para ter aí como base.
+
+Leonardo Marchi
+E o usuário, deixa aí... Os usuários, você
+
+Raphael Zappacosta
+pode colocar você. O que serve esses usuários? Às vezes você quer... Algumas empresas, elas gostam de ter tipos de atividade muito bem definidos e limitados a cada usuário. Exemplo. O cara que só faz manutenção, ele só pode agendar alguns tipos de atividades referentes à manutenção. Quem faz só, por exemplo, algumas atividades referentes a vendas, só pode fazer reuniões de vendas. Enfim, isso é uma separação que você pode fazer. Por exemplo, na Duke, a gente usa uma atividade que chama reunião. Uma atividade padrão, onde todo mundo tem para usar, porque é o jeito que a gente usa o nosso calendário. Isso, depois, você pode criar várias. Por enquanto, cria uma padrão, só para a gente utilizar no exemplo aqui. Pode colocar seu nome, seu usuário e confirmar. Se precisar editar, você consegue vir aqui e editar no lápis.
+
+Leonardo Marchi
+Criei.
+
+Raphael Zappacosta
+Beleza?
+
+Leonardo Marchi
+Beleza.
+
+Raphael Zappacosta
+Vamos lá em operações de novo, negócios, para a gente voltar para o nosso painel de leads.
+
+Leonardo Marchi
+Tá.
+
+Raphael Zappacosta
+Vamos clicar na nossa lead, né? E a gente tem agora o criar agendamento aqui de novo, né? Faltou um detalhe. A gente abriu Criar Agendamento, a gente vai ver que agora a gente tem essa atividade, né? Então é aqui que você escolhe quais atividades você quer. De novo, criamos a padrão. Falta uma coisa só, tá? A origem dos nossos agendamentos. Rafa, por exemplo, você vai me perguntar, Rafa, mas aí eu preciso uma origem para cada agendamento? Não, não necessariamente.
+
+Leonardo Marchi
+Eu preciso fazer um pagamento ali. Uma pessoa chegou aqui para a cobrança é um minutinho.
+
+Raphael Zappacosta
+Tranquilo.
+
+Leonardo Marchi
+Voltei. Estava precisando de mim ali resolver uma coisa.
+
+Raphael Zappacosta
+Tranquilo. Voltando. Então a gente tem as atividades agora, mas a gente não tem as origens. Lembra que eu falei que o sistema é estruturado em grupos e origens? Se a gente for lá em operações e agenda, a gente está em operações negócios, vamos ver operações e agendas. Se você quiser abrir aí.
+
+Leonardo Marchi
+Tá, então isso aqui eu posso fechar por enquanto, o que eu tô em agendamento.
+
+Raphael Zappacosta
+Isso, pode fechar, né? Aquele que você tava em agendamento, era só pra eu mostrar pra você, né? Você tava aqui, né? É só pra eu mostrar pra você que a atividade que você criou lá apareceu aqui,
+
+Leonardo Marchi
+né? Tá,
+
+Raphael Zappacosta
+deixa eu confirmar se é minha,
+
+Leonardo Marchi
+porque pareceu certinho, só um minuto. Volta lá. Tá vendo, Alex? Selecionar atividade. Tá, eu não preciso clicar, né? Eu vi que ela apareceu aqui, igualzinho. É, não,
+
+Raphael Zappacosta
+não precisa. Só
+
+Leonardo Marchi
+pra ver, tá? Beleza.
+
+Raphael Zappacosta
+Pra ver se tá certinho, né? Pode fechar aqui, né? Pra fechar,
+
+Leonardo Marchi
+você pode clicar
+
+Raphael Zappacosta
+no X ou clicar fora, tá? Tá. Vamos em Operações, Agenda.
+
+Leonardo Marchi
+Operação e Agenda.
+
+Raphael Zappacosta
+Isso. E aqui? A gente também tem essa coluna da esquerda, na agenda. O que muda na agenda? Na agenda a gente tem esse Todos, que é se eu quiser ver todos os meus calendários, todas as minhas agendas. Vamos criar um grupo de agendas, porque, de novo, você pode ter grupos e origens das agendas. Vamos clicar em Criar grupo. Como eu crio um grupo de agendas? Aqui você pode criar o primeiro grupo, Criar grupo. Posso chamar de qualquer coisa, podemos chamar de padrão, Podendo escolher do que você preferir.
+
+Leonardo Marchi
+Vou criar padrão também, só para... É, pode
+
+Raphael Zappacosta
+ser padrão. Portanto, a gente tem uma nesse momento, tá? Confirmar. Você já vai ver que vai aparecer aqui. Da mesma forma que tem lá os grupos e origens, você tem aqui também os grupos e origens. E aí você pode criar uma origem também, clicando no maizinho aqui. no botão aqui no meio da tela. Você escolhe. Pode criar uma origem também, né? Pode ser padrão também, principal, né? Essa primeira é o que importa só para a gente poder testar aqui certinho, pois você pode segregar isso, tá? Na Duke, a gente usa só uma agenda para todo mundo. A 3.0, por exemplo, que eu sei, eles usam várias agendas. Eles gostam de separar as agendas. Então, isso pode ser... É bem pessoal, tá? É bem... depende da operação. Você pode complicar bastante, porque você precisa ou você pode simplificar ao máximo, porque às vezes é mais fácil. O que muda aqui? A gente tem o nosso quadro. Então, aqui são os nossos dias da semana. Então, dia 23 hoje é quarta. Ele sempre vai trazer aqui em segundo. E a gente vai ter a lista de agendamentos nosso. E agora aqui você tem também várias agendas. Se você clicar em todos, você vê todas. Se você clicar na agenda que você quer, você só vê os agendamentos que você quer.
+
+Leonardo Marchi
+Em cima ali, o meu não estava aparecendo a data. Tipo dia 22, 23, tal, quarta.
+
+Raphael Zappacosta
+Não está aparecendo?
+
+Leonardo Marchi
+Não.
+
+Raphael Zappacosta
+Você tem aqui padrão e você tem aqui um grupo.
+
+Leonardo Marchi
+Eu criei o padrão. É para entrar no padrão? Isso.
+
+Raphael Zappacosta
+Então,
+
+Leonardo Marchi
+entra no padrão. Não apareceu. Quando eu clico no mais para explicar a origem da agenda que é eu criei o padrão e depois eu criei mais um processo né.
+
+Raphael Zappacosta
+Isso
+
+Leonardo Marchi
+aí a origem vou colocar qual o nome só para poder criar.
+
+Raphael Zappacosta
+principal é um nome só para a gente testar. Aqui é a sua agenda. Pensa como se você tivesse na sua empresa várias agendas físicas, né? Separadas. Então, aqui as origens,
+
+Leonardo Marchi
+né? São
+
+Raphael Zappacosta
+agendas físicas mesmo, né? São agendas diferentes, tá? E pensa que os grupos podem ser, por exemplo, gavetas onde você guarda suas suas agendas,
+
+Leonardo Marchi
+né?
+
+Raphael Zappacosta
+E se você clicar em Você vê todas as agendas numa visão só Essa agenda
+
+Leonardo Marchi
+é mais para notar o compromisso, algo assim, né?
+
+Raphael Zappacosta
+Exato Vou usar
+
+Leonardo Marchi
+mais para isso, né?
+
+Raphael Zappacosta
+Exatamente, é o que a gente vai entrar agora, tá? Então, na parte de agenda, né? Aqui você também tem o criar agendamento Ou aqui em cima o agendar, tanto faz Então, por exemplo, se eu criar um agendamento hoje aqui E selecionar, eu posso selecionar um usuário, né? Uma atividade, tá? uma duração que eu quiser, uma descrição para eu lembrar do que que é feito, para que que é isso, né, para que que é esse ensinamento, um dia, né, e um horário. Então, por exemplo, eu posso criar aqui uma para as 17 horas, né, como é que é, na verdade.
+
+Leonardo Marchi
+Uma pergunta, e como que o site me lembra disso? Fica, tipo, um ponto H-100 e alguma coisa assim, me lembrando?
+
+Raphael Zappacosta
+Eu vou mostrar, vamos chegar nisso já já. Então, eu vou criar aqui um exemplo para você ver. Eu criei 60 minutos de duração, às 18 horas, no dia de hoje. Let me test on board. Vou agendar. Logo aqui na nossa agenda, ele já vai ficar aqui. Por que ele está em laranjinha? Porque quer dizer que é um agendamento próximo. Então, agora são as 16 horas, a gente tem um agendamento hoje a ser cumprido aqui. Então, ele vai mostrar aqui para mim. Se eu... Vamos atualizar aqui a página. Se eu... Toda vez que eu navego de uma aba a outra e tudo mais, atualizo, a gente tem esse sininho aqui em cima, que ele fica de acordo com o agendamento. Exemplo. Nesse caso, tem um agendamento iminente. Só um agendamento iminente. Então, ele está aqui. Não importa em qual janela do sistema eu estiver, eu tenho aqui me alertando que, pô, eu tenho um agendamento em uma hora. O teste... Tem aqui teste on board, uma descrição prep e o horário. Se eu estiver lá em negócios, ele ainda está aqui, entendeu? E de qualquer lugar do sistema, eu consigo clicar e abrir esse agendamento. Da mesma forma que eu posso estar olhando minha agenda aqui também, do dia de hoje, e ver que tem um agendamento e clicar. Então, ele não muda ali nada, tá bom? Vamos voltar para negócios, né? Porque a gente estava em negócios, a gente saiu só para fazer essa extensão da agenda, agora vamos voltar lá, tá? Porque quando eu crio uma agenda no agendamento, às vezes é uma agenda interna da minha empresa, não está relacionada às vezes a nenhuma lead ou está relacionada a várias, enfim. Aqui nas leads, seja aqui dentro ou no Kanban direto nesse atalho, indiferente de onde você vai usar, é a mesma coisa, a gente consegue criar um agendamento para a nossa lead. Então, por exemplo, para três pontos aqui no caso, consigo clicar no agendamento e esse agendamento vai estar amarrado à nossa lead. Então, lá na minha tela de agendamento, depois, eu consigo ver que esse agendamento é para três pontos, nesse caso. É para essa linha de linha. Então, eu posso selecionar só a origem que eu quero criar. O usuário, que é esse agendamento. Pode ser um agendamento sem usuário, quero que mostre para todo mundo. Então, você pode escolher. A atividade, que a gente já criou lá, previamente, e você pode ter várias de novo. E eu posso... criar aqui, por exemplo, duas horas, por exemplo, amanhã, tem uma reunião às nove da manhã, reunião X. E eu posso agendar. Quando eu agendo para uma lead, aqui na tela de agendamentos, nessa abinha de agendamentos, eu tenho todos os meus agendamentos com essa lead. Então, eu consigo ver tudo que está agendado para ela. da mesma forma que eu consigo ver também lá na minha agenda. Então, se eu for em operações agenda, esse agendamento que a gente acabou de criar vai estar aqui, no dia 24, tá bom? Então, aqui, qual que é a vantagem? Aqui na agenda, como eu criei para três pontos, ele já vai aparecer que esse agendamento é para essa lead aqui. Se eu clicar nele, eu tenho também o atalho para ver a lead direto na agenda. Então, você não precisa ir lá procurar a lead. Você clica aqui e ele já vai abrir para mim aquela mesma tela. Eu já sei qual é a lead, tá bom? E aqui no histórico, obviamente, vai aparecer. O agendamento foi adicionado, uma reunião. e já tem esse registro de alteração, tá? Então, é aquela mesma tela. Aqui em notas, tá vendo que eu tô indo um e um, né? Próxima funcionalidade aqui é o notas, né? O que que é o notas? Notas é qualquer informação que eu quero salvar nessa LEED, né? Às vezes a LEED me mandou um recibo, ou tô esperando um recibo de pagamento, ou a LEED não me atendeu, né, e você quer que o time seu de marketing ou de venda adiciona alguma informação aqui. Então aqui é uma informação qualquer que você quer deixar como anotação. Anotações, notas, o que você
+
+Leonardo Marchi
+quiser.
+
+Raphael Zappacosta
+Você clicou em salvar. ele vem direto para o meu histórico. Só que ao invés de registro de alteração, ele vai aparecer aqui em notas. E aí eu tenho a informação. Então, você consegue ver nesse histórico. Pô, dia 23 de abril às 16h20 e 27h, o usuário nome criou essa anotação. Pô, então eu sei o que aconteceu com essa lead. Às vezes é uma informação que você precisa saber, você guarda aqui. É uma informação aberta. Você pode usar da maneira que você quiser. Por último, arquivos. Então, por exemplo, um comprovante, qualquer coisa que você quiser. Você pode subir aqui, por exemplo...
+
+Leonardo Marchi
+Esse cliente pagou, vou deixar o... Nota
+
+Raphael Zappacosta
+fiscal, boleto, recibo, o que você quiser. Aí você sobe o arquivo que você quiser aqui, ele fica aqui, você pode clicar aqui depois para ver e tudo mais. Beleza?
+
+Leonardo Marchi
+Beleza.
+
+Raphael Zappacosta
+E, por último, o status da lead, o estado da lead ali. Lembra que a gente tem os estágios, as etapas. O que são as etapas? O funil, se ela está... Vamos voltar lá para a gente ver. Fica mais fácil de visualizar. Então, estou aqui em negócio de novo no meu Kanban. Aqui são as etapas. Qual a etapa do meu funil, minha lead está? Mas ela ainda está em aberto. Uma vez que eu fechei essa lead aqui, eu posso marcar que eu ganhei ela. Ela está como um ganho. ou como perdido. Se eu marcar como ganho, olha o que vai acontecer. Ficou verdinho, como ganho, e ela sumiu, ela vai sumir da minha operação. Se eu clicar aqui, sumiu. Rafa, mas eu quero marcar como ganho e quero continuar vendo ela, né. Aqui em cima em status, a gente pode deixar, né, marcado todas as leads que a gente quer. A gente quer ver, às vezes, as ganhas em aberto, e as perdidas. E ela fica verdinha para sinalizar. Se eu clicar, por exemplo, se eu criar uma aqui, vou criar um exemplo aqui, e colocar ela como perdido, se eu vim aqui e colocar como perdido, ela vai ficar verdinha. Posso colher o motivo de perda se eu quiser classificar. Sal. E agora ela vai ficar como vermelho aqui. Verde como ganho, vermelho como perdido. E o padrão seria uma lead em aberto fica como cinza, por exemplo. Então tem as classificações aqui. Léo, eu acho o básico. O básico do sistema, o onboarding nosso, né, a primeira etapa do nosso onboarding é isso, tá? Como criar e lidar com o negócio e como criar e lidar com o agendamento. Faltou uma coisa de agendamento, que eu vou mostrar agora, tá? Se a gente for em agenda e num agendamento, né? Rafa, chegou às seis horas da tarde, fiz minha agenda, completei ela. Você tem o simbolozinho de completar aqui, tá? Você tem certeza que deseja completar? Confirmou? Sumiu daqui, de novo. Posso vir aqui e colocar para Os meus agendamentos em aberto, os fechados e o cancelado. Exemplo, essa reunião aqui que a gente marcou amanhã às nove, três pontos. Ah, cancelei. Tenho aqui o simbolozinho de cancelar. Deseja cancelar esse agendamento? Sim. Vai ficar em vermelhinho. Vamos dizer aqui, não... Fechei sem querer. Quero deletar ele. Ou, no caso, se for sem querer mesmo, quero reabrir. Clico aqui para reabrir. Tem ainda o botão de reabrir, não precisa se desesperar ou criar outro. Você pode reabrir ele, tá? Volta aqui para cima para mim. Se eu tiver um agendamento fechado, uma vez que eu completo ele, ele some daqui, obviamente. O agendamento fechado também não vai mostrar na lead. Então, por exemplo, na três pontos aqui, a gente cancelou esse agendamento. Se eu voltar em negócio, e colocar, vamos colocar ali, dá três pontos. Aqui a gente não tem, por exemplo, mais nada, não fala que tem nenhum agendamento aqui. Se eu criar um agendamento agora, de novo, isso é importante, que é uma coisa que a gente gosta de mostrar. Vamos dizer que eu marquei aqui para amanhã, de novo, horário qualquer. Marquei um agendamento para amanhã, aqui ficou azulzinho, tá vendo que ficou azulzinho? Deixa eu voltar ela como aberta só para ficar mais fácil de você visualizar. Tá vendo que ficou aqui em azulzinho em volta? Se eu coloco o mouse em cima, eu tenho uma prévia desse agendamento, tá vendo? Então, pô, eu tenho um agendamento às 10 horas, qual que eu fico da minha atividade? Padrão nesse dia com essa lead. Então, no Kanban, aqui é fácil de você ver, mas se eu for por essa base test, se eu entrar numa base test com muito agendamento, Vou mostrar para você. Isso ajuda demais. Então, por exemplo, se eu entrar nessa base aqui e eu abrir... Vamos pegar um que tem bastante aqui. Humano. Então, por exemplo, numa base com muitas leads, por exemplo, aqui nessa origem tem 894 só nessa origem, fica fácil de eu ver. Então, por exemplo, se tá azul eu sei que tem um agendamento no futuro, se tá vermelho eu sei que tem um agendamento em atraso. Então, quando você tem muitas leads, fica fácil de você ver quem que está... Se você tem algum agendamento em atraso, algum compromisso com o cliente em atraso ou não, ou um compromisso iminente, se for algo no dia. E também você tem aqui esse esfriando. O que é esse esfriando? Qual que foi o último agendamento completado para esse cliente? Então, ainda em agendamento, conforme você completa um agendamento, Se eu pegar esse agendamento aqui, por exemplo, e completar ele, vai sumir esfriando. Minha lead está quente de novo. Eu acabei de fazer um agendamento com ela, acabei de fazer um follow-up, uma mensagem de venda, alguma coisa. Então, resumindo os nossos agendamentos, é isso. Cara, falei demais. Ficou alguma... Passei algum ponto muito rápido que eu tava
+
+Leonardo Marchi
+de olho? Não, cara, na verdade, a hora que a gente começar a botar em prática, aí vai surgir mais dúvida, aí a gente vai conversando. Mas assim, deu pra ter uma noção, sim.
+
+Raphael Zappacosta
+Beleza. O que a gente vai mandar pra você ainda, tá, Leo? Documentação em texto, tá? A gente tem nosso site de documentação, a Emily vai compartilhar com você, tá? A gente vai ver os acessos, compartilha com você até o fim da semana, tá? Lá a gente vai ter algumas outras coisas que você pode, às vezes, colocar lá se a gente esquecer.
+
+Leonardo Marchi
+Por exemplo, estou com uma dúvida. Eu posso mandar um print no WhatsApp e tirar minha dúvida por lá assim também? Com certeza, com
+
+Raphael Zappacosta
+certeza. A gente tem o nosso WhatsApp do suporte. Eu não sei se a gente pode compartilhar com você. Por que eu estava falando no WhatsApp? Eu acho que é a Juliana, né?
+
+Leonardo Marchi
+Ah, é a Juliana, mas acho que é ela mesmo.
+
+Raphael Zappacosta
+Tá. Acho que a Emily você deve ter falado hoje também.
+
+Leonardo Marchi
+Eu acho que a Emily se eu não me engano foi quando ela apresentou para mim antes de eu fechar. Era duas moças uma era Juliana a outra não lembro.
+
+Raphael Zappacosta
+Tá, beleza. A Emily já vai entrar em contato com você, então, muito provavelmente amanhã, tá? E já passar para você e falar, ó, Léo, esse é o número do WhatsApp que você tem o suporte, né? Lembrando que o nosso suporte é humanizado, tá? A parte de ajuda em breve, né? A gente vai ter por dentro do próprio sistema, né? A gente tem aqui também o nosso chat, tá? Esse chat aqui vai virar uma ajuda rápida, né? Ah, tem uma ajuda de fazer alguma coisa no sistema. Pô, você manda aqui, Resolveu? Resolveu. Não resolveu, pode mandar no WhatsApp pra gente, tá? Então isso vai... De qualquer forma, se tem o WhatsApp da Emila, ela já vai entrar em contato com você amanhã se ela já não falou com você, tá? Ela vai deixar claro. Pode mandar print aqui, pode mandar vídeo, né? Se você souber gravar a tela, também ajuda, tá? Então a gente pode te ajudar de ponto a ponto. Com isso, até o fim da semana, você já vai receber a documentação nossa com uma ajuda a mais, né? E, obviamente, também a gente consegue ter os outros treinamentos. Treinamento na parte da integração com o WhatsApp E como usar a parte de atendimento Em maio, agora, a gente está lançando o nosso assistente inteligente Que ele vai ajudar no atendimento também Se você decidir usar, ele ajuda no atendimento Como se fosse um chatbot, mas muito mais inteligente Isso é um treinamento à parte também
+
+Leonardo Marchi
+Deixa eu perguntar Como é que eu vou vincular o WhatsApp aqui?
+
+Raphael Zappacosta
+Então, na parte de configurações, a gente tem aqui... essa área de dispositivos. A gente pode fazer um treinamento só para isso, tá? Eu tenho outra reunião em 15 minutos, eu não consigo te passar hoje.
+
+Leonardo Marchi
+Não, tranquilo. Mas
+
+Raphael Zappacosta
+aqui em dispositivos a gente tem disponível hoje o WhatsApp oficial, né? E aí a gente tem um treinamento só para integrar o WhatsApp e depois um treinamento de comunicação na parte de atendimento e na parte de campanha, né? De promoções e disparos. Como a gente usa a API oficial, você pode fazer um disparo para mil clientes em poucos minutos ou
+
+Leonardo Marchi
+segundos? Ela até me passou sobre isso, eu estava conversando com ela e ela falou assim, por exemplo, tem um curso ali que é sobre o WhatsApp, né? Depende o tanto de tempo que eu... o tanto de coisa que eu vou querer disparar, etc. Mas é beleza, então. Era mais para saber como que vincula o iOVF e adicionar o dispositivo. E aí eu vinculo o WhatsApp e depois eu vou perguntando pelo Instax,
+
+Raphael Zappacosta
+né? Isso. A oficial é bem... É um pouco chatinha, né? Do jeito que eles pedem essa integração hoje Em breve isso vai ficar um pouco mais fácil Então a gente pode fazer um treinamento para a gente vincular esse número O WhatsApp Web, né? Que é aquele que você escaneia o QR Code
+
+Leonardo Marchi
+Que é
+
+Raphael Zappacosta
+o que o pessoal gosta de usar Se for só para atendimento receptivo, só responder cliente, uma mensagem aqui, uma linha de atendimento do dia a dia, nada em massa, ele vai funcionar, tá? Ele está sendo recomendado porque ele tem as limitações, risco de banimento e tudo mais. Então a gente não gosta de recomendar ele. É,
+
+Leonardo Marchi
+normalmente o da empresa eu uso o Business Member.
+
+Raphael Zappacosta
+Então a gente pode fazer daí um treinamento só para o dispositivo, tá bom? E em breve o Instagram também vai estar conectado aí na plataforma. Ainda a gente pode conversar depois, né? Alguns outros treinamentos. A parte de perfil de usuário, acesso, motivos de perda, né? Links e agendamento. Se você faz, às vezes, agendamento com cliente, né? Tem outras coisas pra gente falar ainda. Mas a Emily vai entrar em contato e vai organizando isso com você, beleza?
+
+Leonardo Marchi
+Beleza.
+
+Raphael Zappacosta
+Bom, Leonardo, é isso então. Vai mandando pra gente qualquer dúvida, se quer me entrar em contato, aí a gente já tem um canal aberto direto no WhatsApp, beleza?
+
+Leonardo Marchi
+Beleza. Aí a gente vai conversando. Vai ter bastante dúvida na hora que eu tiver colocando em prática aqui, mas aí eu vou... Se você gosta, por favor, vai entrar em contato comigo e fala, ó, o seu suporte é esse. Se tiver uma dúvida, manda aqui. E aí qualquer coisa, se for algo mais complexo, a gente faz uma ligação e a gente vai resolvendo.
+
+Raphael Zappacosta
+Perfeito. Assim mesmo que a gente tem que navegar. Beleza? Obrigado, Leonardo.
+
+Leonardo Marchi
+Um abraço.
+
+Raphael Zappacosta
+Um ótimo dia.
+
