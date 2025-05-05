@@ -9,14 +9,14 @@ export const metadata = {
 }
 
 const banner = <Banner storageKey="ducke">
-    <a href="https://crm.ducke.com.br" target="_blank">
-      🎉 Conheça já o Ducke CRM! Saiba mais →
-    </a>
-  </Banner>
+  <a href="https://crm.ducke.com.br" target="_blank">
+    🎉 Conheça já o Ducke CRM! Saiba mais →
+  </a>
+</Banner>
 const navbar = (
   <Navbar
     logo={<img src="/ducke-logo.png" alt="Ducke" width={64} height={32} />}
-    // ... Your additional navbar options
+  // ... Your additional navbar options
   />
 )
 const footer = <Footer>Powered by 2023-{new Date().getFullYear()} © Ducke.</Footer>
@@ -41,9 +41,10 @@ export default async function RootLayout({ children }) {
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://docs.ducke.com.br"
+          docsRepositoryBase="https://github.com/ducke-consultoria/ducke-docs"
           footer={footer}
-          // ... Your additional layout options
+          sidebar={{ defaultMenuCollapseLevel: 1 }}
+        // ... Your additional layout options
         >
           {children}
         </Layout>

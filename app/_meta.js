@@ -18,4 +18,3 @@ export default {
   '11-suporte-e-ajuda': 'Suporte e Ajuda',
   '12-recursos-avancados': 'Recursos Avançados'
 }
-  
