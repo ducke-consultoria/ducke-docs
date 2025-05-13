@@ -16,5 +16,6 @@ export default {
   '9-gestao-de-usuarios': 'Gestão de Usuários',
   '10-configuracao-do-sistema': 'Configuração do Sistema',
   '11-suporte-e-ajuda': 'Suporte e Ajuda',
-  '12-recursos-avancados': 'Recursos Avançados'
+  '12-recursos-avancados': 'Recursos Avançados',
+  '13-assistente-inteligente': 'Assistente Inteligente'
 }
