@@ -41,7 +41,7 @@ export default async function RootLayout({ children }) {
           banner={banner}
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/ducke-consultoria/ducke-docs"
+          docsRepositoryBase="https://github.com/ducke-consultoria/ducke-docs/blob/main"
           footer={footer}
           sidebar={{ defaultMenuCollapseLevel: 1 }}
         // ... Your additional layout options
