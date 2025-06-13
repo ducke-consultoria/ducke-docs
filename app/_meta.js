@@ -17,5 +17,6 @@ export default {
   '10-configuracao-do-sistema': 'Configuração do Sistema',
   '11-suporte-e-ajuda': 'Suporte e Ajuda',
   '12-recursos-avancados': 'Recursos Avançados',
-  '13-assistente-inteligente': 'Assistente Inteligente'
+  '13-assistente-inteligente': 'Assistente Inteligente',
+  '14-problemas-frequentes': 'Problemas Frequentes'
 }
