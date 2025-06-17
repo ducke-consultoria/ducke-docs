@@ -1,0 +1,43 @@
+---
+title: 'Criação de Campanha'
+order: 1
+---
+
+# Criação de Campanha
+
+Aqui você irá ver o passo a passo de como criar uma campanha no Ducke CRM.
+
+1. Na página ´´negócios´´, selecione as 3 bolinhas que ficam ao lado do estágio do lead.
+2. Clique em ´´Criar campanha´´, após isso irá abrir um campo para você configurar a sua campanha: Nome, Estágio de Destino,
+Canal e Template. 
+3. Clique em confirmar após preencher tudo.
+
+Existe também um outro caminho para criar a sua campanha. 
+
+1. Na parte superior da tela do CRM, vá em ´´Comunicações´´ e em seguida clique em ´´Campanha´´.
+2. Clique em ´´Criar campanha´´ na parte superior á direita da tela.
+3. Após isso irá aparecer um campo para você configurar a sua campanha: Selecione os filtros desejados, exemplo:
+Grupo: (De onde você quer tirar os leads)
+Origem: (Novas leads)
+Estágio: (Qual estágio os leads para a campanha se encontram)
+Status: (Aberto/Fechado)
+4. Em parâmetros, coloque o nome da campanha, selecione o estágio de destino dos leads, selecione o canal e o template.
+Por fim, selecione ao lado quais são os leads desejados para essa campanha.
+5. Clique em confirmar. 
+6. Para o envio das mensagens e o avanço do estágio dos leads, 
+clique no triângulo verde que irá aparecer na lateral direita da tela.
+
+Como criar template?
+1. Vá em configurações e selecione o template desejado ´´Template de Email´´ ou ´´Template de SMS´´.
+2. Clique em ´´criar modelo´´ no canto superior a direita da tela e escreva a mensagem desejada.
+
+Como criar template no WhatsApp? 
+Para criar um template para o WhatsApp é necessário criar com o Facebook, para poder enviar as mensagens,
+é necessário que você tenha um template do Facebook e um número oficializado pela Meta. 
+Pois corre o risco do seu número prório ser banido futuramente.
+1. Na aba de ´´Canal´´, selecione ´´WhatsApp API´´ ou ´WhatsApp´´.
+2. Escolha qual o dispositivo/número que será usado para a campanha.
+3. Clique no ícone do WhatsApp que aparece no final da aba ´´Template´´, você será redirecionado para o Facebook Business.
+4. Crie o seu modelo de Template.
+
+E assim sua campanha estará pronta!
