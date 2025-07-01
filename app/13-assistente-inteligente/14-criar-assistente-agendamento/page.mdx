@@ -1,0 +1,161 @@
+---
+title: 'Criar Assistente para Agendamentos'
+order: 14
+---
+
+# Criar Assistente para Agendamentos
+
+Este tutorial mostra como criar um assistente inteligente para agendamentos de entregas, incluindo a configuração de variáveis, fluxo de conversa e integração com o sistema de agendamentos.
+
+## Visão Geral do Fluxo
+
+O assistente de agendamento segue este fluxo:
+1. **Início** → Coleta de informações do cliente
+2. **Criar Agendamento** → Criação do compromisso no sistema
+3. **Apagar Variáveis** → Limpeza das variáveis para evitar loops
+4. **Retorno** → Volta ao assistente para novos agendamentos
+
+## Passo 1: Definir Variáveis do Assistente
+
+### Criar Variáveis Necessárias
+
+#### Hora da Entrega
+- **Nome**: `hora_entrega`
+- **Descrição**: "Horário da entrega, caso o usuário tenha preferência"
+- **Formato**: `hh:mm`
+- **Obrigatória**: Não
+
+#### Localização da Entrega
+- **Nome**: `localizacao_entrega`
+- **Descrição**: "Localização completa com rua, número, complemento (se houver) e bairro"
+- **Formato**: Texto livre
+- **Obrigatória**: Sim
+
+#### Data da Entrega
+- **Nome**: `data_entrega`
+- **Descrição**: "Data da entrega no formato yy-mm-dd"
+- **Formato**: `yy-mm-dd`
+- **Obrigatória**: Sim
+
+## Passo 2: Configurar o Assistente
+
+### Descrição do Assistente
+```
+Você é um assistente que cria agendamentos de entrega. 
+Seu objetivo é marcar entregas de produtos na cidade.
+
+Informações necessárias:
+- Localização (com bairro, rua, número)
+- Complemento (se houver)
+- Data da entrega
+- Hora da entrega (opcional)
+
+Informações que já possuo:
+- Localização: {{localizacao_entrega}}
+- Data: {{data_entrega}}
+- Hora: {{hora_entrega}}
+```
+
+### Instruções Específicas
+- Solicite confirmação das informações ao usuário
+- Valide se todos os dados obrigatórios foram fornecidos
+- Use linguagem clara e amigável
+
+## Passo 3: Configurar o Bloco de Agendamento
+
+### Acessar o Criador de Agendamentos
+1. No menu lateral esquerdo, vá em **Agenda** → **Criar**
+2. Arraste o nó de agendamento para a tela do fluxograma
+3. Configure os seguintes campos:
+
+### Configurações do Nó de Agendamento
+
+#### ID da Lead (Opcional)
+- **Formato**: `{{conversation.leadId}}`
+- **Uso**: Quando há uma lead vinculada à conversa
+- **Sintaxe**: Use a variável `conversation.leadid` para acessar o ID da lead
+
+#### Fuso Horário
+- **Formato**: `america-sao_paulo`
+- **Exemplo**: Para São Paulo, use `america-sao_paulo`
+- **Importante**: Use o formato em inglês com underscores
+
+#### ID da Origem do Agendamento
+- **Localização**: Configurações da origem na agenda
+- **Suporte**: Em caso de dúvidas, solicite ao suporte
+
+#### Data e Hora
+- **Data**: Use variável capturada pelo assistente
+- **Hora**: Use variável para horário da entrega
+- **Formato Data**: `yy-mm-dd` (formato universal)
+
+#### IDs dos Usuários
+- **Formato**: IDs separados por vírgula
+- **Localização**: Tela de configuração de usuários
+
+#### ID do Tipo de Atividade
+- **Localização**: Tela de configuração de tipos de atividade
+
+#### Duração (Opcional)
+- Pode ser deixada em branco
+- Ou definir duração específica do agendamento
+
+#### Descrição
+- **Exemplo**: `Localização da entrega: {{localizacao_entrega}}`
+- **Uso**: Incluir informações relevantes capturadas pelo assistente
+
+## Passo 4: Configurar Redirecionamentos
+
+### Condições de Redirecionamento
+- **Quando**: Todas as informações obrigatórias estiverem preenchidas
+- **Variáveis Obrigatórias**: `localizacao_entrega` e `data_entrega`
+- **Ação**: Redirecionar para o bloco "Criar Agendamento"
+
+### Fluxo de Confirmação
+1. Assistente coleta informações
+2. Solicita confirmação ao usuário
+3. Se confirmado, redireciona para criação do agendamento
+4. Após criação, apaga as variáveis
+
+## Passo 5: Configurar Limpeza de Variáveis
+
+### Bloco "Apagar Variáveis"
+- **Variáveis a apagar**:
+  - `hora_entrega`
+  - `localizacao_entrega`
+  - `data_entrega`
+
+### Finalidade
+- Evitar que informações fiquem salvas
+- Permitir novos agendamentos sem conflitos
+- Manter o fluxo limpo para próximas interações
+
+## Dicas Importantes
+
+### Formato de Variáveis
+- **Sintaxe**: Use `{{nome_variavel}}` no fluxograma
+- **Nomenclatura**: Use underscores, não espaços
+- **Exemplo**: `{{localizacao_entrega}}` (correto)
+- **Exemplo**: `{{localização entrega}}` (incorreto)
+
+### Variáveis de Contexto
+- **conversation.leadid**: ID da lead vinculada
+- **conversation.userid**: ID do usuário
+- **conversation.channel**: Canal de comunicação
+
+### Validações
+- Sempre confirme informações com o usuário
+- Valide formatos de data e hora
+- Verifique se dados obrigatórios estão preenchidos
+
+## Exemplo de Fluxo Completo
+
+1. **Usuário**: "Quero agendar uma entrega"
+2. **Assistente**: "Claro! Preciso de algumas informações. Qual a data da entrega?"
+3. **Usuário**: "Amanhã"
+4. **Assistente**: "E qual o endereço completo?"
+5. **Usuário**: "Rua das Flores, 123, Centro"
+6. **Assistente**: "Perfeito! Confirma: Entrega amanhã na Rua das Flores, 123, Centro?"
+7. **Usuário**: "Sim"
+8. **Sistema**: Cria agendamento e apaga variáveis
+9. **Assistente**: "Agendamento criado com sucesso! Posso ajudar com mais alguma coisa?" 

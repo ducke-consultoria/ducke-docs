@@ -15,5 +15,6 @@ export default {
     '10-api': 'Configurar Bloco API',
     '11-redirecionamentos': 'Criar Redirecionamentos Condicionais',
     '12-teste-simulacao': 'Testar e Simular o Assistente',
-    '13-monitoramento': 'Monitorar Transações e Uso de IA'
+    '13-monitoramento': 'Monitorar Transações e Uso de IA',
+    '14-criar-assistente-agendamento': 'Criar Assistente para Agendamentos'
 } 
