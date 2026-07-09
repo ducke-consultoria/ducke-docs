@@ -1,0 +1,47 @@
+---
+title: 'Chaves de Acesso API'
+order: 10
+---
+
+import { Callout } from 'nextra/components'
+
+# Chaves de Acesso API
+
+A aba **Chaves de Acesso API** permite criar tokens para integrações externas que consomem a API do Ducke CRM em nome da operação.
+
+<img src="/prints/setup-user-tokens.png" alt="Tela de chaves de acesso API no setup" style={{ borderRadius: '0.5rem' }} />
+
+## Como acessar
+
+1. Abra **Configuração** no menu.
+2. Selecione a aba **Chaves de Acesso API**.
+
+## Criar uma chave
+
+1. Clique em **Criar chave** (botão no topo).
+2. Informe um **nome** descritivo (ex.: *Integração ERP*, *Webhook interno*).
+3. Confirme — o token completo é exibido **uma vez**; copie e guarde em local seguro.
+
+<Callout type="warning">
+  Trate cada chave como senha. Não compartilhe em chats públicos nem commite em repositórios.
+</Callout>
+
+## Gerenciar chaves existentes
+
+A tabela lista **Nome**, trecho mascarado da **Chave de Acesso** e **Ações**:
+
+- **Copiar:** cola o token na área de transferência.
+- **Editar:** altera o nome identificador.
+- **Excluir:** revoga o acesso imediatamente.
+
+## Quando usar
+
+- Automações que criam ou atualizam leads via API.
+- Integrações com ERP, BI ou ferramentas internas.
+- Scripts de migração ou sincronização sob demanda.
+
+## Segurança
+
+- Revogue chaves não utilizadas.
+- Crie uma chave por integração para facilitar auditoria.
+- Restrinja quem tem permissão de escrita nesta aba.

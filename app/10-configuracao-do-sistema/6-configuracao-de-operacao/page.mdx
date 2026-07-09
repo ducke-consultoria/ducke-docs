@@ -1,0 +1,38 @@
+---
+title: 'Configuração de Operação'
+order: 6
+---
+
+import { Callout } from 'nextra/components'
+
+# Configuração de Operação
+
+A aba **Operação** reúne preferências que valem para toda a operação (tenant), independentemente do funil ou origem de leads.
+
+<img src="/prints/setup-operation.png" alt="Tela de configuração de operação no setup" style={{ borderRadius: '0.5rem' }} />
+
+## Como acessar
+
+1. Abra **Configuração** no menu.
+2. Selecione a aba **Operação**.
+
+## Atribuição automática de leads
+
+O principal ajuste disponível é o interruptor **Atribuir automaticamente o usuário criador ao cadastrar lead**:
+
+- **Ativado:** leads criados manualmente (cadastro único) ficam atribuídos a quem os cadastrou.
+- **Desativado:** novos leads entram sem responsável definido até alguém assumi-los.
+
+<Callout type="info">
+  Essa regra **não** se aplica a importação por planilha nem a leads criados pela API de integração.
+</Callout>
+
+## Salvar alterações
+
+1. Altere o interruptor conforme a política da sua equipe.
+2. Clique em **Salvar** quando o botão estiver habilitado.
+3. O botão exibe **Salvo** após a confirmação.
+
+## Permissões
+
+Somente usuários com permissão de escrita em **Configuração → Operação** podem alterar e salvar essas opções.

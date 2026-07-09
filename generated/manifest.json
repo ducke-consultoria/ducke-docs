@@ -1,0 +1,275 @@
+{
+  "capturedAt": "2026-07-08T22:25:06.631Z",
+  "prints": [
+    {
+      "id": "sign",
+      "module": "autenticacao",
+      "title": "Login",
+      "crmRoute": "/sign",
+      "printFile": "sign-login.png",
+      "kind": "page",
+      "mdxPath": "/prints/sign-login.png"
+    },
+    {
+      "id": "onboarding",
+      "module": "inicio",
+      "title": "Seleção de operação",
+      "crmRoute": "/onboarding",
+      "printFile": "onboarding.png",
+      "kind": "onboarding",
+      "mdxPath": "/prints/onboarding.png"
+    },
+    {
+      "id": "home",
+      "module": "inicio",
+      "title": "Página inicial",
+      "crmRoute": "/home",
+      "printFile": "home.png",
+      "kind": "page",
+      "mdxPath": "/prints/home.png"
+    },
+    {
+      "id": "leads",
+      "module": "leads",
+      "title": "Lista de leads",
+      "crmRoute": "/leads",
+      "printFile": "lista-leads.png",
+      "kind": "page",
+      "mdxPath": "/prints/lista-leads.png"
+    },
+    {
+      "id": "leads-create-modal",
+      "module": "leads",
+      "title": "Modal criar oportunidade",
+      "crmRoute": "/leads",
+      "printFile": "leads-criar-oportunidade.png",
+      "kind": "leads-create-modal",
+      "mdxPath": "/prints/leads-criar-oportunidade.png"
+    },
+    {
+      "id": "leads-import-modal",
+      "module": "leads",
+      "title": "Modal importação",
+      "crmRoute": "/leads",
+      "printFile": "leads-importacao.png",
+      "kind": "leads-import-modal",
+      "mdxPath": "/prints/leads-importacao.png"
+    },
+    {
+      "id": "leads-export-modal",
+      "module": "leads",
+      "title": "Modal exportação",
+      "crmRoute": "/leads",
+      "printFile": "leads-exportacao.png",
+      "kind": "leads-export-modal",
+      "mdxPath": "/prints/leads-exportacao.png"
+    },
+    {
+      "id": "leads-panel",
+      "module": "leads",
+      "title": "Painel do lead",
+      "crmRoute": "/leads",
+      "printFile": "leads-painel.png",
+      "kind": "leads-panel",
+      "mdxPath": "/prints/leads-painel.png"
+    },
+    {
+      "id": "chat",
+      "module": "chat",
+      "title": "Chat",
+      "crmRoute": "/chat",
+      "printFile": "chat.png",
+      "kind": "page",
+      "mdxPath": "/prints/chat.png"
+    },
+    {
+      "id": "dashboard",
+      "module": "dashboard",
+      "title": "Dashboard",
+      "crmRoute": "/dashboard",
+      "printFile": "dashboard.png",
+      "kind": "page",
+      "mdxPath": "/prints/dashboard.png"
+    },
+    {
+      "id": "bookings",
+      "module": "agendamentos",
+      "title": "Agendamentos",
+      "crmRoute": "/bookings",
+      "printFile": "bookings.png",
+      "kind": "page",
+      "mdxPath": "/prints/bookings.png"
+    },
+    {
+      "id": "bookings-create-modal",
+      "module": "agendamentos",
+      "title": "Modal agendar",
+      "crmRoute": "/bookings",
+      "printFile": "bookings-modal-agendar.png",
+      "kind": "booking-create-modal",
+      "mdxPath": "/prints/bookings-modal-agendar.png"
+    },
+    {
+      "id": "campaign",
+      "module": "campanhas",
+      "title": "Campanhas",
+      "crmRoute": "/campaign",
+      "printFile": "campaign.png",
+      "kind": "page",
+      "mdxPath": "/prints/campaign.png"
+    },
+    {
+      "id": "reports",
+      "module": "relatorios",
+      "title": "Relatórios",
+      "crmRoute": "/reports",
+      "printFile": "reports.png",
+      "kind": "page",
+      "mdxPath": "/prints/reports.png"
+    },
+    {
+      "id": "assistants",
+      "module": "assistentes",
+      "title": "Assistentes",
+      "crmRoute": "/assistants",
+      "printFile": "assistants.png",
+      "kind": "page",
+      "mdxPath": "/prints/assistants.png"
+    },
+    {
+      "id": "setup-tags",
+      "module": "configuracao",
+      "title": "Tags (Setup)",
+      "crmRoute": "/setup?tab=tags",
+      "printFile": "setup-tags.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-tags.png"
+    },
+    {
+      "id": "setup-loss-reasons",
+      "module": "configuracao",
+      "title": "Motivos de perda (Setup)",
+      "crmRoute": "/setup?tab=SETUP_LEADLOSSREASONS",
+      "printFile": "setup-loss-reasons.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-loss-reasons.png"
+    },
+    {
+      "id": "clients",
+      "module": "clientes",
+      "title": "Clientes",
+      "crmRoute": "/clients",
+      "printFile": "clients.png",
+      "kind": "page",
+      "mdxPath": "/prints/clients.png"
+    },
+    {
+      "id": "products",
+      "module": "produtos",
+      "title": "Produtos",
+      "crmRoute": "/products",
+      "printFile": "products.png",
+      "kind": "page",
+      "mdxPath": "/prints/products.png"
+    },
+    {
+      "id": "sales",
+      "module": "vendas",
+      "title": "Vendas",
+      "crmRoute": "/sales",
+      "printFile": "sales.png",
+      "kind": "page",
+      "mdxPath": "/prints/sales.png"
+    },
+    {
+      "id": "auto",
+      "module": "automacao",
+      "title": "Automação",
+      "crmRoute": "/auto",
+      "printFile": "auto.png",
+      "kind": "page",
+      "mdxPath": "/prints/auto.png"
+    },
+    {
+      "id": "setup-profile",
+      "module": "configuracao",
+      "title": "Perfil (Setup)",
+      "crmRoute": "/setup?tab=profile",
+      "printFile": "setup-profile.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-profile.png"
+    },
+    {
+      "id": "setup-operation",
+      "module": "configuracao",
+      "title": "Operação (Setup)",
+      "crmRoute": "/setup?tab=operation",
+      "printFile": "setup-operation.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-operation.png"
+    },
+    {
+      "id": "setup-transactions",
+      "module": "configuracao",
+      "title": "Transações (Setup)",
+      "crmRoute": "/setup?tab=transactions",
+      "printFile": "setup-transactions.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-transactions.png"
+    },
+    {
+      "id": "setup-users",
+      "module": "configuracao",
+      "title": "Usuários (Setup)",
+      "crmRoute": "/setup?tab=users",
+      "printFile": "setup-users.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-users.png"
+    },
+    {
+      "id": "setup-devices",
+      "module": "configuracao",
+      "title": "Dispositivos (Setup)",
+      "crmRoute": "/setup?tab=devices",
+      "printFile": "setup-devices.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-devices.png"
+    },
+    {
+      "id": "setup-roles",
+      "module": "configuracao",
+      "title": "Acessos (Setup)",
+      "crmRoute": "/setup?tab=SETUP_ROLES",
+      "printFile": "setup-roles.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-roles.png"
+    },
+    {
+      "id": "setup-activity-types",
+      "module": "configuracao",
+      "title": "Tipos de atividade (Setup)",
+      "crmRoute": "/setup?tab=SETUP_ACTIVITYTYPES",
+      "printFile": "setup-activity-types.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-activity-types.png"
+    },
+    {
+      "id": "setup-booking-links",
+      "module": "configuracao",
+      "title": "Links de agendamento (Setup)",
+      "crmRoute": "/setup?tab=booking-types",
+      "printFile": "setup-booking-links.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-booking-links.png"
+    },
+    {
+      "id": "setup-user-tokens",
+      "module": "configuracao",
+      "title": "Chaves API (Setup)",
+      "crmRoute": "/setup?tab=user-tokens",
+      "printFile": "setup-user-tokens.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-user-tokens.png"
+    }
+  ]
+}
