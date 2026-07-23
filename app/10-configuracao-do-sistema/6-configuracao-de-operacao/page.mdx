@@ -7,7 +7,7 @@ import { Callout } from 'nextra/components'
 
 # Configuração de Operação
 
-A aba **Operação** reúne preferências que valem para toda a operação (tenant), independentemente do funil ou origem de leads.
+A aba **Operação** é o painel da operação ativa: resumo do tenant, inscrição/planos, pagamentos, créditos e preferências que valem para todo o ambiente (independentemente do funil ou origem).
 
 <img src="/prints/setup-operation.png" alt="Tela de configuração de operação no setup" style={{ borderRadius: '0.5rem' }} />
 
@@ -16,9 +16,17 @@ A aba **Operação** reúne preferências que valem para toda a operação (tena
 1. Abra **Configuração** no menu.
 2. Selecione a aba **Operação**.
 
+## O que aparece na tela
+
+- **Resumo:** nome da operação, data de criação, status (trial, assinatura, assistente) e indicadores de usuários / quantidade cobrada / vagas.
+- **Inscrição e plano:** detalhes do trial, plano CRM Profissional e pacote do assistente.
+- **Pagamentos:** links para assinar o plano por usuário (mensal ou anual) e o assistente inteligente.
+- **Créditos:** saldo e compra de pacotes de créditos (o histórico continua na aba **Transações**).
+- **Configurações:** preferências operacionais, como atribuição automática de leads.
+
 ## Atribuição automática de leads
 
-O principal ajuste disponível é o interruptor **Atribuir automaticamente o usuário criador ao cadastrar lead**:
+O interruptor **Atribuir automaticamente o usuário criador ao cadastrar lead**:
 
 - **Ativado:** leads criados manualmente (cadastro único) ficam atribuídos a quem os cadastrou.
 - **Desativado:** novos leads entram sem responsável definido até alguém assumi-los.
@@ -33,6 +41,8 @@ O principal ajuste disponível é o interruptor **Atribuir automaticamente o usu
 2. Clique em **Salvar** quando o botão estiver habilitado.
 3. O botão exibe **Salvo** após a confirmação.
 
+As seções de resumo, pagamentos e créditos permanecem visíveis mesmo se você tiver apenas permissão de leitura.
+
 ## Permissões
 
-Somente usuários com permissão de escrita em **Configuração → Operação** podem alterar e salvar essas opções.
+Somente usuários com permissão de escrita em **Configuração → Operação** podem alterar e salvar as preferências operacionais. Proprietários da operação têm acesso completo.
