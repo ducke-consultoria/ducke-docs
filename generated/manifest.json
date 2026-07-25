@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-07-23T03:12:17.424Z",
+  "capturedAt": "2026-07-25T20:39:40.672Z",
   "prints": [
     {
       "id": "sign",
@@ -97,7 +97,7 @@
       "title": "Agendamentos",
       "crmRoute": "/bookings",
       "printFile": "bookings.png",
-      "kind": "page",
+      "kind": "bookings-board",
       "mdxPath": "/prints/bookings.png"
     },
     {
