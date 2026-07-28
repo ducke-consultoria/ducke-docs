@@ -1,0 +1,47 @@
+---
+title: 'Configurar tarefas'
+order: 1
+---
+
+import { Callout } from 'nextra/components'
+
+# Configurar tarefas no funil
+
+As tarefas são definidas **por estágio**, na configuração da origem. Cada estágio pode ter nenhuma, uma ou várias tarefas, em qualquer ordem.
+
+## Abrir a configuração da origem
+
+1. Na tela de **Leads**, use a barra lateral de grupos e origens.
+2. Passe o mouse sobre a origem desejada e clique no ícone de **configurar origem** (lápis).
+3. Abra a aba **Estágios**.
+
+## Adicionar tarefas a um estágio
+
+1. No estágio desejado, clique em **Configurar estágio**.
+2. Na seção **Tarefas do checklist**, adicione as tarefas que o time deve concluir nesse estágio.
+3. Preencha a **descrição** de cada tarefa (tarefas vazias impedem salvar).
+4. Remova ou reordene conforme a rotina do time.
+5. Clique em **Aplicar alterações** e depois em **Salvar pipeline** na aba Estágios.
+
+<Callout type="info">
+  Só aparece checklist na ficha do lead se o estágio atual tiver pelo menos uma tarefa salva. Estágios sem tarefas continuam funcionando normalmente no Kanban.
+</Callout>
+
+## Avanço automático
+
+Na mesma tela de configurar estágio você pode ativar **Avançar ao concluir todas as tarefas** e escolher o estágio de destino.
+
+- Com a opção ativa: ao marcar a **última** tarefa pendente, o lead muda automaticamente para o estágio escolhido.
+- Sem a opção (ou em **Permanecer neste estágio**): o checklist fica 100% concluído e o lead permanece onde está.
+
+## Boas práticas
+
+- Escreva tarefas em linguagem de ação (“Enviar proposta”, “Confirmar interesse”).
+- Mantenha o checklist curto o suficiente para o dia a dia — o painel rola se houver muitas itens.
+- Use o avanço automático só quando a conclusão das tarefas realmente significar “pronto para o próximo estágio”.
+- Ao editar tarefas de um estágio que já tem leads, novas tarefas aparecem desmarcadas na próxima abertura da ficha.
+
+## Próximos passos
+
+- [Usar o checklist no lead](/3-gestao-de-leads/4-tarefas-da-etapa/2-checklist-do-lead)
+- [Visão geral de leads](/3-gestao-de-leads/0-visao-geral)

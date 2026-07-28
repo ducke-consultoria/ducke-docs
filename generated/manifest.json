@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-07-25T20:39:40.672Z",
+  "capturedAt": "2026-07-28T13:32:34.185Z",
   "prints": [
     {
       "id": "sign",
@@ -72,6 +72,15 @@
       "printFile": "leads-painel.png",
       "kind": "leads-panel",
       "mdxPath": "/prints/leads-painel.png"
+    },
+    {
+      "id": "leads-bulk-bar",
+      "module": "leads",
+      "title": "Ações em massa (lista)",
+      "crmRoute": "/leads",
+      "printFile": "leads-acoes-em-massa.png",
+      "kind": "leads-bulk-bar",
+      "mdxPath": "/prints/leads-acoes-em-massa.png"
     },
     {
       "id": "chat",

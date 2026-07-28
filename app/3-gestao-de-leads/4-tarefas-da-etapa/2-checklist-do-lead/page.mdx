@@ -1,0 +1,50 @@
+---
+title: 'Checklist no lead'
+order: 2
+---
+
+import { Callout } from 'nextra/components'
+
+# Usar o checklist no lead
+
+Quando o estágio atual do lead tem tarefas configuradas, a ficha mostra um painel de **Tarefas** à esquerda dos dados do negócio.
+
+<img src="/prints/leads-painel.png" alt="Checklist de tarefas aberto na ficha do lead" style={{ borderRadius: '0.5rem' }} />
+
+## Abrir e fechar o painel
+
+- O botão de tarefas mostra o progresso (por exemplo **3/5**) e permite **mostrar** ou **ocultar** o checklist.
+- No **chat**, o painel começa **fechado** para economizar espaço; abra-o quando for marcar itens.
+- No quadro / modal do lead, o painel pode abrir expandido quando houver tarefas.
+
+Se o estágio não tiver tarefas, o botão e o painel **não são exibidos**.
+
+## Marcar tarefas
+
+1. Abra a ficha do lead (card no Kanban, modal ou painel do chat).
+2. Expanda **Tarefas**, se estiver oculto.
+3. Marque ou desmarque cada item do checklist.
+
+As alterações são salvas automaticamente após um curto intervalo. Você verá um aviso de sucesso (por exemplo **Tarefa atualizada**). Conclusões também entram no **histórico** do lead.
+
+<Callout type="warning">
+  Se o estágio tiver avanço automático e você concluir a última tarefa, o lead muda de estágio na hora. Confira a mensagem de confirmação com o nome do estágio de destino.
+</Callout>
+
+## Textos longos e largura do painel
+
+- Cada tarefa aparece em uma linha própria, com espaço para ler descrições em mais de uma linha.
+- Com o painel aberto, arraste a **barra vertical** entre o checklist e os dados do lead para deixar as tarefas mais largas ou dar mais espaço às abas.
+- No chat, você também pode ajustar a largura da coluna do lead em relação às mensagens; essa preferência é lembrada separadamente da preferência do modal do lead.
+
+## Mudança de estágio
+
+- O checklist mostra **somente** as tarefas do estágio atual.
+- Se você mover o lead para outro estágio, o checklist muda para as tarefas daquele estágio.
+- Se o lead voltar a um estágio já visitado, o progresso anterior daquele estágio é reaproveitado.
+
+## Próximos passos
+
+- [Configurar tarefas no funil](/3-gestao-de-leads/4-tarefas-da-etapa/1-configurar-tarefas)
+- [Histórico do lead](/3-gestao-de-leads/3-organizacao-de-leads/3-historico)
+- [Central de chat](/8-integracao-de-comunicacao/0-central-de-chat)
