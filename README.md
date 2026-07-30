@@ -19,4 +19,10 @@ npm install
 npm run dev
 ```
 
-Production build: `npm run build`
+Production build (also generates the Pagefind search index via `postbuild`):
+
+```bash
+npm run build
+```
+
+Search only works after a production build — Pagefind indexes the generated HTML, not MDX. To test search locally, run `npm run build` and then `npm run start` (or `npm run dev` after the index exists in `public/_pagefind`).
