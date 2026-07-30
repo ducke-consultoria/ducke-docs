@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-07-29T22:39:03.313Z",
+  "capturedAt": "2026-07-30T02:00:58.796Z",
   "prints": [
     {
       "id": "sign",
@@ -180,6 +180,15 @@
       "printFile": "report-close-or-lost-average-time-by-user.png",
       "kind": "report-view",
       "mdxPath": "/prints/report-close-or-lost-average-time-by-user.png"
+    },
+    {
+      "id": "report-average-time-by-stage",
+      "module": "relatorios",
+      "title": "Tempo Médio por Etapa",
+      "crmRoute": "/reports",
+      "printFile": "report-average-time-by-stage.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-average-time-by-stage.png"
     },
     {
       "id": "report-lead-transition-by-stage",
