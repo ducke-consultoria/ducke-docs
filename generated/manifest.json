@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-07-30T02:00:58.796Z",
+  "capturedAt": "2026-07-30T13:55:05.963Z",
   "prints": [
     {
       "id": "sign",
@@ -189,6 +189,15 @@
       "printFile": "report-average-time-by-stage.png",
       "kind": "report-view",
       "mdxPath": "/prints/report-average-time-by-stage.png"
+    },
+    {
+      "id": "report-origin-stage-task-progress",
+      "module": "relatorios",
+      "title": "Andamento dos Passos da Origem",
+      "crmRoute": "/reports",
+      "printFile": "report-origin-stage-task-progress.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-origin-stage-task-progress.png"
     },
     {
       "id": "report-lead-transition-by-stage",
