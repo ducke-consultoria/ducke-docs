@@ -23,12 +23,36 @@ Se o estágio não tiver tarefas, o botão e o painel **não são exibidos**.
 
 1. Abra a ficha do lead (card no Kanban, modal ou painel do chat).
 2. Expanda **Tarefas**, se estiver oculto.
-3. Marque ou desmarque cada item do checklist.
+3. Para tarefas **sem ação**, marque ou desmarque a caixinha do checklist.
 
 As alterações são salvas automaticamente após um curto intervalo. Você verá um aviso de sucesso (por exemplo **Tarefa atualizada**). Conclusões também entram no **histórico** do lead.
 
 <Callout type="warning">
   Se o estágio tiver avanço automático e você concluir a última tarefa, o lead muda de estágio na hora. Confira a mensagem de confirmação com o nome do estágio de destino.
+</Callout>
+
+## Botões de ação nas tarefas
+
+Tarefas configuradas com uma ação mostram um **botão ao lado da caixinha** enquanto estão pendentes:
+
+- **Registrar nota** — abre a janela de nota já vinculada à tarefa.
+- **Anexar arquivo** — abre a janela de anexos já vinculada à tarefa.
+- **Enviar template** — envia o template de WhatsApp configurado para o contato do lead, em um clique.
+
+Ao concluir a ação com sucesso (nota salva, arquivo enviado ou template disparado), a tarefa é **marcada automaticamente** — inclusive com avanço de estágio, se for a última pendente. Se você fechar a janela sem salvar, ou o envio falhar, a tarefa continua pendente.
+
+O botão desaparece quando a tarefa é concluída, e fica indisponível enquanto o checklist está salvando.
+
+<Callout type="warning">
+  Tarefas com ação (**nota**, **anexo** ou **enviar template**) **não** podem ser concluídas só marcando a caixinha. O sistema avisa que é preciso concluir a ação primeiro. Você ainda pode **desmarcar** uma tarefa já concluída pela caixinha, se precisar reabrir o passo.
+</Callout>
+
+<Callout type="info">
+  Notas e anexos criados pelos botões de ação ficam vinculados à tarefa. Os botões de **nota** e **anexo** da barra superior do lead continuam funcionando sem vínculo com nenhuma tarefa.
+</Callout>
+
+<Callout type="warning">
+  O envio de template precisa de um **telefone de contato** no lead e de dispositivo/template válidos. Sem isso, aparece uma mensagem de erro e a tarefa não é concluída.
 </Callout>
 
 ## Textos longos e largura do painel
