@@ -5,25 +5,115 @@ order: 5
 
 # Relatórios
 
-A área de **Relatórios** permite extrair visões analíticas dos dados do CRM — leads, vendas, atividades e outros indicadores configurados para sua operação.
+A área de **Relatórios** permite extrair visões analíticas dos dados do CRM — oportunidades, vendas, agenda e outros indicadores configurados para sua operação.
 
 <img src="/prints/reports.png" alt="Tela de relatórios do Ducke CRM" style={{ borderRadius: '0.5rem' }} />
 
 ## O que você pode fazer
 
-- Gerar relatórios pré-configurados ou personalizados.
-- Filtrar por período, origem, responsável ou status.
-- Exportar resultados para análise externa, quando disponível.
+- Gerar relatórios pré-configurados por categoria (Oportunidades, Vendas, Agenda).
+- Filtrar por período, grupo, origem, responsável, tags ou status.
+- Exportar o resultado atual para XLSX.
 
 ## Como usar
 
 1. Acesse **Relatórios** no menu lateral.
-2. Escolha o tipo de relatório desejado.
-3. Defina filtros e intervalo de datas.
-4. Execute e visualize ou exporte o resultado.
+2. Escolha a categoria e o tipo de relatório desejado.
+3. Defina filtros e intervalo de datas (quando o relatório usa o período).
+4. Visualize a tabela ou exporte o resultado.
+
+## Filtros de grupo e origem
+
+Na maioria dos relatórios de oportunidades:
+
+- **Grupo** sozinho já restringe os dados a todas as origens daquele grupo.
+- **Origem** é opcional: escolha um grupo primeiro para listar as origens disponíveis, depois refine se quiser uma origem específica.
+
+Indicadores de **Atendimento** (produtividade, primeira resposta, taxa de retorno) ficam no **Dashboard → Atendimento**, não nesta tela de Relatórios.
+
+## Oportunidades
+
+### Desempenho de Oportunidades
+
+Taxa de conversão agregada por cidade, segmento, faturamento, origem ou grupo.
+
+<img src="/prints/report-lead-conversion-by.png" alt="Relatório Desempenho de Oportunidades" style={{ borderRadius: '0.5rem' }} />
+
+- Use o filtro **Por** para escolher a dimensão da tabela.
+- Combine com grupo, origem e tags quando precisar restringir o escopo.
+
+### Desempenho de Usuário
+
+Conversão e perda por usuário (e equipe, quando o filtro de equipe estiver ativo), incluindo a coluna de SLA atrasado.
+
+<img src="/prints/report-lead-conversion-by-user.png" alt="Relatório Desempenho de Usuário" style={{ borderRadius: '0.5rem' }} />
+
+### Oportunidades atrasadas por usuário
+
+Lista oportunidades fora do SLA do estágio (dias sem interação ≥ dias configurados no estágio).
+
+<img src="/prints/report-overdue-leads-by-user.png" alt="Relatório Oportunidades Atrasadas por Usuário" style={{ borderRadius: '0.5rem' }} />
+
+- **Usuário** é opcional. Sem usuário, lista todas as atrasadas no escopo (grupo/origem/tags/estado). Com usuário, usa a mesma regra do board: atribuídas a esse usuário **ou sem responsável**.
+- Sem responsável aparece como **Sem responsável** na coluna de usuário.
+- **Grupo** sozinho já restringe; **origem** é opcional após escolher o grupo.
+- **Estado** (aberta / ganha / perdida): padrão **OPEN** (abertas).
+- O período de datas é enviado pela tela, mas **não** limita quais oportunidades entram no atraso (snapshot atual).
+
+## Vendas
+
+### Motivos de Perda por Usuário
+
+Motivos de perda agrupados por usuário, com a quantidade de oportunidades perdidas por motivo.
+
+<img src="/prints/report-lead-loss-reason-by-user.png" alt="Relatório Motivos de Perda por Usuário" style={{ borderRadius: '0.5rem' }} />
+
+### Tempo Médio de Ganho/Perda por Usuário
+
+Tempo médio (em dias) entre a criação e o ganho ou a perda da oportunidade, por usuário.
+
+<img src="/prints/report-close-or-lost-average-time-by-user.png" alt="Relatório Tempo Médio de Ganho/Perda por Usuário" style={{ borderRadius: '0.5rem' }} />
+
+### Transição de Oportunidades por Estágio
+
+Movimentações entre estágios do funil no período selecionado.
+
+<img src="/prints/report-lead-transition-by-stage.png" alt="Relatório Transição de Oportunidades por Estágio" style={{ borderRadius: '0.5rem' }} />
+
+### Transição de Oportunidades por Estado
+
+Movimentações entre estados (aberta, ganha, perdida) no período.
+
+<img src="/prints/report-lead-transition-by-status.png" alt="Relatório Transição de Oportunidades por Estado" style={{ borderRadius: '0.5rem' }} />
+
+## Agenda
+
+### Agendamento de Oportunidades por Grupo
+
+Contagem de agendamentos finalizados, abertos e cancelados por grupo de oportunidades.
+
+<img src="/prints/report-leads-with-bookings-by-groups.png" alt="Relatório Agendamento de Oportunidades por Grupo" style={{ borderRadius: '0.5rem' }} />
+
+### Agendamento de Oportunidades por Origem
+
+Mesma visão de agendamentos, agregada por origem. Escolha o grupo primeiro para listar as origens.
+
+<img src="/prints/report-leads-with-bookings-by-origins.png" alt="Relatório Agendamento de Oportunidades por Origem" style={{ borderRadius: '0.5rem' }} />
+
+### Agendamentos por Usuário
+
+Agendamentos abertos, vencidos e por vencer agrupados por usuário e equipe.
+
+<img src="/prints/report-open-bookings.png" alt="Relatório Agendamentos por Usuário" style={{ borderRadius: '0.5rem' }} />
+
+### Oportunidades sem Agendamentos recentes
+
+Oportunidades que não tiveram agendamentos recentes — útil para priorizar follow-up.
+
+<img src="/prints/report-leads-without-booking.png" alt="Relatório Oportunidades sem Agendamentos recentes" style={{ borderRadius: '0.5rem' }} />
 
 ## Boas práticas
 
-- Defina o período antes de gerar relatórios extensos.
+- Defina o período antes de gerar relatórios extensos (quando o relatório usa o intervalo).
 - Combine relatórios com o **Dashboard** para visão operacional e analítica.
 - Documente critérios de filtro usados em reuniões de equipe para manter consistência.

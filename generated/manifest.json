@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-07-28T13:32:34.185Z",
+  "capturedAt": "2026-07-29T22:39:03.313Z",
   "prints": [
     {
       "id": "sign",
@@ -135,6 +135,105 @@
       "printFile": "reports.png",
       "kind": "page",
       "mdxPath": "/prints/reports.png"
+    },
+    {
+      "id": "report-lead-conversion-by",
+      "module": "relatorios",
+      "title": "Desempenho de Oportunidades",
+      "crmRoute": "/reports",
+      "printFile": "report-lead-conversion-by.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-lead-conversion-by.png"
+    },
+    {
+      "id": "report-lead-conversion-by-user",
+      "module": "relatorios",
+      "title": "Desempenho de Usuário",
+      "crmRoute": "/reports",
+      "printFile": "report-lead-conversion-by-user.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-lead-conversion-by-user.png"
+    },
+    {
+      "id": "report-overdue-leads-by-user",
+      "module": "relatorios",
+      "title": "Oportunidades Atrasadas por Usuário",
+      "crmRoute": "/reports",
+      "printFile": "report-overdue-leads-by-user.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-overdue-leads-by-user.png"
+    },
+    {
+      "id": "report-lead-loss-reason-by-user",
+      "module": "relatorios",
+      "title": "Motivos de Perda por Usuário",
+      "crmRoute": "/reports",
+      "printFile": "report-lead-loss-reason-by-user.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-lead-loss-reason-by-user.png"
+    },
+    {
+      "id": "report-close-or-lost-average-time-by-user",
+      "module": "relatorios",
+      "title": "Tempo Médio de Ganho/Perda por Usuário",
+      "crmRoute": "/reports",
+      "printFile": "report-close-or-lost-average-time-by-user.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-close-or-lost-average-time-by-user.png"
+    },
+    {
+      "id": "report-lead-transition-by-stage",
+      "module": "relatorios",
+      "title": "Transição de Oportunidades por Estágio",
+      "crmRoute": "/reports",
+      "printFile": "report-lead-transition-by-stage.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-lead-transition-by-stage.png"
+    },
+    {
+      "id": "report-lead-transition-by-status",
+      "module": "relatorios",
+      "title": "Transição de Oportunidades por Estado",
+      "crmRoute": "/reports",
+      "printFile": "report-lead-transition-by-status.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-lead-transition-by-status.png"
+    },
+    {
+      "id": "report-leads-with-bookings-by-groups",
+      "module": "relatorios",
+      "title": "Agendamento de Oportunidades por Grupo",
+      "crmRoute": "/reports",
+      "printFile": "report-leads-with-bookings-by-groups.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-leads-with-bookings-by-groups.png"
+    },
+    {
+      "id": "report-leads-with-bookings-by-origins",
+      "module": "relatorios",
+      "title": "Agendamento de Oportunidades por Origem",
+      "crmRoute": "/reports",
+      "printFile": "report-leads-with-bookings-by-origins.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-leads-with-bookings-by-origins.png"
+    },
+    {
+      "id": "report-open-bookings",
+      "module": "relatorios",
+      "title": "Agendamentos por Usuário",
+      "crmRoute": "/reports",
+      "printFile": "report-open-bookings.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-open-bookings.png"
+    },
+    {
+      "id": "report-leads-without-booking",
+      "module": "relatorios",
+      "title": "Oportunidades sem Agendamentos recentes",
+      "crmRoute": "/reports",
+      "printFile": "report-leads-without-booking.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-leads-without-booking.png"
     },
     {
       "id": "assistants",
