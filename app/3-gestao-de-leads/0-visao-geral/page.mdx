@@ -5,9 +5,9 @@ order: 0
 
 # Gestão de Leads — Visão Geral
 
-A área de **Leads** é o coração do CRM: aqui você acompanha oportunidades no quadro Kanban ou em lista, filtra por status, tags e responsáveis, busca por texto (nome, telefone ou documento) e cria novos leads.
+A área de **Oportunidades** é o coração do CRM: aqui você acompanha o funil no quadro Kanban ou em lista, filtra por status, tags e responsáveis, busca por texto (nome, telefone ou documento) e cria novas oportunidades.
 
-<img src="/prints/lista-leads.png" alt="Tela de leads com quadro Kanban" style={{ borderRadius: '0.5rem' }} />
+<img src="/prints/lista-leads.png" alt="Tela de oportunidades com quadro Kanban e barra de comando" style={{ borderRadius: '0.5rem' }} />
 
 ## Layout da tela
 
@@ -15,36 +15,42 @@ A área de **Leads** é o coração do CRM: aqui você acompanha oportunidades n
 
 À esquerda ficam os **grupos** e **origens** da operação. Cada origem representa um funil de vendas com seus próprios estágios. Selecione uma origem para carregar o quadro correspondente.
 
-### Área principal
+### Barra de comando (área principal)
 
-No centro você alterna entre:
+No topo da área principal, numa única faixa, você encontra:
 
-- **Quadro:** colunas por estágio, com cards arrastáveis.
-- **Lista:** tabela com todos os leads da origem selecionada.
+- **Nome da origem** e a contagem de oportunidades
+- Alternância **Quadro** / **Lista**
+- Atalhos para **ordenar**, **filtrar**, **exportar** e **criar oportunidade**
 
-Acima do quadro ou da lista há atalhos para **ordenar**, **filtrar**, **exportar** e **criar lead**.
+Quando há filtros além do padrão (seu usuário + status aberto), o **badge** no botão de filtros indica quantos estão ativos.
+
+### Quadro e lista
+
+- **Quadro:** colunas por estágio, com cabeçalho fixo, cards arrastáveis e estado vazio quando não há oportunidades na etapa.
+- **Lista:** tabela com todas as oportunidades da origem selecionada.
 
 ## Ações principais
 
 | Ação | Onde encontrar |
 |------|----------------|
-| Criar lead | Botão **+** na barra superior |
-| Filtrar por status, tags ou usuário | Ícone de filtros |
-| Buscar por nome, telefone ou documento (CPF/CNPJ) | Campo de busca de texto no quadro ou na lista (aceita telefone com ou sem máscara) |
-| Exportar planilha | Botão **Exportar oportunidades** — veja [exportação](/3-gestao-de-leads/1-criacao-de-leads/3-exportacao) |
+| Criar oportunidade | Botão **+ Oportunidade** na barra de comando |
+| Filtrar por status, tags ou usuário | Ícone de filtros (badge com a quantidade ativa) |
+| Buscar por nome, telefone ou documento (CPF/CNPJ) | Campo de busca no painel de filtros (aceita telefone com ou sem máscara) |
+| Exportar planilha | Botão **Exportar** — veja [exportação](/3-gestao-de-leads/1-criacao-de-leads/3-exportacao) |
 | Ações em massa (lista) | Checkbox na lista → barra inferior — veja [ações em massa](/3-gestao-de-leads/3-organizacao-de-leads/4-acoes-em-massa) |
 | Criar grupo ou origem | Barra lateral |
 
-## Ficha do lead
+## Ficha da oportunidade
 
-Clique em um card no quadro para abrir a ficha com dados, contatos, histórico e, quando configurado, o checklist de tarefas. Detalhes em [visualizar e editar lead](/3-gestao-de-leads/3-organizacao-de-leads/0-visualizar-e-editar).
+Clique em um card no quadro para abrir a ficha com identidade, estágio, ações rápidas, dados, contatos, histórico e, quando configurado, o checklist de tarefas. Detalhes em [visualizar e editar lead](/3-gestao-de-leads/3-organizacao-de-leads/0-visualizar-e-editar).
 
-<img src="/prints/leads-painel.png" alt="Painel de detalhes de um lead" style={{ borderRadius: '0.5rem' }} />
+<img src="/prints/leads-painel.png" alt="Painel de detalhes de uma oportunidade" style={{ borderRadius: '0.5rem' }} />
 
 ## Dicas
 
-- Mantenha pelo menos um grupo e uma origem configurados antes de cadastrar leads.
-- Use a aba **Lista** para buscas rápidas e a **Quadro** para acompanhar o funil visualmente. Digite o telefone com ou sem formatação — a busca ignora pontuação e espaços.
+- Mantenha pelo menos um grupo e uma origem configurados antes de cadastrar oportunidades.
+- Use a aba **Lista** para buscas rápidas e o **Quadro** para acompanhar o funil visualmente. Digite o telefone com ou sem formatação — a busca ignora pontuação e espaços.
 - Combine filtros de tags com estágios para segmentar campanhas de follow-up.
 
 ## Próximos passos
