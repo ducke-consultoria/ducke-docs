@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-07-31T03:04:15.733Z",
+  "capturedAt": "2026-08-03T19:36:06.643Z",
   "prints": [
     {
       "id": "sign",
@@ -396,6 +396,15 @@
       "printFile": "setup-user-tokens.png",
       "kind": "page",
       "mdxPath": "/prints/setup-user-tokens.png"
+    },
+    {
+      "id": "ai-support-chat",
+      "module": "suporte",
+      "title": "Assistente de suporte",
+      "crmRoute": "/leads?aiSupport=1",
+      "printFile": "ai-support-chat.png",
+      "kind": "ai-support-drawer",
+      "mdxPath": "/prints/ai-support-chat.png"
     }
   ]
 }
