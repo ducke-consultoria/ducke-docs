@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-03T19:36:06.643Z",
+  "capturedAt": "2026-08-12T12:57:44.426Z",
   "prints": [
     {
       "id": "sign",
@@ -400,7 +400,7 @@
     {
       "id": "ai-support-chat",
       "module": "suporte",
-      "title": "Assistente de suporte",
+      "title": "Ducke AI",
       "crmRoute": "/leads?aiSupport=1",
       "printFile": "ai-support-chat.png",
       "kind": "ai-support-drawer",
