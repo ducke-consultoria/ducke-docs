@@ -7,7 +7,7 @@ import { Callout } from 'nextra/components'
 
 # Chaves de Acesso API
 
-A aba **Chaves de Acesso API** permite criar tokens para integrações externas que consomem a API do Ducke CRM em nome da operação.
+A aba **Chaves de Acesso API** permite criar tokens para integrações externas que consomem a API do Ducke CRM em nome da operação. Novas chaves usam o prefixo `ducke_` (ex.: `ducke_a1b2…`).
 
 <img src="/prints/setup-user-tokens.png" alt="Tela de chaves de acesso API no setup" style={{ borderRadius: '0.5rem' }} />
 
@@ -18,21 +18,23 @@ A aba **Chaves de Acesso API** permite criar tokens para integrações externas 
 
 ## Criar uma chave
 
-1. Clique em **Criar chave** (botão no topo).
+1. Clique em **Adicionar Chaves de Acesso API** (botão no topo).
 2. Informe um **nome** descritivo (ex.: *Integração ERP*, *Webhook interno*).
-3. Confirme — o token completo é exibido **uma vez**; copie e guarde em local seguro.
+3. Confirme — o token completo (com prefixo `ducke_`) é exibido **uma única vez**.
+4. Use **Copiar** no diálogo, guarde em local seguro e confirme **Já copiei**.
 
 <Callout type="warning">
-  Trate cada chave como senha. Não compartilhe em chats públicos nem commite em repositórios.
+  Trate cada chave como senha. Depois de fechar o diálogo, o secret completo não pode ser recuperado. Se perder a chave, exclua-a e crie outra. Não compartilhe em chats públicos nem commite em repositórios.
 </Callout>
 
 ## Gerenciar chaves existentes
 
-A tabela lista **Nome**, trecho mascarado da **Chave de Acesso** e **Ações**:
+A tabela lista **Nome**, preview mascarado da **Chave de Acesso** (início e fim, ex.: `ducke_abcd…wxyz`) e **Ações**:
 
-- **Copiar:** cola o token na área de transferência.
 - **Editar:** altera o nome identificador.
 - **Excluir:** revoga o acesso imediatamente.
+
+Não há botão para copiar o secret completo a partir da lista — apenas o preview.
 
 ## Quando usar
 
