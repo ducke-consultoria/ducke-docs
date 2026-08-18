@@ -26,11 +26,20 @@ O Ducke CRM oferece recursos avançados para gerenciar suas campanhas de marketi
 
 ### Estrutura
 
-- **Canais**: Seleção de canais de comunicação
-- **Conteúdo**: Materiais da campanha
-- **Sequência**: Fluxo de ações
-- **Métricas**: Indicadores de sucesso
-- **Automações**: Regras e triggers
+- **Canais**: WhatsApp, e-mail ou SMS
+- **Dispositivo e template**: obrigatórios no WhatsApp
+- **Cabeçalho de mídia (WhatsApp)**: se o template tiver HEADER IMAGE, VIDEO ou DOCUMENT, escolha **usar a mídia de exemplo do Meta** ou **enviar um arquivo novo**
+- **Sequência**: fluxo de ações após o disparo (estágio de destino)
+
+### Cabeçalho de imagem, vídeo ou documento (WhatsApp)
+
+1. Na criação da campanha, selecione o dispositivo WhatsApp e um **template aprovado**.
+2. Se o template exigir mídia no cabeçalho:
+   - **Usar mídia do template** — reutiliza o exemplo aprovado no Meta.
+   - **Enviar nova mídia** — escolha o arquivo na tela; o CRM envia o arquivo junto com a criação da campanha.
+3. Limites de tamanho: **imagem 5 MB**, **vídeo 16 MB**, **documento 100 MB**. Vídeos e imagens cabem no pedido de criação; documentos muito grandes (acima de ~18 MB após o envio) devem ser reduzidos.
+
+Se a preparação da mídia falhar no envio, a campanha é desativada com mensagem de erro — o disparo não segue sem o cabeçalho.
 
 ## Execução
 
@@ -69,7 +78,7 @@ O Ducke CRM oferece recursos avançados para gerenciar suas campanhas de marketi
 - **Exportação**: Dados para análise externa
 
 <Callout type="info">
-Utilize os dados de análise para melhorar continuamente suas campanhas e alcançar melhores resultados.
+Para templates WhatsApp com cabeçalho de **imagem**, **vídeo** ou **documento**, envie o arquivo na criação da campanha ou use a mídia de exemplo aprovada no Meta. Limites: imagem 5 MB, vídeo 16 MB, documento 100 MB.
 </Callout>
 
 ## Dicas para Gestão
