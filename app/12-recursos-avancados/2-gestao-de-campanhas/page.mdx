@@ -45,7 +45,7 @@ O filtro de usuário segue a mesma regra do quadro: leads atribuídas àquele us
 
 1. Na criação da campanha, selecione o dispositivo WhatsApp e um **template aprovado**.
 2. Se o template exigir mídia no cabeçalho:
-   - **Usar mídia do template** — reutiliza o exemplo aprovado no Meta.
+   - **Usar mídia do template** — reutiliza o exemplo aprovado no Meta (download + upload para media id no envio).
    - **Enviar nova mídia** — escolha o arquivo na tela; o CRM envia o arquivo junto com a criação da campanha.
 3. Limites de tamanho: **imagem 5 MB**, **vídeo 16 MB**, **documento 100 MB**. Vídeos e imagens cabem no pedido de criação; documentos muito grandes (acima de ~18 MB após o envio) devem ser reduzidos.
 
@@ -88,7 +88,7 @@ Se a preparação da mídia falhar no envio, a campanha é desativada com mensag
 - **Exportação**: Dados para análise externa
 
 <Callout type="info">
-Para templates WhatsApp com cabeçalho de **imagem**, **vídeo** ou **documento**, você pode anexar um arquivo novo na criação da campanha (o CRM faz upload e usa o media id do WhatsApp) ou usar a **mídia de exemplo** já aprovada no Meta — nesse caso o envio usa a URL de exemplo do template (`link`), sem precisar escolher outro arquivo. Limites do arquivo anexado: imagem 5 MB, vídeo 16 MB, documento 100 MB.
+Para templates WhatsApp com cabeçalho de **imagem**, **vídeo** ou **documento**, você pode anexar um arquivo novo na criação da campanha (o CRM faz upload e usa o media id do WhatsApp) ou usar a **mídia de exemplo** já aprovada no Meta — nesse caso o CRM baixa o exemplo, faz o upload na Cloud API e envia com o media id, sem precisar escolher outro arquivo. Limites do arquivo anexado: imagem 5 MB, vídeo 16 MB, documento 100 MB.
 </Callout>
 
 ## Dicas para Gestão
