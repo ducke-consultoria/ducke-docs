@@ -15,6 +15,8 @@ O Ducke CRM permite importar múltiplos leads de uma vez por planilha XLSX.
 2. No modal **Criar Oportunidade**, selecione a aba **Múltiplo**.
 3. Baixe o modelo de importação e preencha a planilha com:
    - Nome
+   - CPF/CNPJ (quando houver — usado para identificar a oportunidade na origem)
+   - Estágio
    - Telefone
    - E-mail
    - Outros campos opcionais do modelo
@@ -26,6 +28,13 @@ O Ducke CRM permite importar múltiplos leads de uma vez por planilha XLSX.
 3. Na aba **Múltiplo**, envie o arquivo em **Planilha XLSX**.
 4. Clique em **Importar Leads** e aguarde a conclusão.
 
+## Reimportação (mesmo documento na origem)
+
+Se a linha tiver **CPF/CNPJ** e já existir uma oportunidade com esse documento na **origem selecionada**, a importação **não cria um segundo lead**. Em vez disso, atualiza o **estágio** conforme a coluna de estágio da planilha.
+
+- Nome, status e demais campos da oportunidade **não** são substituídos nessa reimportação.
+- Contatos, tags e responsáveis da planilha continuam podendo ser adicionados como no fluxo atual.
+
 ## Dicas
 
 - Não há limite rígido de linhas por importação — milhares de leads podem ser carregados de uma vez.
@@ -33,12 +42,13 @@ O Ducke CRM permite importar múltiplos leads de uma vez por planilha XLSX.
   - Migração de outros sistemas
   - Extração de contatos do WhatsApp
   - Campanhas de remarketing
+  - Corrigir o estágio de oportunidades já existentes (via CPF/CNPJ + estágio)
 
 Mantenha um backup da planilha original antes da importação.
 
 ## Campos obrigatórios
 
-Consulte o modelo de importação — em geral, **nome** e **telefone** são essenciais para cada linha.
+Consulte o modelo de importação — em geral, **nome** e **estágio** são essenciais para cada linha. Para reimportar e mover estágio, inclua também o **CPF/CNPJ**.
 
 ## Próximos passos
 
