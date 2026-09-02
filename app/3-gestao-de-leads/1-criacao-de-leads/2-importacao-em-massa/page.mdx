@@ -3,58 +3,95 @@ title: 'Importação em Massa'
 order: 2
 ---
 
-# Importação em Massa de Leads
+# Importação em Massa de Oportunidades
 
-O Ducke CRM permite importar múltiplos leads de uma vez por planilha XLSX.
+Importe centenas ou milhares de oportunidades por **planilha XLSX, XLS ou CSV**. O fluxo usa um **assistente em etapas** e o processamento continua **em segundo plano** — você pode fechar o modal após confirmar.
 
-<img src="/prints/leads-importacao.png" alt="Modal de importação de leads por planilha" style={{ borderRadius: '0.5rem' }} />
+<img src="/prints/leads-importacao.png" alt="Assistente de importação de oportunidades (passo upload)" style={{ borderRadius: '0.5rem' }} />
 
-## Preparação
+## Formatos e limites
 
-1. Acesse **Leads** e clique no botão **Oportunidade**.
-2. No modal **Criar Oportunidade**, selecione a aba **Múltiplo**.
-3. Baixe o modelo de importação e preencha a planilha com:
-   - Nome
-   - CPF/CNPJ (quando houver — usado para identificar a oportunidade na origem)
-   - Estágio
-   - Telefone
-   - E-mail
-   - Outros campos opcionais do modelo
+- **Formatos:** `.xlsx`, `.xls`, `.csv`
+- **Tamanho máximo:** 50 MB por arquivo
+- **Delimitador CSV:** vírgula (`,`) ou ponto e vírgula (`;`) — escolha no passo de upload
+- **Modelos:** baixe XLSX ou CSV de exemplo no passo de upload (cabeçalhos compatíveis com exportação e aliases comuns)
 
-## Importação
+## Fluxo do assistente
 
-1. Acesse **Leads** no menu.
-2. Clique em **Oportunidade**.
-3. Na aba **Múltiplo**, envie o arquivo em **Planilha XLSX**.
-4. Clique em **Importar Leads** e aguarde a conclusão.
+1. **Leads** → botão **Oportunidade** → aba **Múltiplo**
+2. **Arquivo** — selecione ou arraste a planilha; opcionalmente ajuste o delimitador CSV
+3. **Mapeamento** — associe cada coluna da planilha a um campo do CRM (obrigatórios: **nome principal** e **estágio**). Colunas não mapeadas são ignoradas
 
-## Reimportação (mesmo documento na origem)
+<img src="/prints/leads-import-mapping.png" alt="Passo de mapeamento de colunas da planilha" style={{ borderRadius: '0.5rem' }} />
 
-Se a linha tiver **CPF/CNPJ** e já existir uma oportunidade com esse documento na **origem selecionada**, a importação **não cria um segundo lead**. Em vez disso, atualiza o **estágio** conforme a coluna de estágio da planilha.
+4. **Prévia** — revise amostra das linhas com as colunas mapeadas
 
-- Nome, status e demais campos da oportunidade **não** são substituídos nessa reimportação.
-- Contatos, tags e responsáveis da planilha continuam podendo ser adicionados como no fluxo atual.
+<img src="/prints/leads-import-preview.png" alt="Prévia das linhas mapeadas antes de confirmar" style={{ borderRadius: '0.5rem' }} />
+
+5. **Confirmar** — opcionalmente defina um **nome para a importação** (aparece em Configurações e nos filtros), escolha as políticas de merge e clique em **Iniciar importação**
+
+<img src="/prints/leads-import-confirm.png" alt="Passo de confirmação com políticas de merge" style={{ borderRadius: '0.5rem' }} />
+
+O nome sugerido vem do arquivo (sem extensão); você pode editar antes de enfileirar.
+
+Após confirmar, a importação entra na **fila**. O modal mostra o progresso e avisa que **você pode fechar a janela** — o processamento não para. Se a API reiniciar, jobs em andamento **retomam de onde pararam**, sem voltar para “na fila”.
+
+<img src="/prints/leads-import-iniciada.png" alt="Importação enfileirada com opção de fechar o modal" style={{ borderRadius: '0.5rem' }} />
+
+Acompanhe também em **[Configurações → Importações](/10-configuracao-do-sistema/11-importacoes-de-planilha)** (histórico, detalhes, linhas com erro).
+
+## Políticas na confirmação
+
+| Opção | Padrão | Comportamento |
+|--------|--------|----------------|
+| **Oportunidade existente (CPF/CNPJ)** | Atualizar campos mapeados | Se o documento já existir na origem, atualiza só o que foi mapeado; célula vazia não apaga dado existente |
+| | Somente criar | Ignora linhas cujo documento já existe |
+| | Falhar a linha | Marca erro se o documento já existir |
+| **Contatos** | Evitar duplicatas | Não cria contato repetido (mesmo telefone/e-mail no lead) |
+| | Sempre adicionar | Cria contato para cada coluna mapeada |
+| **Tags** | Adicionar | Une tags da planilha às existentes |
+| | Substituir | Troca tags do lead pelas da linha mapeada |
+| **Ignorar outras origens** | Ativo | Busca CPF/CNPJ só na origem selecionada |
+
+## Erros comuns
+
+### CPF/CNPJ já existe, mas “não tenho acesso”
+
+Várias linhas podem falhar com mensagem do tipo: *CPF/CNPJ já existe em uma oportunidade atribuída a outro responsável*. Isso significa que o documento **já está no CRM**, mas a oportunidade está com **outro vendedor/equipe** fora da sua visibilidade. A importação **não altera** oportunidades que você não pode ver.
+
+**O que fazer:** importar com um usuário com acesso mais amplo, pedir ao responsável para importar, ou usar a política **Somente criar** (só ignora duplicatas que você *pode* ver).
+
+No detalhe do job, erros iguais aparecem **agrupados** com a quantidade de linhas (ex.: “847 linhas”), não um card por documento.
+
+## Reimportação e atualização
+
+Com **CPF/CNPJ** na planilha e política **Atualizar**:
+
+- Não cria oportunidade duplicada na mesma origem
+- Atualiza campos mapeados com valor não vazio
+- Contatos e tags seguem as políticas escolhidas
+
+Para **mover estágio** em massa, inclua coluna de **estágio** (nome igual ao do funil) e o documento.
+
+## Erros parciais
+
+Se algumas linhas falharem, o job termina como **Concluída com erros**. Em **Configurações → Importações**, abra o detalhe e **baixe as linhas com erro** (CSV disponível por **30 dias** após a conclusão), corrija a planilha e importe de novo.
+
+## Filtrar oportunidades por importação
+
+No quadro de leads, use o filtro **Importação** para ver só as oportunidades criadas ou atualizadas por um job específico.
+
+<img src="/prints/leads-filtro-importacao.png" alt="Filtro de importação no painel de filtros do quadro de leads" style={{ borderRadius: '0.5rem' }} />
 
 ## Dicas
 
-- Não há limite rígido de linhas por importação — milhares de leads podem ser carregados de uma vez.
-- A importação é ideal para:
-  - Migração de outros sistemas
-  - Extração de contatos do WhatsApp
-  - Campanhas de remarketing
-  - Corrigir o estágio de oportunidades já existentes (via CPF/CNPJ + estágio)
-
-Mantenha um backup da planilha original antes da importação.
-
-## Campos obrigatórios
-
-Consulte o modelo de importação — em geral, **nome** e **estágio** são essenciais para cada linha. Para reimportar e mover estágio, inclua também o **CPF/CNPJ**.
+- Exporte oportunidades ([exportação](/3-gestao-de-leads/1-criacao-de-leads/3-exportacao)), edite e reimporte — os cabeçalhos do export batem com o auto-mapeamento
+- Várias colunas podem mapear para o mesmo tipo de campo (ex.: várias colunas de tag)
+- Não há limite rígido de linhas; imports muito grandes podem levar vários minutos
+- Mantenha backup da planilha original
 
 ## Próximos passos
 
-Após a importação, você pode:
-
-- Verificar os leads no quadro ou na lista
-- Organizar em grupos e origens
-- Iniciar campanhas
-- Criar agendamentos em massa
+- [Importações em Configurações](/10-configuracao-do-sistema/11-importacoes-de-planilha) — histórico e progresso
+- [Exportação](/3-gestao-de-leads/1-criacao-de-leads/3-exportacao) — planilha compatível com reimportação
+- Verificar oportunidades no quadro ou na lista; filtrar por job de importação quando aplicável

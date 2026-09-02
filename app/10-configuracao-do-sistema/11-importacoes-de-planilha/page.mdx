@@ -1,0 +1,73 @@
+---
+title: 'Importações de Planilha'
+order: 11
+---
+
+# Importações de Planilha
+
+A aba **Importações** em **Configurações** lista todas as importações de oportunidades do workspace: status, progresso, contagens e acesso ao detalhe de erros.
+
+## Como acessar
+
+1. Menu **Configurações** (ícone de engrenagem)
+2. Aba **Importações** (requer permissão de leitura em Importações no perfil de acesso)
+
+## O que você vê na lista
+
+<img src="/prints/setup-importacoes-lista.png" alt="Lista de importações em Configurações" style={{ borderRadius: '0.5rem' }} />
+
+| Coluna | Descrição |
+|--------|-----------|
+| **Arquivo / nome** | Nome do arquivo ou **nome da importação** definido no passo Confirmar do assistente |
+| **Status** | Na fila, Em andamento, Concluída, Concluída com erros, Falhou, Expirada |
+| **Progresso** | Linhas processadas / total |
+| **Contagens** | Sucesso, erros e ignorados |
+| **Origem** | Origem de destino da importação |
+| **Criado em** | Data/hora do envio |
+
+A lista **atualiza automaticamente** enquanto houver jobs em andamento.
+
+## Detalhe de um job
+
+Clique em **Detalhes** para ver:
+
+<img src="/prints/setup-importacoes-detalhe.png" alt="Detalhe de uma importação com erros agrupados" style={{ borderRadius: '0.5rem' }} />
+
+- Progresso e contagens atualizadas
+- Quem importou, origem, políticas usadas e duração (quando disponível)
+- **Erros agrupados por tipo** — ex.: centenas de linhas com o mesmo problema de CPF/CNPJ aparecem em um único bloco com a contagem (ex.: “312 linhas”), com mensagem em português
+- **Baixar linhas com erro** — CSV com as células originais + mensagem de erro (para corrigir e reimportar pelo [assistente de importação](/3-gestao-de-leads/1-criacao-de-leads/2-importacao-em-massa))
+
+### Erro frequente: CPF/CNPJ inacessível
+
+Mensagem resumida: *CPF/CNPJ já existe em uma oportunidade atribuída a outro responsável (fora do seu acesso).*
+
+O documento da linha já está cadastrado, mas a oportunidade pertence a outro usuário que quem importou não enxerga. Não é falha de formatação do documento.
+
+## Relação com o assistente de importação
+
+- Enfileirar pelo modal **Oportunidade → Múltiplo** cria um job visível aqui
+- O **nome da importação** (opcional) é definido no último passo do assistente, antes de **Iniciar importação**
+- Fechar o modal ou sair da página **não cancela** o job
+- Vários imports do **mesmo tenant** são processados **um por vez**; tenants diferentes podem rodar em paralelo
+- Reinício da API **retoma** imports em andamento; o status permanece “Em andamento” quando possível
+
+## Permissões
+
+- **Ler** Importações: ver lista e detalhe (inclui quem enfileirou o próprio job no assistente)
+- Perfis sem acesso a Configurações → Importações ainda podem enfileirar pelo assistente e acompanhar o progresso **no modal** até fechar
+
+## Retenção de arquivos
+
+| Artefato | Retenção |
+|----------|----------|
+| **Planilha original** | Removida assim que o job termina (sucesso, erro ou expirado) |
+| **CSV de linhas com erro** | Disponível para download por **30 dias** após a conclusão; depois é removido do armazenamento (o histórico e o resumo de erros permanecem no CRM) |
+| **Histórico do job** | Permanece em Configurações para auditoria |
+
+Os arquivos de importação ficam em um **bucket S3 dedicado** (variável `AWS_S3_LEAD_IMPORT_BUCKET_NAME`), separado dos anexos de chat e oportunidades.
+
+## Quando um job expira ou falha
+
+- Jobs **expirados** ou **falhos** permanecem no histórico para auditoria
+- Para tentar de novo, corrija a planilha e inicie uma **nova** importação

@@ -10,4 +10,5 @@ export default {
   '8-configuracao-de-usuarios': 'Usuários da Operação',
   '9-configuracao-de-acessos': 'Perfis de Acesso',
   '10-chaves-de-acesso-api': 'Chaves de Acesso API',
+  '11-importacoes-de-planilha': 'Importações de Planilha',
 }

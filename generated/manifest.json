@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-31T17:05:45.713Z",
+  "capturedAt": "2026-09-02T00:07:51.506Z",
   "prints": [
     {
       "id": "sign",
@@ -54,6 +54,69 @@
       "printFile": "leads-importacao.png",
       "kind": "leads-import-modal",
       "mdxPath": "/prints/leads-importacao.png"
+    },
+    {
+      "id": "leads-import-mapping",
+      "module": "leads",
+      "title": "Importação — mapeamento",
+      "crmRoute": "/leads",
+      "printFile": "leads-import-mapping.png",
+      "kind": "leads-import-mapping",
+      "mdxPath": "/prints/leads-import-mapping.png"
+    },
+    {
+      "id": "leads-import-preview",
+      "module": "leads",
+      "title": "Importação — prévia",
+      "crmRoute": "/leads",
+      "printFile": "leads-import-preview.png",
+      "kind": "leads-import-preview",
+      "mdxPath": "/prints/leads-import-preview.png"
+    },
+    {
+      "id": "leads-import-confirm",
+      "module": "leads",
+      "title": "Importação — confirmar",
+      "crmRoute": "/leads",
+      "printFile": "leads-import-confirm.png",
+      "kind": "leads-import-confirm",
+      "mdxPath": "/prints/leads-import-confirm.png"
+    },
+    {
+      "id": "leads-import-started",
+      "module": "leads",
+      "title": "Importação iniciada",
+      "crmRoute": "/leads",
+      "printFile": "leads-import-iniciada.png",
+      "kind": "leads-import-started",
+      "mdxPath": "/prints/leads-import-iniciada.png"
+    },
+    {
+      "id": "setup-imports-list",
+      "module": "configuracao",
+      "title": "Importações (Setup) — lista",
+      "crmRoute": "/setup?tab=imports",
+      "printFile": "setup-importacoes-lista.png",
+      "kind": "setup-imports-list",
+      "mdxPath": "/prints/setup-importacoes-lista.png"
+    },
+    {
+      "id": "setup-imports-detail",
+      "module": "configuracao",
+      "title": "Importações (Setup) — detalhe",
+      "crmRoute": "/setup?tab=imports",
+      "printFile": "setup-importacoes-detalhe.png",
+      "kind": "setup-imports-detail",
+      "mdxPath": "/prints/setup-importacoes-detalhe.png"
+    },
+    {
+      "id": "leads-filter-import-job",
+      "module": "leads",
+      "title": "Filtro por importação",
+      "crmRoute": "/leads",
+      "printFile": "leads-filtro-importacao.png",
+      "kind": "leads-filter-import-job",
+      "mdxPath": "/prints/leads-filtro-importacao.png"
     },
     {
       "id": "leads-export-modal",
