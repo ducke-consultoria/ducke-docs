@@ -9,8 +9,8 @@ A aba **Importações** em **Configurações** lista todas as importações de o
 
 ## Como acessar
 
-1. Menu **Configurações** (ícone de engrenagem)
-2. Aba **Importações** (requer permissão de leitura em Importações no perfil de acesso)
+1. Menu **Configurações** (ícone de engrenagem) — disponível para todo membro da operação
+2. Aba **Importações** — requer permissão de **leitura** em **Importações** no perfil de acesso (Acessos)
 
 ## O que você vê na lista
 
@@ -54,8 +54,12 @@ O documento da linha já está cadastrado, mas a oportunidade pertence a outro u
 
 ## Permissões
 
-- **Ler** Importações: ver lista e detalhe (inclui quem enfileirou o próprio job no assistente)
-- Perfis sem acesso a Configurações → Importações ainda podem enfileirar pelo assistente e acompanhar o progresso **no modal** até fechar
+- **Ler** Importações (em Acessos → Configuração): ver a aba Importações, lista, detalhe e download de linhas com erro
+- **Escrever** Importações: enfileirar pelo assistente **Oportunidade → Múltiplo** (também exige permissão de Leads e acesso à origem)
+- Sem Importações no perfil, membros ainda acessam **Configurações → Perfil**; a aba Importações some e a aba **Múltiplo** do assistente fica desabilitada (tooltip de sem permissão)
+
+- Na lista, proprietários veem todos os jobs da operação; demais membros veem em geral os jobs que eles mesmos enviaram
+- Enquanto o assistente estiver aberto, o progresso do job também aparece **no modal**
 
 ## Retenção de arquivos
 
