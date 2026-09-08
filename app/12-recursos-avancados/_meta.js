@@ -7,4 +7,5 @@ export default {
   '6-clientes': 'Clientes',
   '7-produtos': 'Produtos',
   '8-vendas': 'Vendas',
+  '9-prospeccao': 'Prospecção',
 }

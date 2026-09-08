@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-03T02:43:55.980Z",
+  "capturedAt": "2026-09-08T18:49:52.666Z",
   "prints": [
     {
       "id": "sign",
@@ -468,6 +468,33 @@
       "printFile": "ai-support-chat.png",
       "kind": "ai-support-drawer",
       "mdxPath": "/prints/ai-support-chat.png"
+    },
+    {
+      "id": "prospecting-find",
+      "module": "prospeccao",
+      "title": "Prospecção — Encontrar clientes ideais",
+      "crmRoute": "/prospecting?tab=find",
+      "printFile": "prospecting-encontrar.png",
+      "kind": "page",
+      "mdxPath": "/prints/prospecting-encontrar.png"
+    },
+    {
+      "id": "prospecting-results",
+      "module": "prospeccao",
+      "title": "Prospecção — Resultados",
+      "crmRoute": "/prospecting?tab=find",
+      "printFile": "prospecting-resultados.png",
+      "kind": "page",
+      "mdxPath": "/prints/prospecting-resultados.png"
+    },
+    {
+      "id": "prospecting-history",
+      "module": "prospeccao",
+      "title": "Prospecção — Histórico de buscas",
+      "crmRoute": "/prospecting?tab=history",
+      "printFile": "prospecting-historico.png",
+      "kind": "page",
+      "mdxPath": "/prints/prospecting-historico.png"
     }
   ]
 }
