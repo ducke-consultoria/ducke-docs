@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-10T02:11:25.204Z",
+  "capturedAt": "2026-09-10T03:51:57.042Z",
   "prints": [
     {
       "id": "sign",
@@ -324,6 +324,15 @@
       "printFile": "assistants.png",
       "kind": "page",
       "mdxPath": "/prints/assistants.png"
+    },
+    {
+      "id": "assistants-create-modal",
+      "module": "assistentes",
+      "title": "Modal criar assistente com templates",
+      "crmRoute": "/assistants",
+      "printFile": "assistants-criar-template.png",
+      "kind": "assistants-create-modal",
+      "mdxPath": "/prints/assistants-criar-template.png"
     },
     {
       "id": "setup-tags",
