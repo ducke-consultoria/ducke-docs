@@ -41,6 +41,21 @@ Na criação (pela lista de campanhas ou pelo menu da coluna no quadro), os dest
 
 O filtro de usuário segue a mesma regra do quadro: leads atribuídas àquele usuário **e** leads sem responsável.
 
+### Campanhas recorrentes
+
+Use recorrência quando quiser um **gotejamento** contínuo em vez de disparar todas as leads de uma vez.
+
+Exemplo: todo dia útil às **08:00**, pegar as **30** leads mais antigas da origem X (no estágio/status filtrados) e movê-las para o estágio de destino após o envio.
+
+1. No modal de criação, ative **Campanha recorrente**.
+2. Escolha os **dias da semana**, o **horário** (fuso `America/Sao_Paulo`) e o **tamanho do lote**.
+3. Configure os filtros normalmente (origem, estágio, status, etc.). Com recorrência, a seleção manual de leads fica desabilitada — cada disparo reavalia o filtro.
+4. Crie a campanha e **inicie** (play) quando quiser que a agenda fique ativa.
+
+**Pausa:** pausar a campanha impede novos disparos. Ao retomar, horários perdidos **não** são refeitos (sem backfill); o próximo disparo é o próximo slot futuro.
+
+**Auto-pausa:** se **3 disparos seguidos** não encontrarem novas oportunidades no filtro, a campanha é pausada automaticamente (com motivo na tela). Retome manualmente quando houver público de novo.
+
 ### Cabeçalho de imagem, vídeo ou documento (WhatsApp)
 
 1. Na criação da campanha, selecione o dispositivo WhatsApp e um **template aprovado**.
