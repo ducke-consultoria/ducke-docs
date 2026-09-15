@@ -6,15 +6,16 @@ order: 7
 # Ajustar Parâmetros do Agente
 
 1. Com o agente selecionado, abra **Configurações do Agente** no painel direito.
-2. **Modelo**: escolha entre opções (Nano, GPT-3.5, GPT-4) conforme custo, velocidade e precisão.
+2. **Modelo**: a lista vem do catálogo ao vivo de provedores com chave na Ducke (**OpenAI** e **Grok**). Novos modelos de chat desses provedores podem aparecer automaticamente, com preço atualizado.
 
-   * **Nano**: até 5M tokens, custo mais baixo, respostas objetivas.
-   * **GPT-3.5**: até 1.5M tokens, equilíbrio entre custo e performance.
-   * **GPT-4**: até 100k tokens, maior profundidade e qualidade.
+   * O consumo do agente debita **créditos** da operação (não a cota em reais do Ducke AI de suporte).
+   * O valor em créditos usa o preço de lista do modelo (USD), a cotação do dólar e a margem de serviço da Ducke (30%).
+   * Ícones de preço no seletor são uma indicação relativa de custo — o débito real depende dos tokens usados.
 3. **Raciocínio vs Inteligência**:
 
-   * Inteligência: respostas diretas com base no script.
-   * Raciocínio: reflexão interna antes de responder, ótimo para casos complexos.
-4. **Max Tokens**: limite de tokens por resposta (define comprimento máximo).
-5. **Temperatura** (apenas em modelos de Inteligência): controla aleatoriedade (0.01 = rigoroso; 0.5–1 = criativo).
-6. Monitore o consumo em **Relatórios** para ajustar o uso conforme orçamento. 
+   * Modelos sem raciocínio: respostas diretas; temperatura pode ficar disponível.
+   * Modelos com raciocínio (ex.: GPT-5 e derivados): o painel mostra **esforço de raciocínio** e **não** envia temperatura quando o provedor não aceita.
+4. **Max Tokens / Max Completion Tokens**: limite de tokens por resposta conforme o que o modelo permite.
+5. **Temperatura** (somente quando o modelo permite): controla aleatoriedade (próximo de 0 = mais rigoroso; 0,5–1 = mais criativo).
+6. Se um modelo antigo sumir do catálogo, o agente marca o valor como **indisponível** — escolha outro modelo antes de salvar.
+7. Monitore o consumo em **Relatórios** / créditos da operação para ajustar o uso conforme orçamento.
