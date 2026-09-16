@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-10T03:51:57.042Z",
+  "capturedAt": "2026-09-16T17:31:45.220Z",
   "prints": [
     {
       "id": "sign",
@@ -468,6 +468,15 @@
       "printFile": "setup-user-tokens.png",
       "kind": "page",
       "mdxPath": "/prints/setup-user-tokens.png"
+    },
+    {
+      "id": "setup-integrations",
+      "module": "configuracao",
+      "title": "Integrações (Setup)",
+      "crmRoute": "/setup?tab=integrations",
+      "printFile": "setup-integracoes.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-integracoes.png"
     },
     {
       "id": "ai-support-chat",

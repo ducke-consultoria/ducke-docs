@@ -1,0 +1,24 @@
+---
+title: 'Integrações'
+order: 12
+---
+
+# Integrações
+
+A aba **Integrações** em **Configurações** conecta contas de terceiros à operação. Hoje o primeiro provedor é a **Econodata**, usada pela [Prospecção B2B](/12-recursos-avancados/9-prospeccao).
+
+## Como acessar
+
+1. Menu **Configurações** (ícone de engrenagem)
+2. Aba **Integrações** — requer permissão de **leitura** em **Integrações** no perfil de acesso (Acessos). Salvar ou remover a chave exige **escrita**.
+
+## Econodata
+
+1. Obtenha a API key na sua conta Econodata (formato `ek_live_…`).
+2. Em **Integrações**, cole a chave e clique em **Salvar chave**.
+3. O status mostra apenas um **hint mascarado** (últimos caracteres). A chave completa nunca é exibida depois de salva.
+4. Use **Remover chave** para apagar a credencial da operação.
+
+Com a chave configurada, a Prospecção autentica na API Econodata com o token da **sua** conta. O consumo de tokens é cobrado pela Econodata; a Ducke não debita créditos CRM por essas buscas.
+
+<img src="/prints/setup-integracoes.png" alt="Aba Integrações com Econodata" style={{ borderRadius: '0.5rem' }} />

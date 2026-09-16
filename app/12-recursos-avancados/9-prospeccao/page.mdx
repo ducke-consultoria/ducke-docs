@@ -2,14 +2,20 @@
 
 A **Prospecção** fica no menu **Operações**, ao lado de **Oportunidades**. Com ela você define o perfil do cliente ideal (ICP), busca empresas na base B2B (Econodata), vê o **ICP Score** e adiciona empresas selecionadas ao CRM.
 
+## Pré-requisito: chave Econodata
+
+A Prospecção usa a **API key da sua conta Econodata** (bring-your-own-key). Configure em **Configurações → Integrações**. O consumo de tokens é cobrado pela Econodata; a Ducke **não** debita créditos CRM por essas buscas.
+
+Sem a chave configurada, a tela de busca orienta você a abrir Integrações.
+
 ## Permissões
 
-O acesso exige a permissão **Prospecção** (leitura para consultar e buscar; escrita para salvar ICP e adicionar ao CRM). Adicionar ao CRM também exige permissão de escrita em **Oportunidades** na origem escolhida.
+O acesso exige a permissão **Prospecção** (leitura para consultar e buscar; escrita para salvar ICP e adicionar ao CRM). Adicionar ao CRM também exige permissão de escrita em **Oportunidades** na origem escolhida. Gerenciar a chave exige a permissão **Integrações** em Configurações.
 
 ## Encontrar clientes ideais
 
 1. Abra **Operações → Prospecção → Encontrar clientes ideais**.
-2. Preencha o ICP com os filtros da Econodata: localização (UF, cidade, bairro, CEP, meso/microrregião), perfil (CNAE, setores, situação, porte, enquadramento, regime, matriz/filial, data de abertura), porte/volume (funcionários, faturamento, capital social) e a **quantidade de empresas** (1, 5, 10, 20, 50 ou 100 — quanto mais, maior o consumo de créditos). Telefone, WhatsApp e site **não** são filtros de busca — aparecem nos dados da empresa quando disponíveis.
+2. Preencha o ICP com os filtros da Econodata: localização (UF, cidade, bairro, CEP, meso/microrregião), perfil (CNAE, setores, situação, porte, enquadramento, regime, matriz/filial, data de abertura), porte/volume (funcionários, faturamento, capital social) e a **quantidade de empresas** (1, 5, 10, 20, 50 ou 100 — quanto mais, maior o consumo de tokens na Econodata). Telefone, WhatsApp e site **não** são filtros de busca — aparecem nos dados da empresa quando disponíveis.
 3. Ou use **Montar ICP com Ducke AI**: descreva o cliente ideal em linguagem natural; o Ducke AI preenche os filtros (você só clica em **Encontrar clientes ideais**).
 4. Clique em **Encontrar clientes ideais**.
 
@@ -17,15 +23,15 @@ O acesso exige a permissão **Prospecção** (leitura para consultar e buscar; e
 
 ## Resultados
 
-Após a busca (ou ao **Reabrir** um histórico), a tela mostra os **critérios** usados e a tabela de empresas com **ICP Score**. Selecione empresas e use **Adicionar ao CRM**. Se ainda houver mais resultados no provedor, use **Buscar mais empresas** (próxima página — consome créditos de novo; o custo estimado em créditos do CRM aparece antes). Use **Editar ICP** ou **Nova busca** para voltar ao formulário.
+Após a busca (ou ao **Reabrir** um histórico), a tela mostra os **critérios** usados e a tabela de empresas com **ICP Score**. Selecione empresas e use **Adicionar ao CRM**. Se ainda houver mais resultados no provedor, use **Buscar mais empresas** (próxima página — consome tokens Econodata de novo; a estimativa de tokens aparece antes). Use **Editar ICP** ou **Nova busca** para voltar ao formulário.
 
-Cada busca consome **créditos** do tenant (custo do provedor + margem Ducke de **30%**) e **salva automaticamente** os filtros e os resultados em **Histórico de buscas**. Antes de buscar, a tela mostra o **custo estimado em créditos** (via simulação da Econodata). Reabrir um histórico **não** cobra de novo.
+Cada busca consome **tokens da sua conta Econodata** e **salva automaticamente** os filtros e os resultados em **Histórico de buscas**. Antes de buscar, a tela mostra a **estimativa de tokens Econodata** (simulação `X-Estimate-Only`). Reabrir um histórico **não** chama a API de novo.
 
 <img src="/prints/prospecting-resultados.png" alt="Resultados da prospecção" />
 
 ## Histórico de buscas
 
-Em **Histórico de buscas** você vê as buscas anteriores. Use **Reabrir** para abrir a vista de **Resultados** (critérios + empresas) e selecionar para o CRM — sem nova cobrança.
+Em **Histórico de buscas** você vê as buscas anteriores. Use **Reabrir** para abrir a vista de **Resultados** (critérios + empresas) e selecionar para o CRM — sem nova chamada à Econodata.
 
 <img src="/prints/prospecting-historico.png" alt="Histórico de buscas" />
 
