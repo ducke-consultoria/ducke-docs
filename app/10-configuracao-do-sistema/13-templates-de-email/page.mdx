@@ -1,0 +1,70 @@
+---
+title: 'Templates de Email'
+order: 13
+---
+
+# Templates de Email
+
+import { Callout } from 'nextra/components'
+
+Templates de e-mail do tenant são usados em **campanhas** e **notificações de agendamento**. O corpo da mensagem é **HTML** — você pode formatar o texto visualmente ou editar o código-fonte.
+
+<img
+  src="/prints/setup-email-templates.png"
+  alt="Lista de templates de e-mail em Configurações"
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+## Como criar ou editar
+
+1. Acesse **Configurações** e abra o item **Templates de Email** (permissão `Templates de Email`)
+2. Clique para criar um novo template ou edite um existente
+3. Preencha:
+   - **Nome**: identificação interna
+   - **Assunto**: texto do assunto (também aceita variáveis `{{…}}`)
+   - **Mensagem**: corpo em HTML (editor visual ou aba **HTML**)
+4. Use **Editor**, **Ambos** ou **Preview** para escolher o que vê; a pré-visualização **não executa scripts**
+5. Opcionalmente abra o workspace em **tela cheia** (ícone ao lado das abas de painel)
+6. Clique em **Salvar** / **Atualizar**
+
+<img
+  src="/prints/setup-email-template-editor.png"
+  alt="Modal de criação com editor HTML, abas Visual/HTML e preview lado a lado"
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+## Editor visual e HTML
+
+- **Visual**: negrito, itálico, listas e links
+- **HTML**: cole ou refine o markup diretamente
+- **Editor / Ambos / Preview**: mostra só o editor, os dois painéis ou só a pré-visualização
+- A pré-visualização atualiza com o conteúdo atual e roda em um iframe isolado (sem scripts)
+
+<Callout type="info">
+Ao **salvar**, o sistema remove tags e atributos perigosos (por exemplo `<script>` e handlers como `onclick`). No **envio** (campanha ou agendamento), o HTML é sanitizado de novo depois de substituir as variáveis — assim URLs inválidas vindas de dados do lead (ex.: `javascript:`) não chegam ao destinatário. Markup comum de e-mail (`p`, `a`, `strong`, listas, etc.) é mantido.
+</Callout>
+
+## Variáveis (catálogo de campanhas)
+
+Use o botão de **variáveis** (ícone de grupo) ao lado da mensagem — o mesmo catálogo das campanhas WhatsApp — para inserir tokens no formato `{{lead.name}}`, `{{contact.email}}`, etc.
+
+No envio de campanha por e-mail (e em agendamentos que usam o template), esses tokens são resolvidos por lead/contato. No **corpo HTML**, os valores são escapados para não quebrar o markup; no **assunto**, a substituição é texto puro (sem HTML), com remoção de quebras de linha.
+
+### Placeholders legados
+
+Ainda funcionam nos templates antigos:
+
+| Placeholder | Uso |
+| --- | --- |
+| `{nome_primario}` | Nome do lead |
+| `{nome_secundario}` | Nome secundário do lead |
+| `{nome_contato}` | Nome do contato |
+
+Prefira o catálogo `{{…}}` em templates novos.
+
+## Onde o template é usado
+
+- Campanhas por canal **e-mail**
+- Tipos de atividade / notificações de agendamento que enviam e-mail com template selecionado
+
+Esses e-mails usam o HTML do template do tenant e **não** passam pelo layout brandado dos e-mails transacionais do sistema (reset de senha, convite, faturamento, etc.).

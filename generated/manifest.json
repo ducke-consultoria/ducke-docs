@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-19T00:46:12.682Z",
+  "capturedAt": "2026-09-21T19:11:00.632Z",
   "prints": [
     {
       "id": "sign",
@@ -477,6 +477,24 @@
       "printFile": "setup-integracoes.png",
       "kind": "page",
       "mdxPath": "/prints/setup-integracoes.png"
+    },
+    {
+      "id": "setup-email-templates",
+      "module": "configuracao",
+      "title": "Templates de Email (Setup)",
+      "crmRoute": "/setup?tab=profile",
+      "printFile": "setup-email-templates.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-email-templates.png"
+    },
+    {
+      "id": "setup-email-template-editor",
+      "module": "configuracao",
+      "title": "Modal editor HTML de template de e-mail",
+      "crmRoute": "/setup?tab=profile",
+      "printFile": "setup-email-template-editor.png",
+      "kind": "email-template-create-modal",
+      "mdxPath": "/prints/setup-email-template-editor.png"
     },
     {
       "id": "ai-support-chat",

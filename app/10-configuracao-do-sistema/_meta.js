@@ -12,4 +12,5 @@ export default {
   '10-chaves-de-acesso-api': 'Chaves de Acesso API',
   '11-importacoes-de-planilha': 'Importações de Planilha',
   '12-integracoes': 'Integrações',
+  '13-templates-de-email': 'Templates de Email',
 }
