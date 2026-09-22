@@ -1,16 +1,29 @@
 # Prospecção B2B
 
-A **Prospecção** fica no menu **Operações**, ao lado de **Oportunidades**. Com ela você define o perfil do cliente ideal (ICP), busca empresas na base B2B (Econodata), vê o **ICP Score** e adiciona empresas selecionadas ao CRM.
+A **Prospecção** fica no menu **Operações**, ao lado de **Oportunidades**. Com ela você define o perfil do cliente ideal (ICP), busca empresas na base B2B (Econodata), vê o **ICP Score** e adiciona empresas selecionadas ao CRM. Também pode buscar estabelecimentos locais pelo **Google Places** e importá-los como oportunidades.
 
 ## Pré-requisito: chave Econodata
 
-A Prospecção usa a **API key da sua conta Econodata** (bring-your-own-key). Configure em **Configurações → Integrações**. O consumo de tokens é cobrado pela Econodata; a Ducke **não** debita créditos CRM por essas buscas.
+A busca por ICP usa a **API key da sua conta Econodata** (bring-your-own-key). Configure em **Configurações → Integrações**. O consumo de tokens é cobrado pela Econodata; a Ducke **não** debita créditos CRM por essas buscas.
 
-Sem a chave configurada, a tela de busca orienta você a abrir Integrações.
+Sem a chave configurada, a tela de busca ICP orienta você a abrir Integrações.
+
+## Google Places
+
+A aba **Google Places** usa a **API oficial Google Places (New)** no servidor (chave de plataforma). Cada página retorna **até 20 leads** (máximo cerca de 60 com **Buscar mais**) e debita **créditos CRM**: preço de lista do Google em USD, convertido pelo câmbio USD→BRL, com margem de processamento de **30%**.
+
+1. Abra **Operações → Prospecção → Google Places**.
+2. Informe o termo obrigatório (ex.: *Clínicas odontológicas*). Localização, raio, tipo e demais filtros são opcionais. A estimativa de créditos aparece ao lado de **Buscar**.
+3. Clique em **Buscar**, selecione os resultados e use **Importar selecionados**.
+4. Escolha origem/etapa (padrão: origem **Google Places**) e tags opcionais.
+
+A importação cria ou atualiza leads pelo `placeId` do Google (sem duplicar o mesmo estabelecimento no mesmo tenant) e cria contato quando houver telefone.
+
+<img src="/prints/prospecting-places.png" alt="Prospecção Google Places — formulário de busca" />
 
 ## Permissões
 
-O acesso exige a permissão **Prospecção** (leitura para consultar e buscar; escrita para salvar ICP e adicionar ao CRM). Adicionar ao CRM também exige permissão de escrita em **Oportunidades** na origem escolhida. Gerenciar a chave exige a permissão **Integrações** em Configurações.
+O acesso exige a permissão **Prospecção** (leitura para consultar e buscar; escrita para salvar ICP, buscar Places e adicionar ao CRM). Adicionar ao CRM também exige permissão de escrita em **Oportunidades** na origem escolhida. Gerenciar a chave Econodata exige a permissão **Integrações** em Configurações.
 
 ## Encontrar clientes ideais
 
@@ -31,7 +44,7 @@ Cada busca consome **tokens da sua conta Econodata** e **salva automaticamente**
 
 ## Histórico de buscas
 
-Em **Histórico de buscas** você vê as buscas anteriores. Use **Reabrir** para abrir a vista de **Resultados** (critérios + empresas) e selecionar para o CRM — sem nova chamada à Econodata.
+Em **Histórico de buscas** você vê as buscas anteriores (Econodata). Use **Reabrir** para abrir a vista de **Resultados** (critérios + empresas) e selecionar para o CRM — sem nova chamada à Econodata. Buscas do Google Places ficam listadas dentro da própria aba Places.
 
 <img src="/prints/prospecting-historico.png" alt="Histórico de buscas" />
 
