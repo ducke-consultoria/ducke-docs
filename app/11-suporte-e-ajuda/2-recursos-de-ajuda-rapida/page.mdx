@@ -18,7 +18,8 @@ Ele pode:
 - Explicar telas e fluxos com base na documentação
 - Indicar onde ficar cada área do CRM
 - Consultar dados que você já tem permissão de ler (oportunidades, agendamentos, clientes, conversas do chat, campanhas, métricas de atendimento, Dashboard geral/funil, cobrança/Operação e os relatórios da tela Relatórios) e montar tabelas ou gráficos quando fizer sentido
-- Sugerir o relatório ou a tela certa do produto quando a pergunta for analítica (ex.: cliente esperando no chat → Dashboard → Atendimento ou conversas não lidas; cards que não avançam → Oportunidades Atrasadas; conversão/motivos de perda/tempo no funil → Relatórios com números; funil/KPIs → Dashboard; disparos com erro → Campanhas)
+- Montar um gráfico de **dias sem interação** das oportunidades abertas (dias desde a última atividade). Isso é diferente do relatório **Oportunidades Atrasadas**, que só lista cards que já passaram do SLA do estágio
+- Sugerir o relatório ou a tela certa do produto quando a pergunta for analítica (ex.: cliente esperando no chat → Dashboard → Atendimento ou conversas não lidas; cards com SLA estourado → Oportunidades Atrasadas; conversão/motivos de perda/tempo no funil → Relatórios com números; funil/KPIs → Dashboard; disparos com erro → Campanhas)
 - Informar status do **Assistente Inteligente** (pacote, créditos, fluxos e onde estão ligados) e da **assinatura/trial** da operação — sem confundir com a cota do Ducke AI
 - Listar dispositivos (WhatsApp/etc.), usuários da operação e grupos/origens quando você tiver permissão
 - Explicar erros dos avisos (toasts), inclusive com a ação **Explicar**
@@ -33,10 +34,10 @@ O **Ducke AI** é o copiloto de **suporte do produto**. Ele é diferente do **As
 
 ### Limite de uso
 
-Há um limite por período (em reais), separado dos créditos do Assistente Inteligente. O painel do chat mostra quanto resta.
+Há um limite por período em **créditos** do Ducke AI. Cada resposta desconta o custo do modelo nessa cota, na mesma escala da operação (100.000 créditos = R$ 1), e não um crédito por token. Essa cota pessoal continua separada dos créditos da operação. O painel do chat mostra quanto resta e permite escolher o modelo entre as opções disponíveis (OpenAI e Grok). Em **Configurações → Usuários**, as configurações de cada usuário podem permitir que ele continue no Ducke AI com os **créditos da operação** depois que a cota pessoal acaba. Essa opção começa desligada. A coluna Ducke AI mostra a cota pessoal e, quando houver gasto da operação neste período, os créditos debitados daquela pessoa. A resposta aparece aos poucos enquanto o modelo escreve. **Parar** interrompe a geração e mantém o trecho já escrito. Enquanto a resposta é preparada, o chat mostra “Pensando… 4s” e a consulta em andamento. Depois, a mensagem fica com “Pensou por 4s”. Cada consulta fica fechada; abra para ver o pedido e o resultado. Se o gráfico não tiver números, o cartão avisa que não há o que mostrar. O anel ao lado do enviar abre o painel de contexto acima do campo (começa fechado) e o X fecha esse painel. Ele mostra o quanto da janela do modelo está em uso (instruções, ferramentas, resumo, mensagens e raciocínio anterior), inclusive o texto que você está digitando. Todas as mensagens entram até essa janela passar de 80%: aí só o trecho antigo que não cabe é resumido, e as mensagens recentes continuam na íntegra. **Resumir** faz o mesmo na hora. O chat mostra “Resumindo…” enquanto isso acontece e, ao terminar, deixa na conversa o aviso “Conversa anterior resumida”. O texto do resumo fica no fim do chat. Um novo resumo substitui esse texto, e o aviso anterior permanece sem o texto antigo. O mesmo aviso aparece quando o resumo dispara sozinho, perto de 80% da janela. O retorno das ferramentas e o raciocínio voltam nos turnos seguintes até entrar no resumo. O histórico visível continua no painel.
 
-- **Período de teste** da operação (sem assinatura paga nem Cortesia): o limite é menor (cerca de R$ 1) e **não recarrega** durante o teste.
-- **Cortesia**, **mensal** e **anual**: o limite incluso é maior (cerca de **R$ 15** por usuário) e **recarrega todo mês no dia do pagamento ou da concessão** — inclusive no plano anual, não só na cobrança de 12 meses.
+- **Período de teste** da operação (sem assinatura paga nem Cortesia): **100.000 créditos** por usuário e **não recarrega** durante o teste.
+- **Cortesia**, **mensal** e **anual**: **1.500.000 créditos** por usuário e **recarrega todo mês no dia do pagamento ou da concessão** — inclusive no plano anual, não só na cobrança de 12 meses.
 
 ## Centro de Ajuda
 
