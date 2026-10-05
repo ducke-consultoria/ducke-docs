@@ -5,7 +5,7 @@ order: 3
 
 # Exportação de Leads
 
-Exporte as oportunidades da origem selecionada para uma planilha XLSX e use os dados em relatórios externos ou backups.
+Exporte as oportunidades da origem selecionada para uma planilha XLSX e use os dados em relatórios externos ou backups. A exportação é assíncrona e não tem limite de linhas.
 
 <img src="/prints/leads-exportacao.png" alt="Modal de exportação de oportunidades" style={{ borderRadius: '0.5rem' }} />
 
@@ -13,10 +13,17 @@ Exporte as oportunidades da origem selecionada para uma planilha XLSX e use os d
 
 1. Acesse **Leads** e selecione a origem desejada na barra lateral.
 2. Clique em **Exportar oportunidades**.
-3. No modal, escolha as colunas que deseja incluir.
-4. Clique em **Exportar** para baixar o arquivo `.xlsx`.
+3. No modal, escolha as colunas e, se quiser, os estágios.
+4. Clique em **Exportar**. O modal continua aberto com a **barra de progresso**. O navegador não baixa o arquivo na hora. **Ver em Importações e exportações** abre a lista, onde o arquivo fica pronto para baixar.
+
+<img src="/prints/leads-exportacao-iniciada.png" alt="Barra de progresso da exportação e botão para a lista de exportações" style={{ borderRadius: '0.5rem' }} />
+
+5. Quando o aviso aparecer, abra a aba e baixe o XLSX. O arquivo continua compatível com a importação.
 
 ## Dicas
 
+- A exportação respeita a origem, os estágios, as colunas e os responsáveis que você já enxerga na tela.
+- O **pacote da operação** (Configurações → Operação, só o dono) inclui todas as oportunidades em `leads.csv` dentro do ZIP. Esta tela continua gerando o XLSX da origem selecionada, compatível com a importação.
+- O download expira **7 dias** depois que o arquivo fica pronto.
 - Exporte antes de grandes alterações em massa para manter um backup.
 - Combine com [importação em massa](/3-gestao-de-leads/1-criacao-de-leads/2-importacao-em-massa) para migrar ou corrigir dados entre planilhas.

@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-30T01:02:52.663Z",
+  "capturedAt": "2026-10-05T20:48:12.385Z",
   "prints": [
     {
       "id": "sign",
@@ -126,6 +126,15 @@
       "printFile": "leads-exportacao.png",
       "kind": "leads-export-modal",
       "mdxPath": "/prints/leads-exportacao.png"
+    },
+    {
+      "id": "leads-export-queued",
+      "module": "leads",
+      "title": "Exportação iniciada",
+      "crmRoute": "/leads",
+      "printFile": "leads-exportacao-iniciada.png",
+      "kind": "leads-export-queued",
+      "mdxPath": "/prints/leads-exportacao-iniciada.png"
     },
     {
       "id": "leads-panel",
@@ -405,6 +414,15 @@
       "printFile": "setup-operation.png",
       "kind": "page",
       "mdxPath": "/prints/setup-operation.png"
+    },
+    {
+      "id": "setup-operation-package",
+      "module": "configuracao",
+      "title": "Pacote de dados (Operação)",
+      "crmRoute": "/setup?tab=operation",
+      "printFile": "setup-operation-package.png",
+      "kind": "setup-operation-package",
+      "mdxPath": "/prints/setup-operation-package.png"
     },
     {
       "id": "setup-transactions",

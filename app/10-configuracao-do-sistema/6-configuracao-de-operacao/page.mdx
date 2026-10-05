@@ -34,6 +34,9 @@ A aba **Operação** é o painel da operação ativa: resumo do tenant, inscriç
   - **Recarga automática** (opcional): quando o saldo ficar **abaixo** do limite escolhido, a operação compra o pacote configurado no **cartão salvo**. Não usa Pix e não tem prazo/teto mensal na tela. Depois de três falhas seguidas no cartão, a recarga automática desliga e o dono recebe e-mail. Cortesia com cartão V7 também pode ativar. Com a recarga ligada, o **dono** recebe um e-mail quando o saldo entra na faixa de aviso (cerca de **20% acima** do limite), dizendo que a recarga automática acontecerá em breve; quando a compra automática conclui, outro e-mail confirma o **valor** e os **créditos** adicionados (não há e-mail extra no momento em que a cobrança começa).
   - **Aviso de saldo baixo:** se o saldo cair abaixo de **100.000** créditos e a recarga automática **não** estiver cobrindo a operação (desligada, sem cartão, teto, etc.), o **dono** recebe um e-mail pedindo para comprar créditos ou ativar a recarga. Esses avisos **não se repetem** a cada débito enquanto o saldo permanecer no mesmo episódio (só voltam depois que o saldo sobe de novo acima do limite do aviso).
 - **Configurações:** preferências operacionais, como atribuição automática de leads.
+- **Pacote de dados (somente o dono):** o botão **Exportar pacote** fica no fim da segunda coluna e gera um ZIP com `campaigns.csv`, `recipients.csv`, `messages.csv` e `leads.csv`. O `leads.csv` traz todas as oportunidades da operação. Ele não altera plano, cartão nem as preferências da operação. O arquivo aparece em **Importações e exportações** e expira **7 dias** depois de pronto. Quem não é dono não vê o botão.
+
+<img src="/prints/setup-operation-package.png" alt="Pacote de dados no fim da coluna de operação" style={{ borderRadius: '0.5rem' }} />
 
 ## Usuários e prorata
 
