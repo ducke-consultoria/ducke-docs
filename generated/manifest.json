@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-05T20:48:12.385Z",
+  "capturedAt": "2026-10-06T14:19:58.258Z",
   "prints": [
     {
       "id": "sign",
@@ -198,6 +198,24 @@
       "printFile": "campaign.png",
       "kind": "page",
       "mdxPath": "/prints/campaign.png"
+    },
+    {
+      "id": "campaign-create-scheduled",
+      "module": "campanhas",
+      "title": "Modal campanha avulsa agendada",
+      "crmRoute": "/campaign",
+      "printFile": "campaign-modal-agendada.png",
+      "kind": "campaign-create-scheduled",
+      "mdxPath": "/prints/campaign-modal-agendada.png"
+    },
+    {
+      "id": "campaign-create-recurring",
+      "module": "campanhas",
+      "title": "Modal campanha recorrente",
+      "crmRoute": "/campaign",
+      "printFile": "campaign-modal-recorrente.png",
+      "kind": "campaign-create-recurring",
+      "mdxPath": "/prints/campaign-modal-recorrente.png"
     },
     {
       "id": "reports",

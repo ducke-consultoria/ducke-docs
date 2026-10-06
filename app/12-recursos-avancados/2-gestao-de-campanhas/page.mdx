@@ -58,6 +58,17 @@ Na criação (pela lista de campanhas ou pelo menu da coluna no quadro), os dest
 
 O filtro de usuário segue a mesma regra do quadro: leads atribuídas àquele usuário **e** leads sem responsável.
 
+### Campanha avulsa agendada
+
+Use o agendamento quando quiser um **único** disparo em uma data e hora, sem repetir no dia seguinte. Isso é diferente da campanha recorrente, que segue dias da semana e um lote.
+
+1. No modal de criação, deixe **Campanha recorrente** desligada.
+2. Informe **data** e **horário** no fuso `America/Sao_Paulo`. Se os dois ficarem vazios, a campanha continua saindo só quando alguém inicia.
+
+<img src="/prints/campaign-modal-agendada.png" alt="Modal de criação com campanha avulsa: data e horário, sem recorrência" style={{ borderRadius: '0.5rem' }} />
+3. A campanha fica parada até esse instante e envia sozinha as oportunidades já incluídas na criação. Não há novo disparo no dia seguinte.
+4. **Cancelar agendamento** nos detalhes limpa a data e **não envia**. Iniciar antes do horário envia na hora e descarta o agendamento.
+
 ### Campanhas recorrentes
 
 Use recorrência quando quiser um **gotejamento** contínuo em vez de disparar todas as leads de uma vez.
@@ -66,6 +77,8 @@ Exemplo: todo dia útil às **08:00**, pegar as **30** leads mais antigas da ori
 
 1. No modal de criação, ative **Campanha recorrente**.
 2. Escolha os **dias da semana**, o **horário** (fuso `America/Sao_Paulo`) e o **tamanho do lote**.
+
+<img src="/prints/campaign-modal-recorrente.png" alt="Modal de criação com campanha recorrente: dias da semana, horário e tamanho do lote" style={{ borderRadius: '0.5rem' }} />
 3. Configure os filtros normalmente (origem, estágio, status, etc.). Com recorrência, a seleção manual de leads fica desabilitada — cada disparo reavalia o filtro.
 4. Crie a campanha e **inicie** (play) quando quiser que a agenda fique ativa.
 
