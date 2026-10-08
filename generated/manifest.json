@@ -1,11 +1,11 @@
 {
-  "capturedAt": "2026-10-06T14:19:58.258Z",
+  "capturedAt": "2026-10-08T15:01:53.109Z",
   "prints": [
     {
       "id": "sign",
       "module": "autenticacao",
       "title": "Login",
-      "crmRoute": "/sign",
+      "crmRoute": "/?mode=login",
       "printFile": "sign-login.png",
       "kind": "page",
       "mdxPath": "/prints/sign-login.png"
