@@ -13,4 +13,5 @@ export default {
   '11-importacoes-de-planilha': 'Importações e exportações',
   '12-integracoes': 'Integrações',
   '13-templates-de-email': 'Templates de Email',
+  '14-auditoria-operacional': 'Auditoria operacional',
 }

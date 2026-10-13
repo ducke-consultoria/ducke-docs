@@ -1,0 +1,37 @@
+---
+title: 'Auditoria operacional'
+order: 14
+---
+
+import { Callout } from 'nextra/components'
+
+# Auditoria operacional
+
+A aba **Auditoria** usa o mesmo padrão das demais listas do Setup (CRUD genérico, somente leitura). Ela é a trilha operacional da operação: quem importou planilha, criou/editou/agendou/disparou campanha, exportou dados, incluiu ou removeu telefone da lista de supressão, ou transferiu a titularidade.
+
+<img src="/prints/setup-audit.png" alt="Aba Auditoria no Setup com busca e lista de eventos" style={{ borderRadius: '0.5rem' }} />
+
+## Como acessar
+
+1. Abra **Configuração** no menu.
+2. Selecione a aba **Auditoria** (fica após **Operação**).
+
+<Callout type="info">
+  O acesso segue o mesmo modelo das demais abas do Setup: o perfil precisa da permissão **Auditoria** (leitura). Donos da operação continuam com acesso completo.
+</Callout>
+
+## Busca
+
+Use a barra de **busca** no topo para filtrar por ação, usuário, entidade ou detalhe.
+
+## O que aparece na lista
+
+Cada linha traz **quando**, **ação**, **usuário**, **entidade** e um **detalhe** curto (sem corpo de mensagem ou planilha). Clique na linha para abrir o **modal de detalhes**.
+
+A Atividade do modal de campanha usa a mesma trilha (filtrada pela campanha). Já o **histórico da lead** no card da oportunidade continua separado e **não** aparece nesta aba.
+
+## Quando usar
+
+- Conferir quem importou ou exportou dados.
+- Investigar quem agendou ou disparou uma campanha.
+- Auditar mudanças na lista de supressão ou transferência de titularidade.
