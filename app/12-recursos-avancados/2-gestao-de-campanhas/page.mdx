@@ -106,39 +106,29 @@ Se a preparação da mídia falhar no envio, a campanha é desativada com mensag
 
 ## Execução
 
-### Monitoramento
+### Totais de entrega nos detalhes
 
-- **Dashboard**: Visão geral em tempo real
-- **Métricas**: Acompanhamento de KPIs
-- **Alertas**: Notificações importantes
-- **Ajustes**: Modificações em andamento
-- **Relatórios**: Análises periódicas
+Abra os detalhes de uma campanha para ver, por contato (sem abrir o chat):
 
-### Otimização
+<img src="/prints/campaign-detalhes-entrega.png" alt="Modal de detalhes da campanha com totais: enviadas, entregues, visualizadas, rejeitadas e falhas de envio" style={{ borderRadius: '0.5rem' }} />
 
-- **A/B Testing**: Testes de variações
-- **Segmentação**: Refinamento do público
-- **Timing**: Ajuste de horários
-- **Conteúdo**: Melhoria de materiais
-- **Canais**: Otimização de distribuição
+- **Enviadas** — a API do canal aceitou o envio e a mensagem ainda não foi rejeitada depois
+- **Entregues** — chegou ao aparelho (inclui as visualizadas)
+- **Visualizadas** — o destinatário leu a mensagem
+- **Rejeitadas** — o WhatsApp aceitou o envio e depois falhou no webhook; a mensagem sai de “enviadas” e **não** conta como falha de envio
+- **Falhas de envio** — o envio falhou antes do aceite (variável vazia, número inválido, recusa da API, etc.)
+
+No **WhatsApp**, entregues, visualizadas e rejeitadas atualizam conforme os status da Meta. Em **e-mail** e **SMS** só fazem sentido enviadas e falhas de envio; os outros três ficam em zero.
+
+**Reprocessar erros** tenta de novo só as **falhas de envio**. Contatos rejeitados depois do aceite não entram nesse botão.
+
+A lista de campanhas mostra um resumo de enviadas e falhas de envio; o detalhe completo fica no modal (enviadas, entregues, visualizadas, rejeitadas e falhas de envio, inclusive zeros).
 
 ## Análise
 
-### Métricas Principais
-
-- **Alcance**: Pessoas impactadas
-- **Engajamento**: Interações recebidas
-- **Conversão**: Objetivos alcançados
-- **ROI**: Retorno sobre investimento
-- **Custo por Aquisição**: Eficiência
-
-### Relatórios
-
-- **Desempenho**: Resultados gerais
-- **Comparativo**: Análise entre campanhas
-- **Tendências**: Evolução ao longo do tempo
-- **Detalhado**: Análise profunda
-- **Exportação**: Dados para análise externa
+- Compare enviadas, entregues e visualizadas para ver o funil de abertura no WhatsApp.
+- Use rejeitadas para investigar bloqueios ou números inválidos depois do aceite — sem misturar com falha de envio.
+- A exportação do dono da operação (lista e destinatários) usa os mesmos totais e status.
 
 <Callout type="info">
 Para templates WhatsApp com cabeçalho de **imagem**, **vídeo** ou **documento**, você pode anexar um arquivo novo na criação da campanha (o CRM faz upload e usa o media id do WhatsApp) ou usar a **mídia de exemplo** já aprovada no Meta — nesse caso o CRM baixa o exemplo, faz o upload na Cloud API e envia com o media id, sem precisar escolher outro arquivo. Limites do arquivo anexado: imagem 5 MB, vídeo 16 MB, documento 100 MB.

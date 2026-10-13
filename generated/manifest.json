@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-08T15:01:53.109Z",
+  "capturedAt": "2026-10-13T14:21:25.615Z",
   "prints": [
     {
       "id": "sign",
@@ -216,6 +216,15 @@
       "printFile": "campaign-modal-recorrente.png",
       "kind": "campaign-create-recurring",
       "mdxPath": "/prints/campaign-modal-recorrente.png"
+    },
+    {
+      "id": "campaign-details-delivery",
+      "module": "campanhas",
+      "title": "Detalhes: totais de entrega",
+      "crmRoute": "/campaign",
+      "printFile": "campaign-detalhes-entrega.png",
+      "kind": "campaign-details-delivery",
+      "mdxPath": "/prints/campaign-detalhes-entrega.png"
     },
     {
       "id": "reports",
