@@ -119,7 +119,16 @@ Abra os detalhes de uma campanha para ver, por contato (sem abrir o chat):
 - **Falhas de envio** — o envio falhou antes do aceite (variável vazia, recusa transitória da API, etc.)
 - **Suprimidos** — o telefone está na lista do-not-contact da operação (opt-out, bloqueio ou rejeição permanente); o provedor **não** é chamado
 
-No **WhatsApp**, entregues, visualizadas e rejeitadas atualizam conforme os status da Meta. Em **e-mail** e **SMS** fazem sentido enviadas, falhas de envio e suprimidos; entregues/visualizadas/rejeitadas ficam em zero quando o canal não tem webhook de entrega.
+No **WhatsApp**, entregues, visualizadas e rejeitadas atualizam conforme os status da Meta. No **SMS**, entregues, visualizadas e rejeitadas ficam em zero. No **e-mail**, enviadas é o aceite do servidor SMTP. Visualizadas (e, com elas, entregues) sobem quando o destinatário carrega a imagem de abertura ou quando uma resposta humana chega na caixa que enviou. Um aviso de falha de entrega (bounce) conta como rejeitada e não move a oportunidade. Quem bloqueia imagens não entra em visualizadas.
+
+Na criação da campanha de e-mail, a coluna de destino continua valendo no aceite do envio. Duas colunas opcionais, da mesma origem, podem ser deixadas em **Não mover**:
+
+<img src="/prints/campaign-email-colunas.png" alt="Criação de campanha de e-mail com colunas opcionais ao ler e ao responder" style={{ borderRadius: '0.5rem' }} />
+
+- **Coluna ao ler o e-mail** — a oportunidade vai para essa coluna na primeira abertura.
+- **Coluna ao responder** — a oportunidade vai para essa coluna quando chega uma resposta humana. Uma abertura depois disso não tira a oportunidade dessa coluna.
+
+A resposta também vira uma nota em texto na oportunidade.
 
 **Reprocessar erros** tenta de novo só as **falhas de envio**. Contatos rejeitados depois do aceite ou **suprimidos** não entram nesse botão.
 

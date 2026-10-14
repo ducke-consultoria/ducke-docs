@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-13T22:59:16.442Z",
+  "capturedAt": "2026-10-14T00:02:36.319Z",
   "prints": [
     {
       "id": "sign",
@@ -225,6 +225,24 @@
       "printFile": "campaign-detalhes-entrega.png",
       "kind": "campaign-details-delivery",
       "mdxPath": "/prints/campaign-detalhes-entrega.png"
+    },
+    {
+      "id": "campaign-email-stages",
+      "module": "campanhas",
+      "title": "Campanha de e-mail: colunas ao ler e responder",
+      "crmRoute": "/campaign",
+      "printFile": "campaign-email-colunas.png",
+      "kind": "campaign-email-stages",
+      "mdxPath": "/prints/campaign-email-colunas.png"
+    },
+    {
+      "id": "setup-device-email-imap",
+      "module": "setup",
+      "title": "Dispositivo de e-mail: IMAP opcional",
+      "crmRoute": "/setup?tab=devices",
+      "printFile": "setup-device-email-imap.png",
+      "kind": "setup-device-email-imap",
+      "mdxPath": "/prints/setup-device-email-imap.png"
     },
     {
       "id": "reports",
