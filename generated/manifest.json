@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-14T00:02:36.319Z",
+  "capturedAt": "2026-10-14T12:27:48.005Z",
   "prints": [
     {
       "id": "sign",
@@ -225,6 +225,15 @@
       "printFile": "campaign-detalhes-entrega.png",
       "kind": "campaign-details-delivery",
       "mdxPath": "/prints/campaign-detalhes-entrega.png"
+    },
+    {
+      "id": "campaign-message-history",
+      "module": "campanhas",
+      "title": "Detalhes: histórico de mensagens",
+      "crmRoute": "/campaign",
+      "printFile": "campaign-historico-mensagens.png",
+      "kind": "campaign-message-history",
+      "mdxPath": "/prints/campaign-historico-mensagens.png"
     },
     {
       "id": "campaign-email-stages",
