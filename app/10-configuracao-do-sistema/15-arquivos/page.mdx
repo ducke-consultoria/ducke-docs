@@ -1,0 +1,59 @@
+---
+title: 'Arquivos'
+order: 15
+---
+
+import { Callout } from 'nextra/components'
+
+# Arquivos
+
+A aba **Arquivos** mostra tudo o que a operação guarda: anexos de oportunidades, mídia de chat, importações e exportações. A cota é **da operação**, compartilhada. Não é um espaço pessoal por usuário.
+
+<img src="/prints/setup-storage.png" alt="Aba Arquivos com uso, lista e limpeza" style={{ borderRadius: '0.5rem' }} />
+
+## Como acessar
+
+1. Abra **Configuração** no menu.
+2. Selecione a aba **Arquivos**.
+
+Quem não tem permissão de leitura em **Configuração → Arquivos** não vê a aba. O medidor na aba **Operação** continua visível para quem abre Operação, e o link para Arquivos só aparece para quem pode abrir esta aba.
+
+## Quanto a operação pode guardar
+
+- **Standard:** 10 GB mais 1 GB por assento cobrado.
+- **Pro:** 20 GB mais 2 GB por assento cobrado.
+- **Cortesia:** a mesma conta do Standard, sobre os membros que não são `@ducke.com.br`.
+- **Teste de 14 dias:** 1 GB, sem o acréscimo por assento.
+- Um plano pago com nenhum assento cobrado ainda conta como 1 assento.
+- 1 GB equivale a 1.000.000.000 bytes.
+- A cota cresce quando os assentos cobrados aumentam e não diminui no meio do período.
+
+Cada arquivo continua limitado a 100 MB.
+
+Enquanto o uso medido fica em 90% ou mais, o dono da operação recebe um e-mail por dia pedindo para apagar arquivos antigos. No plano Standard, o mesmo e-mail avisa que o Pro sobe a cota para 20 GB mais 2 GB por assento. Abaixo de 90%, ou antes da medição, o e-mail não é enviado.
+
+## O que entra na conta
+
+Entram os bytes de anexos de oportunidades, mídia de chat, arquivos de importação e arquivos de exportação. Envio feito pelo CRM que passaria da cota, depois que o uso já foi medido, é recusado. Mídia que chega pelo WhatsApp ou pelo Instagram continua sendo guardada e entra na conta, mesmo que a operação já esteja acima da cota.
+
+<Callout type="info">
+  Enquanto os arquivos antigos ainda não foram medidos, novos envios entram na conta e ainda não são bloqueados.
+</Callout>
+
+## Lista e exclusão de um arquivo
+
+A lista mostra nome, tipo, tamanho e data. Excluir um arquivo tira aquele objeto. Não apaga a oportunidade nem a conversa. Apagar um arquivo de chat deixa a conversa e remove a mídia daquela mensagem.
+
+## Limpeza confirmada
+
+A limpeza **não é automática** e não roda em agenda. O campo de dias começa em **90** e precisa ser um número inteiro de pelo menos 1.
+
+1. Marque arquivos, chats e/ou oportunidades.
+2. Clique em **Prévia**. Nada é apagado.
+3. Confirme só se os números estiverem certos.
+
+- **Arquivos:** idade do arquivo guardado.
+- **Chats:** última mensagem (ou a criação da conversa, se não houver mensagem) mais antiga que o prazo. Apagar o chat usa o mesmo efeito de excluir a conversa, inclusive a mídia.
+- **Oportunidades:** dias sem interação, no fuso de São Paulo. Apagar a oportunidade usa a exclusão já existente, inclusive os anexos.
+
+Quem só pode ler a aba vê o uso e a lista. A limpeza e a exclusão pedem permissão de excluir em **Arquivos**.

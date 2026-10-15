@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-14T12:27:48.005Z",
+  "capturedAt": "2026-10-15T02:16:30.188Z",
   "prints": [
     {
       "id": "sign",
@@ -468,6 +468,15 @@
       "printFile": "setup-operation.png",
       "kind": "page",
       "mdxPath": "/prints/setup-operation.png"
+    },
+    {
+      "id": "setup-storage",
+      "module": "configuracao",
+      "title": "Arquivos (Setup)",
+      "crmRoute": "/setup?tab=storage",
+      "printFile": "setup-storage.png",
+      "kind": "page",
+      "mdxPath": "/prints/setup-storage.png"
     },
     {
       "id": "setup-operation-package",

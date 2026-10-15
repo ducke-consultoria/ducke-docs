@@ -14,4 +14,5 @@ export default {
   '12-integracoes': 'Integrações',
   '13-templates-de-email': 'Templates de Email',
   '14-auditoria-operacional': 'Auditoria operacional',
+  '15-arquivos': 'Arquivos',
 }
