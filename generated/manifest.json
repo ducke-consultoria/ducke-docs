@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-15T02:16:30.188Z",
+  "capturedAt": "2026-10-16T14:09:35.221Z",
   "prints": [
     {
       "id": "sign",
@@ -549,6 +549,15 @@
       "printFile": "setup-booking-links.png",
       "kind": "page",
       "mdxPath": "/prints/setup-booking-links.png"
+    },
+    {
+      "id": "setup-booking-link-availability",
+      "module": "configuracao",
+      "title": "Disponibilidade do link de agendamento",
+      "crmRoute": "/setup?tab=booking-types",
+      "printFile": "setup-booking-link-availability.png",
+      "kind": "setup-booking-link-availability",
+      "mdxPath": "/prints/setup-booking-link-availability.png"
     },
     {
       "id": "setup-user-tokens",
