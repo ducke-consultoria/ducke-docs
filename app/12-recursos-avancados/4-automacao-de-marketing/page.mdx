@@ -9,81 +9,19 @@ import { Callout } from 'nextra/components'
 
 <img src="/prints/auto.png" alt="Tela de automação do Ducke CRM" style={{ borderRadius: '0.5rem' }} />
 
-O Ducke CRM oferece recursos avançados de automação de marketing para ajudar você a criar e gerenciar fluxos de comunicação automatizados, nutrir leads e otimizar suas campanhas.
+Em **Automação** (`/auto`) você liga mensagens automáticas da operação. Hoje só a mensagem de aniversário envia. Notificação de produto, promoção e lembrete de compra recorrente aparecem na tela e continuam indisponíveis.
 
-## Fluxos de Automação
+## Mensagem de aniversário
 
-### Criação
+<img src="/prints/auto-birthday-message.png" alt="Editor da mensagem de aniversário" style={{ borderRadius: '0.5rem' }} />
 
-1. Acesse **Marketing > Automações**
-2. Clique em **Novo Fluxo**
-3. Defina:
-   - **Nome**: Identificação do fluxo
-   - **Objetivo**: Meta principal
-   - **Público**: Segmentação inicial
-   - **Gatilhos**: Eventos de início
-   - **Condições**: Regras de execução
+1. Abra **Automação** e conecte um dispositivo de WhatsApp, se ainda não estiver ligado.
+2. Ative **Mensagem de Aniversário**.
+3. Abra o card e escreva o texto. Salvar envia o texto para aprovação do WhatsApp.
+4. O editor mostra o status: ainda não enviada, aguardando aprovação, aprovada ou recusada.
 
-### Elementos
-
-- **Gatilhos**: Eventos que iniciam o fluxo
-- **Condições**: Regras de decisão
-- **Ações**: Tarefas automatizadas
-- **Tempos**: Prazos e esperas
-- **Caminhos**: Fluxos alternativos
-
-## Tipos de Automação
-
-### Nutrição de Leads
-
-- **Bem-vindo**: Primeiro contato
-- **Educação**: Conteúdo informativo
-- **Qualificação**: Avaliação de interesse
-- **Follow-up**: Acompanhamento
-- **Conversão**: Estímulo à ação
-
-### Engajamento
-
-- **Aniversários**: Datas especiais
-- **Eventos**: Participação em eventos
-- **Comportamento**: Ações do usuário
-- **Inatividade**: Reativação
-- **Feedback**: Coleta de opiniões
-
-### Vendas
-
-- **Oportunidades**: Acompanhamento
-- **Abandono**: Recuperação
-- **Upsell**: Venda adicional
-- **Cross-sell**: Produtos relacionados
-- **Renovação**: Manutenção de clientes
-
-## Monitoramento
-
-### Métricas
-
-- **Taxa de Conversão**: Eficácia
-- **Tempo de Resposta**: Velocidade
-- **Engajamento**: Interação
-- **ROI**: Retorno sobre investimento
-- **Satisfação**: Feedback dos usuários
-
-### Ajustes
-
-- **Otimização**: Melhorias contínuas
-- **Testes**: A/B testing
-- **Segmentação**: Refinamento
-- **Personalização**: Adaptação
-- **Escala**: Aumento de volume
+O CRM envia a mensagem aprovada **às 9h, horário de Brasília**, no aniversário do **contato de WhatsApp daquele cliente**. Cada contato recebe **uma vez por ano**. Um aniversário em 29 de fevereiro sai em 28 de fevereiro nos anos que não são bissextos.
 
 <Callout type="info">
-A automação de marketing permite criar experiências personalizadas em escala, aumentando a eficiência das suas campanhas.
+Um telefone na lista de não contatar não recebe a mensagem. Enquanto o texto não estiver aprovado, nada é enviado.
 </Callout>
-
-## Dicas para Automação
-
-- Comece com fluxos simples
-- Teste antes de escalar
-- Monitore resultados
-- Ajuste conforme feedback
-- Mantenha a personalização 
