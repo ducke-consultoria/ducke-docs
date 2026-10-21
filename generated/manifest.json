@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-20T13:55:13.786Z",
+  "capturedAt": "2026-10-21T17:53:16.459Z",
   "prints": [
     {
       "id": "sign",
@@ -162,6 +162,24 @@
       "printFile": "chat.png",
       "kind": "page",
       "mdxPath": "/prints/chat.png"
+    },
+    {
+      "id": "chat-attach-menu",
+      "module": "chat",
+      "title": "Chat — menu de anexos",
+      "crmRoute": "/chat?conversationId=conv-attach-e2e",
+      "printFile": "chat-attach-menu.png",
+      "kind": "chat-attach-menu",
+      "mdxPath": "/prints/chat-attach-menu.png"
+    },
+    {
+      "id": "chat-attach-preview",
+      "module": "chat",
+      "title": "Chat — prévia de arquivos com legenda",
+      "crmRoute": "/chat?conversationId=conv-attach-e2e",
+      "printFile": "chat-attach-preview.png",
+      "kind": "chat-attach-preview",
+      "mdxPath": "/prints/chat-attach-preview.png"
     },
     {
       "id": "dashboard",
