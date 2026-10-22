@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-21T21:26:15.085Z",
+  "capturedAt": "2026-10-22T21:06:45.738Z",
   "prints": [
     {
       "id": "sign",
@@ -423,6 +423,15 @@
       "printFile": "assistants-criar-template.png",
       "kind": "assistants-create-modal",
       "mdxPath": "/prints/assistants-criar-template.png"
+    },
+    {
+      "id": "assistants-node-lead-edit",
+      "module": "assistentes",
+      "title": "Editor do nó Editar Oportunidade",
+      "crmRoute": "/assistants",
+      "printFile": "assistants-node-lead-edit.png",
+      "kind": "assistants-node-lead-edit",
+      "mdxPath": "/prints/assistants-node-lead-edit.png"
     },
     {
       "id": "setup-tags",

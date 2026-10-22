@@ -11,3 +11,17 @@ order: 5
 * **API**: faz chamadas HTTP a sistemas externos, criando ou consultando dados.
 * **Delay**: adiciona pausa configurável (ex.: aguardar 30 minutos antes de seguir).
 * **Condição**: permite ramificar o fluxo com base em expressões simples ou regex. 
+* **Editar Oportunidade** e **Editar Contato**: alteram campos da oportunidade ou do contato da conversa. Escolha vários campos de uma vez e defina o valor de cada um, com texto fixo ou variáveis como `{{lead.name}}`. O bloco no fluxograma mostra quantos campos ele edita (ex.: "Edita 2 campos").
+* **Gerenciar Tags**: adiciona ou remove tags da oportunidade. Se uma tag configurada for apagada em Configurações, ela some do bloco ao abrir o editor; salve para atualizar.
+
+## Editar e salvar um bloco
+
+Clique no bloco para abrir o editor. Use o botão **Salvar atividade** no topo para gravar as alterações.
+
+<img src="/prints/assistants-node-lead-edit.png" alt="Editor do bloco Editar Oportunidade com os campos Nome e Cidade" style={{ borderRadius: '0.5rem' }} />
+
+Se você fechar o editor (botão fechar, tecla Esc ou clique fora) com alterações não salvas, o CRM pergunta o que fazer:
+
+* **Salvar e Fechar**: grava e fecha. Se a gravação falhar, o editor continua aberto com suas alterações.
+* **Descartar**: fecha sem gravar.
+* **Cancelar**: volta para o editor.
