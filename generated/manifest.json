@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-21T17:53:16.459Z",
+  "capturedAt": "2026-10-21T21:26:15.085Z",
   "prints": [
     {
       "id": "sign",
@@ -45,6 +45,15 @@
       "printFile": "leads-criar-oportunidade.png",
       "kind": "leads-create-modal",
       "mdxPath": "/prints/leads-criar-oportunidade.png"
+    },
+    {
+      "id": "leads-create-origin-modal",
+      "module": "leads",
+      "title": "Modal criar origem copiando estágios",
+      "crmRoute": "/leads",
+      "printFile": "leads-criar-origem-copiar-estagios.png",
+      "kind": "leads-create-origin-modal",
+      "mdxPath": "/prints/leads-criar-origem-copiar-estagios.png"
     },
     {
       "id": "leads-import-modal",
