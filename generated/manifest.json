@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-22T21:06:45.738Z",
+  "capturedAt": "2026-10-22T23:33:57.978Z",
   "prints": [
     {
       "id": "sign",
@@ -189,6 +189,33 @@
       "printFile": "chat-attach-preview.png",
       "kind": "chat-attach-preview",
       "mdxPath": "/prints/chat-attach-preview.png"
+    },
+    {
+      "id": "notas-mencao",
+      "module": "leads",
+      "title": "Nota com @ para marcar usuário",
+      "crmRoute": "/leads",
+      "printFile": "notas-mencao.png",
+      "kind": "leads-note-mention",
+      "mdxPath": "/prints/notas-mencao.png"
+    },
+    {
+      "id": "setup-profile-notificacoes",
+      "module": "configuracao",
+      "title": "Perfil — preferências de notificação",
+      "crmRoute": "/setup?tab=profile",
+      "printFile": "setup-profile-notificacoes.png",
+      "kind": "setup-profile-notifications",
+      "mdxPath": "/prints/setup-profile-notificacoes.png"
+    },
+    {
+      "id": "notificacoes-mencao",
+      "module": "inicio",
+      "title": "Sino com menção não lida",
+      "crmRoute": "/leads",
+      "printFile": "notificacoes-mencao.png",
+      "kind": "notifications-bell",
+      "mdxPath": "/prints/notificacoes-mencao.png"
     },
     {
       "id": "dashboard",
