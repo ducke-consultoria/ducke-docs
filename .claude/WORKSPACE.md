@@ -14,12 +14,13 @@ All repositories are siblings under `~/Workspace/Ducke/` (reach them as `../<rep
 | `ducke-crm-chat-test` | Local Meta Graph / WhatsApp mock | Express | `npm run dev` (4200) | none | any app testing WhatsApp (`META_GRAPH_BASE_URL=http://localhost:4200`) |
 | `ducke-website` | Marketing site | Next 16, HeroUI v3, next-intl | `npm run dev` (3000) | own | alone |
 | `ducke-infra` | CloudFormation for the AWS account | YAML, Python checks | none | none, planned in `ducke-admin/openspec` | alone |
+| `ducke-agents` | ClickUp task agent: triages `ia-ok` tasks and opens PRs with Claude Code headless; reports to ducke-admin `/agents` | Node 24 + TypeScript, Docker Compose | `docker compose up` (no port) | none, planned in `ducke-admin/openspec` | ducke-admin (worker API) |
 
 Port clashes: crud-shadcn, erp and admin all use 3002; crm-app and website both use 3000. Run one at a time or pass another port.
 
 ## VS Code workspaces
 
-- `ducke-admin/ducke-admin.code-workspace` opens admin plus crm-app, crm-api, opme, erp, crud-shadcn, website and infra (the control-plane view; docs and chat-test are not in it). Launch "Debug" runs admin `npm run dev`.
+- `ducke-admin/ducke-admin.code-workspace` opens admin plus crm-app, crm-api, opme, erp, crud-shadcn, website, infra and agents (the control-plane view; docs and chat-test are not in it). Launch "Debug" runs admin `npm run dev`.
 - `ducke-crm-app/ducke-crm.code-workspace` opens crm-app, crm-api, chat-test and docs. Launch "Debug All (Concurrently)" runs `npm run dev:all` (app + api); compound "Debug with chat" adds chat-test; "Debug CRM + Docs" adds docs on 3005.
 - Every other repo is opened and run on its own.
 
@@ -33,6 +34,7 @@ A Claude session started from a workspace has the opened folders as additional d
 | Shared business modules (finance, stock, NFe) | `ducke-opme` today; `ducke-erp` is still the template shell |
 | CRM behavior (app and API) | `ducke-crm-app/openspec`, code in `ducke-crm-app` + `ducke-crm-api` |
 | AWS stacks, ALB, pipelines | `ducke-infra` (runbook: `docs/runbook.md`) |
+| ClickUp task agent (worker, prompts, compose) | `ducke-agents`; its runs and worker API live in `ducke-admin` |
 | Marketing site | `ducke-website` |
 
 The four template repos share most files. Search the owner first; do not grep all four for the same hit.
