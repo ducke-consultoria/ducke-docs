@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-22T23:33:57.978Z",
+  "capturedAt": "2026-10-23T12:41:36.555Z",
   "prints": [
     {
       "id": "sign",
@@ -207,6 +207,42 @@
       "printFile": "setup-profile-notificacoes.png",
       "kind": "setup-profile-notifications",
       "mdxPath": "/prints/setup-profile-notificacoes.png"
+    },
+    {
+      "id": "celular-menu",
+      "module": "inicio",
+      "title": "Menu no celular",
+      "crmRoute": "/home",
+      "printFile": "celular-menu.png",
+      "kind": "phone-menu",
+      "mdxPath": "/prints/celular-menu.png"
+    },
+    {
+      "id": "celular-chat",
+      "module": "chat",
+      "title": "Conversa no celular",
+      "crmRoute": "/chat?conversationId=conv-attach-e2e",
+      "printFile": "celular-chat.png",
+      "kind": "phone-chat",
+      "mdxPath": "/prints/celular-chat.png"
+    },
+    {
+      "id": "celular-oportunidades",
+      "module": "leads",
+      "title": "Quadro de oportunidades no celular",
+      "crmRoute": "/leads",
+      "printFile": "celular-oportunidades.png",
+      "kind": "page",
+      "mdxPath": "/prints/celular-oportunidades.png"
+    },
+    {
+      "id": "celular-assistente",
+      "module": "assistentes",
+      "title": "Blocos do editor no celular",
+      "crmRoute": "/assistants",
+      "printFile": "celular-assistente.png",
+      "kind": "phone-assistant-palette",
+      "mdxPath": "/prints/celular-assistente.png"
     },
     {
       "id": "notificacoes-mencao",
