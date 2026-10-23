@@ -5,26 +5,79 @@ order: 0
 
 # Dashboard
 
-O **Dashboard** oferece uma visão consolidada do desempenho da operação: leads, conversões, atividades e indicadores que ajudam a tomar decisões rápidas.
-
-<img src="/prints/dashboard.png" alt="Dashboard do Ducke CRM" style={{ borderRadius: '0.5rem' }} />
-
-## Para que serve
-
-- Acompanhar volume de leads e movimentação no funil.
-- Identificar gargalos em estágios específicos.
-- Monitorar produtividade da equipe em um único painel.
+O **Dashboard** mostra em um painel como estão as oportunidades, as vendas e o atendimento da equipe no período escolhido. Ele tem duas abas: **Geral** e **Atendimento**.
 
 ## Como acessar
 
-No menu lateral, clique em **Dashboard**. Os dados refletem a operação ativa e respeitam as permissões do seu perfil.
+No menu, clique em **Dashboard**. Os dados respeitam as permissões do seu perfil: quem não é dono da operação vê as oportunidades atribuídas a si, à sua equipe ou sem responsável.
 
-## Leitura dos indicadores
+O período e os filtros ficam no canto superior direito e valem para as duas abas. O padrão são os últimos 30 dias.
 
-Cada cartão ou gráfico resume um aspecto do CRM — por exemplo, leads abertos, ganhos no período ou atividades pendentes. Passe o mouse ou clique nos elementos quando houver detalhamento disponível.
+## Como o painel é organizado
+
+Cada aba é um painel com:
+
+- **Cabeçalho**: o nome do painel, o período, o horário da última leitura (**Atualizado às**) e o botão de atualizar, que recarrega os dados sem sair da tela.
+- **Faixa de indicadores**: os números principais do período, com uma legenda curta embaixo de cada um.
+- **Gráficos de tendência**: mostram a evolução dentro do período. Até 62 dias, cada ponto é um dia; em períodos maiores, cada ponto é uma semana (de segunda a domingo). Passe o mouse sobre o gráfico para ver os valores de cada ponto.
+- **Tabelas**: o detalhe por origem (Geral) ou por vendedor (Atendimento).
+
+## Aba Geral
+
+<img src="/prints/dashboard.png" alt="Aba Geral do Dashboard com indicadores, gráficos de oportunidades e valor ganho, desempenho por origem e funil" style={{ borderRadius: '0.5rem' }} />
+
+### Indicadores
+
+| Indicador | O que conta |
+|---|---|
+| **Criadas** | Oportunidades criadas no período |
+| **Em aberto** | Oportunidades criadas no período que ainda estão abertas |
+| **Ganhas** | Oportunidades marcadas como ganhas no período |
+| **Perdidas** | Oportunidades marcadas como perdidas no período |
+| **Conversão** | Ganhas ÷ (ganhas + perdidas) no período |
+| **Valor ganho** | Soma do valor das oportunidades ganhas. A legenda mostra o **ticket médio** (valor ganho ÷ ganhas que têm valor) |
+
+Embaixo de cada indicador aparece a variação em relação ao **período anterior** de mesmo tamanho. Por exemplo, para 1º a 31 de outubro, a comparação é com os 31 dias anteriores. A seta verde indica melhora e a vermelha, piora; em **Perdidas**, subir é piora. Quando o período anterior não tem dados, a variação não aparece.
+
+### Gráficos
+
+- **Oportunidades por período**: criadas, ganhas e perdidas em cada dia (ou semana).
+- **Valor ganho por período**: quanto foi ganho em cada dia (ou semana).
+
+### Desempenho por origem
+
+Para cada origem do grupo selecionado, a tabela mostra as oportunidades **criadas no período**, a barra com a parte de abertas, ganhas e perdidas entre elas, a conversão e o valor ganho. Oportunidades criadas antes do período não entram nesta tabela.
+
+### Funil de vendas
+
+O funil mostra, etapa por etapa, quantas oportunidades há em cada estágio, quantas foram ganhas (verde) ou perdidas (vermelho) e a taxa de passagem para as etapas seguintes.
+
+## Aba Atendimento
+
+<img src="/prints/dashboard-attendance.png" alt="Aba Atendimento do Dashboard com indicadores, gráficos de mensagens, conversas e primeira resposta, SLA e tabela de vendedores" style={{ borderRadius: '0.5rem' }} />
+
+A aba **Atendimento** mede as conversas dos vendedores. Mensagens enviadas pelo assistente inteligente não entram na conta. Cada indicador e gráfico tem um ícone **?** que explica o que é, como é calculado e como usar.
+
+- **Indicadores**: oportunidades atendidas, 1ª resposta média, taxa de resposta, contatos únicos, conversas iniciadas e oportunidades sem resposta.
+- **Volume de mensagens**: mensagens enviadas e recebidas por dia (ou semana).
+- **Fluxo de conversas**: conversas iniciadas pelo time e recebidas dos contatos por dia (ou semana).
+- **1ª resposta (média)**: o tempo médio de primeira resposta em cada dia (ou semana). A linha tracejada marca **30 minutos**, o limite da pior faixa de SLA.
+- **SLA — 1ª resposta**, **Cobertura de oportunidades** e **Retorno de contactadas**: barras que mostram a parte de cada faixa no total do período.
+
+### Desempenho por vendedor
+
+A tabela mostra, para cada vendedor, um minigráfico das mensagens enviadas ao longo do período com o total ao lado, contatos, oportunidades atendidas, 1ª resposta, taxa de resposta, a barra de SLA e as reuniões agendadas.
+
+A coluna **Situação** mostra **Em dia** quando o vendedor não tem oportunidades atrasadas. Quando tem, mostra quantas estão atrasadas e há quantos dias está a mais antiga sem interação, conforme a regra de atraso configurada em cada etapa do funil.
+
+Use **Exportar XLSX** no cabeçalho para baixar a tabela de vendedores em planilha.
+
+### Oportunidades sem resposta
+
+Lista as conversas em que a última mensagem foi do vendedor e o contato ainda não respondeu. Use **Ir para conversa** para abrir a conversa no Chat.
 
 ## Dicas
 
-- Consulte o dashboard no início do dia para priorizar follow-ups.
-- Compare períodos para avaliar o impacto de campanhas ou mudanças no funil.
-- O **assistente de suporte** (botão **?**) também responde KPIs, funil e desempenho por origem quando você tem permissão de Dashboard — útil para perguntas rápidas sem montar filtros na tela.
+- Consulte o dashboard no início do dia para priorizar follow-ups e vendedores com oportunidades atrasadas.
+- Use a variação contra o período anterior para avaliar o impacto de campanhas ou mudanças no funil.
+- O **assistente de suporte** (botão **?**) também responde sobre os indicadores, o funil e o desempenho por origem quando você tem permissão de Dashboard.

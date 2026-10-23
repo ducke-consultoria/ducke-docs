@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-23T12:41:36.555Z",
+  "capturedAt": "2026-10-23T15:41:14.907Z",
   "prints": [
     {
       "id": "sign",
@@ -259,8 +259,17 @@
       "title": "Dashboard",
       "crmRoute": "/dashboard",
       "printFile": "dashboard.png",
-      "kind": "page",
+      "kind": "dashboard-general",
       "mdxPath": "/prints/dashboard.png"
+    },
+    {
+      "id": "dashboard-attendance",
+      "module": "dashboard",
+      "title": "Dashboard — Atendimento",
+      "crmRoute": "/dashboard",
+      "printFile": "dashboard-attendance.png",
+      "kind": "dashboard-attendance",
+      "mdxPath": "/prints/dashboard-attendance.png"
     },
     {
       "id": "bookings",
