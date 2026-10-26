@@ -5,8 +5,8 @@ All repositories are siblings under `~/Workspace/Ducke/` (reach them as `../<rep
 | Repo | Role | UI / stack | Dev (port) | OpenSpec | Runs with |
 |---|---|---|---|---|---|
 | `crud-shadcn` | Generic CRUD template. Git remote `template` of erp, opme, admin | Next 16 + vinext, shadcn/ui | `npm run dev` (3002) | own | alone |
-| `ducke-erp` | Template child; future home of shared business modules | same as template | 3002 | own | alone |
-| `ducke-opme` | OPME product; finance, NFe, stock, purchases live here today | same as template | 3001 | own | alone |
+| `ducke-erp` | Template child; home of the shared business modules: sales, NF-e/NFS-e, stock, finance, purchasing (see its `.claude/PRODUCT.md`) | same as template | 3002 | own | alone |
+| `ducke-opme` | OPME product; keeps its own finance, NFe, stock and purchases until moved to ERP | same as template | 3001 | own | alone |
 | `ducke-admin` | Control plane (one organization) | same as template | 3002 | own, plus infra and cross-product changes | alone |
 | `ducke-crm-app` | CRM web app | Next 16, HeroUI v3, Tailwind 4 | `npm run dev` (3000); `npm run dev:all` starts app + api | owns all CRM specs, API included | `ducke-crm-api` |
 | `ducke-crm-api` | CRM API | Express 5, Prisma 7, Valkey, Socket.io | `npm run dev` (4000 http, 4001 ws) | none, see `ducke-crm-app/openspec` | `ducke-crm-app` |
@@ -31,7 +31,7 @@ A Claude session started from a workspace has the opened folders as additional d
 | Need | Look in |
 |---|---|
 | Generic CRUD, auth shell, AI support core, template behavior | `crud-shadcn`, then the product that merged it |
-| Shared business modules (finance, stock, NFe) | `ducke-opme` today; `ducke-erp` is still the template shell |
+| Shared business modules (sales, fiscal, stock, finance, purchasing) | `ducke-erp` (`openspec/specs/erp-*`); OPME-specific variants stay in `ducke-opme` |
 | CRM behavior (app and API) | `ducke-crm-app/openspec`, code in `ducke-crm-app` + `ducke-crm-api` |
 | AWS stacks, ALB, pipelines | `ducke-infra` (runbook: `docs/runbook.md`) |
 | ClickUp task agent (worker, prompts, compose) | `ducke-agents`; its runs and worker API live in `ducke-admin` |
