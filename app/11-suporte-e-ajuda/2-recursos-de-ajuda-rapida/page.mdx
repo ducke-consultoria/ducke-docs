@@ -23,8 +23,10 @@ Ele pode:
 - Sugerir o relatório ou a tela certa do produto quando a pergunta for analítica (ex.: cliente esperando no chat → Dashboard → Atendimento ou conversas não lidas; cards com SLA estourado → Oportunidades Atrasadas; conversão/motivos de perda/tempo no funil → Relatórios com números; funil/KPIs → Dashboard; disparos com erro → Campanhas)
 - Informar status do **Assistente Inteligente** (pacote, créditos, fluxos e onde estão ligados) e da **assinatura/trial** da operação — sem confundir com a cota do Ducke AI
 - Listar dispositivos (WhatsApp/etc.), usuários da operação e grupos/origens quando você tiver permissão
+- Saber em qual tela você está e qual registro está aberto (lead, campanha, agendamento, conversa ou origem). Com um lead aberto, pergunte "quantos dias sem interação este lead tem?" sem dizer o nome. O Ducke AI recebe só a tela e o identificador do registro e lê os dados pelas mesmas permissões que você tem; se você não puder ver o registro, ele não responde sobre ele
 - Explicar erros dos avisos (toasts), inclusive com a ação **Explicar**
 - Explicar erros de **mensagem que não saiu** no chat: no ícone de erro da mensagem, use **Explicar com o Ducke AI**. O assistente usa o erro do canal (WhatsApp, Instagram ou outra integração) para dizer se você precisa mudar a forma de enviar (por exemplo, janela de 24 horas fechada) ou se parece falha do produto
+- Abrir o formulário de **novo lead**, **novo agendamento** ou **nova campanha** já preenchido (veja [Pedir ao Ducke AI para preencher um formulário](#pedir-ao-ducke-ai-para-preencher-um-formulario))
 - Gerar um **relatório JSON** para enviar ao [suporte humanizado](/11-suporte-e-ajuda/1-suporte-humanizado)
 
 ![Ducke AI](/prints/ai-support-chat.png)
@@ -32,6 +34,16 @@ Ele pode:
 <Callout type="info">
 O **Ducke AI** é o copiloto de **suporte do produto**. Ele é diferente do **Assistente Inteligente** de conversas (WhatsApp/fluxos e créditos).
 </Callout>
+
+### Pedir ao Ducke AI para preencher um formulário
+
+Peça, por exemplo: "cria um lead João, telefone 11999999999, na origem Site". O Ducke AI responde com um cartão mostrando os dados entendidos. Clique em **Abrir formulário**: o CRM leva você à tela certa (Oportunidades, Agendamentos ou Campanhas) e abre o modal com os campos preenchidos.
+
+- **Nada é salvo sozinho.** Confira os dados e clique em **Salvar**. A gravação segue as mesmas regras e permissões de sempre.
+- Para o lead, o Ducke AI pode indicar nome, telefone, origem e etapa. Se a origem ou a etapa citada não existir, o modal abre na origem atual, sem etapa escolhida.
+- Para o agendamento, pode indicar descrição, data e horário. Para a campanha, o nome.
+- Só vale para quem tem permissão de **escrita** na tela: sem ela, o Ducke AI explica que você não pode criar aquilo e nenhum formulário abre.
+- Informações que o Ducke AI não entende como campo do formulário são ignoradas.
 
 ### Limite de uso
 
