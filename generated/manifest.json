@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-23T15:41:14.907Z",
+  "capturedAt": "2026-10-28T18:22:51.670Z",
   "prints": [
     {
       "id": "sign",
@@ -252,6 +252,15 @@
       "printFile": "notificacoes-mencao.png",
       "kind": "notifications-bell",
       "mdxPath": "/prints/notificacoes-mencao.png"
+    },
+    {
+      "id": "app-update-notice",
+      "module": "inicio",
+      "title": "Aviso de nova versão",
+      "crmRoute": "/leads",
+      "printFile": "app-update-notice.png",
+      "kind": "app-update-toast",
+      "mdxPath": "/prints/app-update-notice.png"
     },
     {
       "id": "dashboard",
