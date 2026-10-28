@@ -7,9 +7,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^15.5.27",
-    "nextra": "4.2.16",
-    "nextra-theme-docs": "4.2.16",
+    "next": "^16.4.3",
+    "nextra": "4.6.1",
+    "nextra-theme-docs": "4.6.1",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },
@@ -18,5 +18,9 @@
     "@types/react": "^19.3.0",
     "pagefind": "^1.4.0",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "katex": "^0.18.2",
+    "zod": "4.3.6"
   }
 }
