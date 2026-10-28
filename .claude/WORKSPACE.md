@@ -1,10 +1,10 @@
 # Ducke workspace map
 
-All repositories are siblings under `~/Workspace/Ducke/` (reach them as `../<repo>`). This file is identical in every repo; edit it in `crud-shadcn` and copy it to the repos outside the template family.
+All repositories are siblings under `~/Workspace/Ducke/` (reach them as `../<repo>`). This file is identical in every repo; edit it in `ducke-template` and copy it to the repos outside the template family.
 
 | Repo | Role | UI / stack | Dev (port) | OpenSpec | Runs with |
 |---|---|---|---|---|---|
-| `crud-shadcn` | Generic CRUD template. Git remote `template` of erp, opme, admin | Next 16 + vinext, shadcn/ui | `npm run dev` (3002) | own | alone |
+| `ducke-template` | Generic CRUD template. Git remote `template` of erp, opme, admin | Next 16 + vinext, shadcn/ui | `npm run dev` (3002) | own | alone |
 | `ducke-erp` | Template child; home of the shared business modules: sales, NF-e/NFS-e, stock, finance, purchasing (see its `.claude/PRODUCT.md`) | same as template | 3002 | own | alone |
 | `ducke-opme` | OPME product; keeps its own finance, NFe, stock and purchases until moved to ERP | same as template | 3001 | own | alone |
 | `ducke-admin` | Control plane (one organization) | same as template | 3002 | own, plus infra and cross-product changes | alone |
@@ -15,11 +15,11 @@ All repositories are siblings under `~/Workspace/Ducke/` (reach them as `../<rep
 | `ducke-website` | Marketing site | Next 16, HeroUI v3, next-intl | `npm run dev` (3000) | own | alone |
 | `ducke-infra` | CloudFormation for the AWS account | YAML, Python checks | none | none, planned in `ducke-admin/openspec` | alone |
 
-Port clashes: crud-shadcn, erp and admin all use 3002; crm-app and website both use 3000. Run one at a time or pass another port.
+Port clashes: ducke-template, erp and admin all use 3002; crm-app and website both use 3000. Run one at a time or pass another port.
 
 ## VS Code workspaces
 
-- `ducke-admin/ducke-admin.code-workspace` opens admin plus crm-app, crm-api, opme, erp, crud-shadcn, website and infra (the control-plane view; docs and chat-test are not in it). Launch "Debug" runs admin `npm run dev`.
+- `ducke-admin/ducke-admin.code-workspace` opens admin plus crm-app, crm-api, opme, erp, ducke-template, website and infra (the control-plane view; docs and chat-test are not in it). Launch "Debug" runs admin `npm run dev`.
 - `ducke-crm-app/ducke-crm.code-workspace` opens crm-app, crm-api, chat-test and docs. Launch "Debug All (Concurrently)" runs `npm run dev:all` (app + api); compound "Debug with chat" adds chat-test; "Debug CRM + Docs" adds docs on 3005.
 - Every other repo is opened and run on its own.
 
@@ -29,7 +29,7 @@ A Claude session started from a workspace has the opened folders as additional d
 
 | Need | Look in |
 |---|---|
-| Generic CRUD, auth shell, AI support core, template behavior | `crud-shadcn`, then the product that merged it |
+| Generic CRUD, auth shell, AI support core, template behavior | `ducke-template`, then the product that merged it |
 | Shared business modules (sales, fiscal, stock, finance, purchasing) | `ducke-erp` (`openspec/specs/erp-*`); OPME-specific variants stay in `ducke-opme` |
 | CRM behavior (app and API) | `ducke-crm-app/openspec`, code in `ducke-crm-app` + `ducke-crm-api` |
 | AWS stacks, ALB, pipelines | `ducke-infra` (runbook: `docs/runbook.md`) |
@@ -40,7 +40,7 @@ The four template repos share most files. Search the owner first; do not grep al
 
 ## Lineage and OpenSpec ownership
 
-- Generic platform code changes in `crud-shadcn` first (with its OpenSpec change there), then each child runs `git merge template/main`. Never edit the same generic file in each child.
+- Generic platform code changes in `ducke-template` first (with its OpenSpec change there), then each child runs `git merge template/main`. Never edit the same generic file in each child.
 - Product work gets its OpenSpec change in that product's repo. CRM changes live in `ducke-crm-app` even when only the API changes.
 - Infra and cross-product work started from the admin workspace gets its change in `ducke-admin`.
 - `openspec/specs/` is current truth; `openspec/changes/archive/` is history, read it only when asked.
