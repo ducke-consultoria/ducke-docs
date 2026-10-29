@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-29T20:41:46.813Z",
+  "capturedAt": "2026-10-29T21:09:58.892Z",
   "prints": [
     {
       "id": "sign",
@@ -9,6 +9,15 @@
       "printFile": "sign-login.png",
       "kind": "page",
       "mdxPath": "/prints/sign-login.png"
+    },
+    {
+      "id": "cancel-email-change",
+      "module": "autenticacao",
+      "title": "Troca de e-mail cancelada (Não fui eu)",
+      "crmRoute": "/cancel-email-change",
+      "printFile": "cancel-email-change.png",
+      "kind": "cancel-email-change",
+      "mdxPath": "/prints/cancel-email-change.png"
     },
     {
       "id": "onboarding",

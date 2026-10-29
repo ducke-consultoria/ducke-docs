@@ -46,9 +46,21 @@ Para voltar a entrar só com a senha, desligue o switch e confirme a senha.
 O e-mail é o seu login, por isso a troca tem uma confirmação:
 
 1. Edite o campo **E-mail** e confirme.
-2. Enviamos um **código de 6 dígitos** para o novo e-mail e um **aviso** para o e-mail antigo ("Pediram para trocar o e-mail da sua conta. Se não foi você, troque a senha.").
+2. Enviamos um **código de 6 dígitos** para o novo e-mail e um **aviso** para o e-mail antigo ("Pediram para trocar o e-mail da sua conta"), com o botão **Não fui eu**.
 3. Digite o código na janela **Confirme seu novo e-mail**. O código vale por 15 minutos e dá para pedir um novo a cada 60 segundos.
 4. Só depois do código certo o e-mail muda. Até lá, você continua entrando com o e-mail antigo.
+
+#### Não fui eu
+
+Se você recebeu o aviso e não pediu a troca, clique em **Não fui eu** no e-mail antigo:
+
+- A troca pendente é cancelada e o código enviado ao novo e-mail deixa de funcionar. Seu e-mail de login continua o original.
+- Todos os dispositivos conectados na sua conta são desconectados.
+- A página abre com o botão **Redefinir senha**, que leva ao envio do link de redefinição para o seu e-mail.
+
+<img src="/prints/cancel-email-change.png" alt="Página Troca de e-mail cancelada com o botão Redefinir senha" style={{ borderRadius: '0.5rem' }} />
+
+O botão vale por **15 minutos**, o mesmo prazo do código, e só funciona uma vez. Link já usado ou vencido mostra a mensagem **Link indisponível** e não altera nada. O cancelamento fica registrado na aba **Auditoria** como **Troca de e-mail cancelada**.
 
 Se o novo e-mail já pertence a outro usuário, a troca é recusada com um aviso. A mudança fica registrada na aba **Auditoria** como **E-mail de usuário alterado**.
 
