@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-28T18:22:51.670Z",
+  "capturedAt": "2026-10-29T20:18:29.245Z",
   "prints": [
     {
       "id": "sign",
@@ -306,6 +306,24 @@
       "printFile": "campaign.png",
       "kind": "page",
       "mdxPath": "/prints/campaign.png"
+    },
+    {
+      "id": "instagram-campaign",
+      "module": "campanhas",
+      "title": "Campanha Instagram",
+      "crmRoute": "/campaign-instagram",
+      "printFile": "campaign-instagram.png",
+      "kind": "instagram-campaign-list",
+      "mdxPath": "/prints/campaign-instagram.png"
+    },
+    {
+      "id": "instagram-campaign-posts",
+      "module": "campanhas",
+      "title": "Publicações da campanha Instagram",
+      "crmRoute": "/campaign-instagram",
+      "printFile": "campaign-instagram-publicacoes.png",
+      "kind": "instagram-campaign-posts",
+      "mdxPath": "/prints/campaign-instagram-publicacoes.png"
     },
     {
       "id": "campaign-create-scheduled",

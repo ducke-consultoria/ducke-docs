@@ -1,6 +1,7 @@
 export default {
   '0-dashboard': 'Dashboard',
   '2-gestao-de-campanhas': 'Gestão de Campanhas',
+  '10-campanha-instagram': 'Campanha Instagram',
   '3-envio-em-massa': 'Envio em Massa',
   '4-automacao-de-marketing': 'Automação de Marketing',
   '5-relatorios': 'Relatórios',
