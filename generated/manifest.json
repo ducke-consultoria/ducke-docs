@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-29T20:18:29.245Z",
+  "capturedAt": "2026-10-29T20:41:46.813Z",
   "prints": [
     {
       "id": "sign",
@@ -324,6 +324,15 @@
       "printFile": "campaign-instagram-publicacoes.png",
       "kind": "instagram-campaign-posts",
       "mdxPath": "/prints/campaign-instagram-publicacoes.png"
+    },
+    {
+      "id": "instagram-campaign-comment-assistant",
+      "module": "campanhas",
+      "title": "Assistente nos comentários da campanha Instagram",
+      "crmRoute": "/campaign-instagram",
+      "printFile": "campaign-instagram-comentarios.png",
+      "kind": "instagram-campaign-comment-assistant",
+      "mdxPath": "/prints/campaign-instagram-comentarios.png"
     },
     {
       "id": "campaign-create-scheduled",
