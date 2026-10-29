@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-29T21:09:58.892Z",
+  "capturedAt": "2026-10-29T21:24:23.382Z",
   "prints": [
     {
       "id": "sign",
@@ -18,6 +18,15 @@
       "printFile": "cancel-email-change.png",
       "kind": "cancel-email-change",
       "mdxPath": "/prints/cancel-email-change.png"
+    },
+    {
+      "id": "undo-email-change",
+      "module": "autenticacao",
+      "title": "Troca de e-mail desfeita (Desfazer troca)",
+      "crmRoute": "/undo-email-change",
+      "printFile": "undo-email-change.png",
+      "kind": "undo-email-change",
+      "mdxPath": "/prints/undo-email-change.png"
     },
     {
       "id": "onboarding",
