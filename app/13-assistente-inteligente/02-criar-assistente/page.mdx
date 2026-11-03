@@ -9,7 +9,7 @@ order: 2
 
 1. No menu, clique em **Assistentes** e depois em **Criar Assistente**.
 2. Preencha **Nome** (identificação interna) e **Descrição** (opcional).
-3. (Opcional) Em **Começar com um template**, passe o mouse sobre cada opção para ver uma explicação curta do que o assistente faz e escolha um starter (qualificação, atendimento, pós-venda, agendamento, etc.) — ou use **Começar em branco**.
+3. (Opcional) Em **Começar com um template**, passe o mouse sobre cada opção para ver uma explicação curta do que o assistente faz e escolha um starter (qualificação, atendimento, pós-venda, agendamento, campanha do Instagram, etc.) — ou use **Começar em branco**.
 4. Confirme a criação. Se você escolheu um template, o fluxograma já abre com nós e instruções iniciais prontos para personalizar (incluindo caminhos, edição de lead e handoff quando aplicável).
 5. Se começou em branco, abra o **fluxograma** pelo ícone correspondente para exibir o nó **Início**.
 6. Defina a **Origem** (ex.: WhatsApp, Instagram) que ativará este assistente.
@@ -17,3 +17,12 @@ order: 2
 8. Use o botão **Testar** para enviar uma mensagem de exemplo e validar o disparo do fluxo.
 9. Acesse **Logs** / transações para verificar as requisições recebidas e as respostas geradas pelo assistente.
  
+
+## Template "Campanha do Instagram (comentário)"
+
+Use este template para a campanha em que a pessoa comenta uma palavra (por exemplo "eu quero") na publicação e recebe uma mensagem no direct. O assistente agradece, envia os links da campanha na primeira resposta, conversa para entender o que a pessoa procura e salva o interesse na oportunidade. Se a pessoa não quiser, ele registra isso e se despede; se pedir atendimento humano, transfere.
+
+1. Crie o assistente com este template e abra o editor.
+2. Em **Variáveis**, edite **campaign_links** com os seus links, um por linha, com uma frase curta antes de cada um.
+3. Ajuste o tom e as instruções do agente se quiser.
+4. Na **Campanha Instagram**, abra a publicação, ligue **Assistente nos comentários**, escolha este assistente e defina as palavras que disparam a conversa.
