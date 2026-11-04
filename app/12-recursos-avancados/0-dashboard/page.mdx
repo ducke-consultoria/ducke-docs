@@ -56,13 +56,24 @@ O funil mostra, etapa por etapa, quantas oportunidades há em cada estágio, qua
 
 <img src="/prints/dashboard-attendance.png" alt="Aba Atendimento do Dashboard com indicadores, gráficos de mensagens, conversas e primeira resposta, SLA e tabela de vendedores" style={{ borderRadius: '0.5rem' }} />
 
-A aba **Atendimento** mede as conversas dos vendedores. Mensagens enviadas pelo assistente inteligente não entram na conta. Cada indicador e gráfico tem um ícone **?** que explica o que é, como é calculado e como usar.
+A aba **Atendimento** mede as conversas dos vendedores. Os indicadores e gráficos por vendedor não contam as mensagens do assistente inteligente; os de **Conversas e Assistente Inteligente** (veja abaixo) mostram o total e a parte do assistente. Cada indicador e gráfico tem um ícone **?** que explica o que é, como é calculado e como usar.
 
 - **Indicadores**: oportunidades atendidas, 1ª resposta média, taxa de resposta, contatos únicos, conversas iniciadas e oportunidades sem resposta.
 - **Volume de mensagens**: mensagens enviadas e recebidas por dia (ou semana).
 - **Fluxo de conversas**: conversas iniciadas pelo time e recebidas dos contatos por dia (ou semana).
 - **1ª resposta (média)**: o tempo médio de primeira resposta em cada dia (ou semana). A linha tracejada marca **30 minutos**, o limite da pior faixa de SLA.
 - **SLA — 1ª resposta**, **Cobertura de oportunidades** e **Retorno de contactadas**: barras que mostram a parte de cada faixa no total do período.
+
+### Conversas e Assistente Inteligente
+
+Logo abaixo dos indicadores, quatro cartões e dois gráficos mostram o **Total** das conversas da conta e, ao lado, a parte feita pelo **Assistente**. O total já inclui o que o assistente fez: com 10 mensagens enviadas hoje, 4 delas pelo assistente, o cartão mostra **10** e **Assistente: 4**.
+
+- **Respostas no período**: mensagens enviadas logo depois de uma mensagem do contato.
+- **Média de mensagens por conversa**: no total, todas as mensagens (enviadas e recebidas) divididas pelas conversas com movimento; no assistente, as mensagens dele divididas pelas conversas em que ele escreveu.
+- **Mensagens enviadas hoje** e **Conversas iniciadas hoje**: consideram o dia de hoje no seu fuso. Uma conversa é iniciada pela conta quando a primeira mensagem foi enviada por ela; é do assistente quando essa mensagem foi dele.
+- **Mensagens enviadas** e **Conversas iniciadas** (gráficos): a evolução no período, com as linhas **Total** e **Assistente**.
+
+Os filtros de **Grupo** e **Origem** do painel também valem para esses números. Eles consideram as conversas de contatos de oportunidades da origem; conversas sem oportunidade entram pela origem do dispositivo.
 
 ### Desempenho por vendedor
 
