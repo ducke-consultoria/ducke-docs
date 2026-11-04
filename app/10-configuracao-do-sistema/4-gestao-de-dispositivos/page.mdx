@@ -13,7 +13,22 @@ O Ducke CRM oferece recursos para gerenciar dispositivos conectados ao sistema, 
 
 ## Ações por dispositivo
 
-Na lista de **Configurações → Dispositivos**, cada linha tem um menu de **Ações** (ícone de três pontos). Ao abrir o menu, as opções disponíveis para aquele dispositivo aparecem com **ícone e nome** (por exemplo configurar assistente, templates de mensagens, verificar status na Meta, importar contatos de coexistence, reconectar Instagram, configurações e excluir). As opções mudam conforme o canal e o estado do dispositivo — só entram no menu as ações aplicáveis.
+Na lista de **Configurações → Dispositivos**, cada linha tem um menu de **Ações** (ícone de três pontos). Ao abrir o menu, as opções disponíveis para aquele dispositivo aparecem com **ícone e nome** (por exemplo configurar assistente, templates de mensagens, verificar status na Meta, editar perfil do WhatsApp, importar contatos de coexistence, reconectar Instagram, configurações e excluir). As opções mudam conforme o canal e o estado do dispositivo — só entram no menu as ações aplicáveis.
+
+## Perfil do WhatsApp
+
+Nos dispositivos **WhatsApp Business API**, a ação **Editar perfil do WhatsApp** (menu de **Ações**) abre uma janela com o perfil comercial que os clientes veem no WhatsApp. Ela carrega o perfil atual da Meta e grava as alterações de volta.
+
+<img src="/prints/setup-device-whatsapp-profile.png" alt="Janela de edição do perfil do WhatsApp com foto, sobre, descrição, endereço, e-mail, sites e categoria" style={{ borderRadius: '0.5rem' }} />
+
+- **Foto do perfil**: imagem JPG ou PNG, de preferência quadrada, de até 5 MB.
+- **Sobre**: frase curta exibida abaixo do nome, até 139 caracteres. O contador mostra quanto resta; acima do limite o campo é recusado.
+- **Descrição**: até 512 caracteres.
+- **Endereço** e **E-mail** do negócio.
+- **Sites**: até 2, começando com `http://` ou `https://`.
+- **Categoria**: o ramo da empresa, como Varejo, Saúde ou Educação.
+
+Se a Meta recusar a alteração, a mensagem aparece em português, dizendo o que corrigir. Para editar o perfil é preciso ter permissão de escrita em **Configurações → Dispositivos**, e o token do dispositivo precisa estar válido (reconecte o dispositivo se ele tiver expirado).
 
 ## Dispositivo de e-mail
 
