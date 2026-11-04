@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-03T15:22:41.705Z",
+  "capturedAt": "2026-11-04T23:01:54.091Z",
   "prints": [
     {
       "id": "sign",
@@ -405,6 +405,15 @@
       "printFile": "setup-device-email-imap.png",
       "kind": "setup-device-email-imap",
       "mdxPath": "/prints/setup-device-email-imap.png"
+    },
+    {
+      "id": "setup-device-whatsapp-profile",
+      "module": "setup",
+      "title": "Dispositivo WhatsApp: editar perfil",
+      "crmRoute": "/setup?tab=devices",
+      "printFile": "setup-device-whatsapp-profile.png",
+      "kind": "setup-device-whatsapp-profile",
+      "mdxPath": "/prints/setup-device-whatsapp-profile.png"
     },
     {
       "id": "reports",
