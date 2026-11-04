@@ -29,7 +29,51 @@ Plano, assinatura e créditos da operação ficam na aba **Operação**.
 
 1. Clique no ícone de lápis ao lado do campo desejado.
 2. Informe o novo valor e confirme.
-3. Aguarde a mensagem de sucesso — alterações de e-mail podem exigir validação adicional.
+3. Aguarde a mensagem de sucesso.
+
+### Verificação em duas etapas por e-mail
+
+Na seção **Segurança** do Perfil, o switch **Verificação em duas etapas por e-mail** vem **desligado** e vale só para o seu usuário.
+
+1. Ligue o switch e digite a **senha atual** na janela que abrir.
+2. A partir do próximo login, depois da senha o CRM pede um **código de 6 dígitos** enviado ao seu e-mail. Só com o código certo a sessão é aberta; quem tem apenas a senha não entra.
+3. O código vale por **10 minutos**. Depois de **5 erros** é preciso pedir outro, e o botão **Reenviar código** libera a cada 60 segundos.
+
+Para voltar a entrar só com a senha, desligue o switch e confirme a senha.
+
+### Trocar o e-mail
+
+O e-mail é o seu login, por isso a troca tem uma confirmação:
+
+1. Edite o campo **E-mail** e confirme.
+2. Enviamos um **código de 6 dígitos** para o novo e-mail e um **aviso** para o e-mail antigo ("Pediram para trocar o e-mail da sua conta"), com o botão **Não fui eu**.
+3. Digite o código na janela **Confirme seu novo e-mail**. O código vale por 15 minutos e dá para pedir um novo a cada 60 segundos.
+4. Só depois do código certo o e-mail muda. Até lá, você continua entrando com o e-mail antigo.
+
+#### Não fui eu
+
+Se você recebeu o aviso e não pediu a troca, clique em **Não fui eu** no e-mail antigo:
+
+- A troca pendente é cancelada e o código enviado ao novo e-mail deixa de funcionar. Seu e-mail de login continua o original.
+- Todos os dispositivos conectados na sua conta são desconectados.
+- A página abre com o botão **Redefinir senha**, que leva ao envio do link de redefinição para o seu e-mail.
+
+<img src="/prints/cancel-email-change.png" alt="Página Troca de e-mail cancelada com o botão Redefinir senha" style={{ borderRadius: '0.5rem' }} />
+
+O botão vale por **15 minutos**, o mesmo prazo do código, e só funciona uma vez. Link já usado ou vencido mostra a mensagem **Link indisponível** e não altera nada. O cancelamento fica registrado na aba **Auditoria** como **Troca de e-mail cancelada**.
+
+#### Desfazer troca
+
+Depois que a troca é confirmada, o **e-mail antigo** recebe o aviso "O e-mail da sua conta foi alterado" com o botão **Desfazer troca**. Se não foi você, clique nele:
+
+- O e-mail original volta para a conta.
+- Todos os dispositivos conectados são desconectados e a senha atual deixa de valer: a página abre com o botão **Redefinir senha**, que envia o link de redefinição para o e-mail original. Isso protege a conta, já que quem trocou o e-mail pode ter acesso a ela.
+
+<img src="/prints/undo-email-change.png" alt="Página Troca de e-mail desfeita com o botão Redefinir senha" style={{ borderRadius: '0.5rem' }} />
+
+O botão vale por **30 dias** e só funciona uma vez. Link já usado, vencido ou inválido mostra a mensagem **Não foi possível desfazer a troca** e não altera nada. O mesmo acontece se o e-mail da conta já foi alterado de novo ou se o e-mail original passou a pertencer a outra conta; nesses casos, fale com o suporte. A reversão fica registrada na aba **Auditoria** como **Troca de e-mail desfeita**.
+
+Se o novo e-mail já pertence a outro usuário, a troca é recusada com um aviso. A mudança fica registrada na aba **Auditoria** como **E-mail de usuário alterado**.
 
 ## Dicas
 

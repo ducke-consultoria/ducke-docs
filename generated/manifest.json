@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-10-23T15:41:14.907Z",
+  "capturedAt": "2026-11-03T15:22:41.705Z",
   "prints": [
     {
       "id": "sign",
@@ -9,6 +9,24 @@
       "printFile": "sign-login.png",
       "kind": "page",
       "mdxPath": "/prints/sign-login.png"
+    },
+    {
+      "id": "cancel-email-change",
+      "module": "autenticacao",
+      "title": "Troca de e-mail cancelada (Não fui eu)",
+      "crmRoute": "/cancel-email-change",
+      "printFile": "cancel-email-change.png",
+      "kind": "cancel-email-change",
+      "mdxPath": "/prints/cancel-email-change.png"
+    },
+    {
+      "id": "undo-email-change",
+      "module": "autenticacao",
+      "title": "Troca de e-mail desfeita (Desfazer troca)",
+      "crmRoute": "/undo-email-change",
+      "printFile": "undo-email-change.png",
+      "kind": "undo-email-change",
+      "mdxPath": "/prints/undo-email-change.png"
     },
     {
       "id": "onboarding",
@@ -254,6 +272,15 @@
       "mdxPath": "/prints/notificacoes-mencao.png"
     },
     {
+      "id": "app-update-notice",
+      "module": "inicio",
+      "title": "Aviso de nova versão",
+      "crmRoute": "/leads",
+      "printFile": "app-update-notice.png",
+      "kind": "app-update-toast",
+      "mdxPath": "/prints/app-update-notice.png"
+    },
+    {
       "id": "dashboard",
       "module": "dashboard",
       "title": "Dashboard",
@@ -297,6 +324,33 @@
       "printFile": "campaign.png",
       "kind": "page",
       "mdxPath": "/prints/campaign.png"
+    },
+    {
+      "id": "instagram-campaign",
+      "module": "campanhas",
+      "title": "Campanha Instagram",
+      "crmRoute": "/campaign-instagram",
+      "printFile": "campaign-instagram.png",
+      "kind": "instagram-campaign-list",
+      "mdxPath": "/prints/campaign-instagram.png"
+    },
+    {
+      "id": "instagram-campaign-posts",
+      "module": "campanhas",
+      "title": "Publicações da campanha Instagram",
+      "crmRoute": "/campaign-instagram",
+      "printFile": "campaign-instagram-publicacoes.png",
+      "kind": "instagram-campaign-posts",
+      "mdxPath": "/prints/campaign-instagram-publicacoes.png"
+    },
+    {
+      "id": "instagram-campaign-comment-assistant",
+      "module": "campanhas",
+      "title": "Assistente nos comentários da campanha Instagram",
+      "crmRoute": "/campaign-instagram",
+      "printFile": "campaign-instagram-comentarios.png",
+      "kind": "instagram-campaign-comment-assistant",
+      "mdxPath": "/prints/campaign-instagram-comentarios.png"
     },
     {
       "id": "campaign-create-scheduled",
