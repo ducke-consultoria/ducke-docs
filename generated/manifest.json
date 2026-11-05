@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-05T00:36:22.576Z",
+  "capturedAt": "2026-11-05T03:36:40.685Z",
   "prints": [
     {
       "id": "sign",
@@ -513,6 +513,15 @@
       "printFile": "report-lead-transition-by-status.png",
       "kind": "report-view",
       "mdxPath": "/prints/report-lead-transition-by-status.png"
+    },
+    {
+      "id": "report-lead-details",
+      "module": "relatorios",
+      "title": "Desempenho de negócio detalhado",
+      "crmRoute": "/reports",
+      "printFile": "report-lead-details.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-lead-details.png"
     },
     {
       "id": "report-leads-with-bookings-by-groups",
