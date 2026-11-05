@@ -5,6 +5,7 @@ order: 5
 
 # Ferramentas do Fluxograma
 
+* **Enviar Mensagem**: envia um texto, com variáveis e até 3 botões, e pode levar um **arquivo** junto (veja "Enviar um arquivo" abaixo).
 * **Agente**: bloco de IA que recebe mensagens, envia respostas ou redireciona.
 * **Estágio (CRM)**: muda o estágio da oportunidade no CRM (Lead, Prospecção, Negociação, Decisão).
 * **Handoff**: transfere a conversa para um atendente humano quando acionado.
@@ -17,6 +18,18 @@ order: 5
 ## Usar variáveis nos campos de texto
 
 Nos blocos **Enviar Mensagem**, **Agente**, **API**, **Editar Oportunidade**, **Editar Contato** e **Criar Agendamento**, cada campo de texto tem o botão **Usar variável** ao lado. Clique nele, procure a variável (dados da oportunidade, do contato ou variáveis do fluxo) e escolha: o texto `{{nome_da_variavel}}` é inserido onde está o cursor e vai junto quando você salva a atividade.
+
+## Enviar um arquivo no bloco Enviar Mensagem
+
+No editor do bloco **Enviar Mensagem**, o campo **Arquivo (opcional)** anexa uma imagem, um vídeo, um áudio ou um documento (como um PDF). Clique em **Anexar arquivo**, escolha o arquivo e salve a atividade. Ao reabrir o bloco, o arquivo continua lá: use **Trocar arquivo** para escolher outro ou o botão de remover para tirá-lo. No fluxograma, o bloco mostra o tipo e o nome do arquivo (ex.: "Documento: proposta.pdf").
+
+Na execução, o contato recebe:
+
+* **Imagem, vídeo e documento**: o arquivo com o texto da mensagem como legenda.
+* **Áudio**: primeiro o áudio e depois o texto, se houver.
+* **Com botões**: o arquivo vai primeiro, sem legenda, e depois a mensagem com os botões.
+
+O arquivo aceita os mesmos tipos do Atendimento e conta no armazenamento da operação. O Instagram aceita imagem, vídeo e áudio; se o bloco tiver um documento e a conversa for no Instagram, nada é enviado e o fluxo segue pela saída **Fallback** do bloco (ou pela saída normal, quando o bloco não tem botões e, por isso, não tem Fallback). O mesmo vale se o envio do arquivo falhar.
 
 ## Editar e salvar um bloco
 
