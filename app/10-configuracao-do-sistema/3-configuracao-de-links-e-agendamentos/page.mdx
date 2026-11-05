@@ -59,6 +59,15 @@ Use **Sincronizar agora** no perfil após conectar (ou após muitos eventos novo
    - **Mensagens**: Templates personalizados
    - **Frequência**: Quantidade de lembretes
 
+### Confirmação do agendamento pelo WhatsApp
+
+Quando o link tem **Notificar por Email** marcado e pede **Telefone** ao visitante, a confirmação também sai pelo WhatsApp, para o telefone informado:
+
+- O envio usa o dispositivo e o template configurados no **tipo de atividade** do link (canal **WhatsApp**), com as mesmas variáveis de agendamento dos lembretes.
+- Se o link pedir e-mail e telefone, a confirmação sai pelos dois canais.
+- Se o tipo de atividade não tiver WhatsApp configurado, só o e-mail é enviado. Nesse caso, o ícone de informação ao lado de **Notificar por Email** avisa: configure a notificação por WhatsApp no tipo de atividade para confirmar por telefone.
+- Se o WhatsApp falhar, o agendamento é feito normalmente; o erro só fica registrado.
+
 ## Templates de E-mail
 
 Confirmações e lembretes de agendamento usam templates de e-mail da operação. O corpo é HTML — editor visual, fonte e preview estão em [Templates de E-mail](/10-configuracao-do-sistema/13-templates-de-email).
