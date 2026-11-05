@@ -15,6 +15,14 @@ O Ducke CRM oferece recursos para gerenciar dispositivos conectados ao sistema, 
 
 Na lista de **Configurações → Dispositivos**, cada linha tem um menu de **Ações** (ícone de três pontos). Ao abrir o menu, as opções disponíveis para aquele dispositivo aparecem com **ícone e nome** (por exemplo configurar assistente, templates de mensagens, verificar status na Meta, editar perfil do WhatsApp, importar contatos de coexistence, reconectar Instagram, configurações e excluir). As opções mudam conforme o canal e o estado do dispositivo — só entram no menu as ações aplicáveis.
 
+## Histórico de conversas na coexistência
+
+Quando um número em coexistência (que continua no aplicativo WhatsApp Business e também no CRM) aceita compartilhar o histórico durante a conexão, a Meta envia as conversas antigas em lotes. O CRM cria as conversas e grava as mensagens com a **data original** e o sentido correto (recebida ou enviada). Receber o mesmo lote de novo não duplica mensagens.
+
+Enquanto o histórico é importado, a lista de dispositivos mostra **Importando histórico: N%** abaixo do nome do dispositivo; a mensagem some quando a importação termina. A importação não aciona o assistente, não gera notificações nem campanhas, e as mensagens antigas não reabrem a janela de 24 horas nem alteram a última interação do lead para uma data mais antiga. Fotos, vídeos e outros anexos do histórico aparecem como texto (legenda ou tipo do arquivo).
+
+Para o histórico chegar, o campo **history** do webhook precisa estar assinado no aplicativo da Meta (painel do app → WhatsApp → Configuração).
+
 ## Perfil do WhatsApp
 
 Nos dispositivos **WhatsApp Business API**, a ação **Editar perfil do WhatsApp** (menu de **Ações**) abre uma janela com o perfil comercial que os clientes veem no WhatsApp. Ela carrega o perfil atual da Meta e grava as alterações de volta.
