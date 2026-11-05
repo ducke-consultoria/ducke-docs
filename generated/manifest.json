@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-04T23:01:54.091Z",
+  "capturedAt": "2026-11-05T00:36:22.576Z",
   "prints": [
     {
       "id": "sign",
@@ -279,6 +279,15 @@
       "printFile": "app-update-notice.png",
       "kind": "app-update-toast",
       "mdxPath": "/prints/app-update-notice.png"
+    },
+    {
+      "id": "changelog-modal",
+      "module": "inicio",
+      "title": "Novidades da versão",
+      "crmRoute": "/leads",
+      "printFile": "changelog-modal.png",
+      "kind": "changelog-modal",
+      "mdxPath": "/prints/changelog-modal.png"
     },
     {
       "id": "dashboard",
