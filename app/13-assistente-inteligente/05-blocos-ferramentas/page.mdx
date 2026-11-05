@@ -12,7 +12,7 @@ order: 5
 * **Delay**: adiciona pausa configurável (ex.: aguardar 30 minutos antes de seguir).
 * **Condição**: permite ramificar o fluxo com base em expressões simples ou regex. 
 * **Editar Oportunidade** e **Editar Contato**: alteram campos da oportunidade ou do contato da conversa. Escolha vários campos de uma vez e defina o valor de cada um, com texto fixo ou variáveis como `{{lead.name}}`. O bloco no fluxograma mostra quantos campos ele edita (ex.: "Edita 2 campos").
-* **Gerenciar Tags**: adiciona ou remove tags da oportunidade. Se uma tag configurada for apagada em Configurações, ela some do bloco ao abrir o editor; salve para atualizar.
+* **Gerenciar Tags**: adiciona ou remove tags da oportunidade. Se uma tag configurada for apagada em Configurações, ela some do bloco ao abrir o editor; salve para atualizar. Em **Tag a partir de variável**, escreva uma variável (por exemplo `{{interesse}}`) e use o botão de variáveis ao lado do campo: na execução, o valor vira o nome da tag, cortado em 30 caracteres. Se a tag ainda não existir, ela é criada ao adicionar, com uma cor padrão; se a variável vier vazia, nada acontece.
 
 ## Usar variáveis nos campos de texto
 
