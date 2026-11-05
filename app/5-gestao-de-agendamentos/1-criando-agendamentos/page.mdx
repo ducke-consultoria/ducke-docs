@@ -18,7 +18,32 @@ O Ducke CRM oferece uma interface intuitiva para criar e gerenciar agendamentos 
    - **Duração**
    - **Usuários** responsáveis
    - **Descrição** do compromisso
-4. Confirme com **Agendar**.
+4. Se o compromisso se repete, preencha **Repetir** e **Termina** (veja abaixo).
+5. Confirme com **Agendar**.
+
+## Agendamentos recorrentes
+
+No campo **Repetir** do modal, escolha como o agendamento se repete:
+
+- **Não repete** (padrão): cria um único agendamento.
+- **Todos os dias**.
+- **Toda semana**: marque os dias da semana (por exemplo, só terça-feira).
+- **Todo mês, no mesmo dia**: em meses mais curtos, usa o último dia do mês.
+
+No campo **Termina**, escolha **Depois de N vezes** e informe o número de agendamentos, ou **Em uma data** e informe o último dia. Uma série tem no máximo **52 agendamentos**.
+
+Ao agendar, o Ducke cria um agendamento comum para cada data, todos ligados entre si. Notificações, relatórios e a sincronização com o Google Agenda funcionam por agendamento, como sempre. Por exemplo, **Toda semana** na terça-feira, **Depois de 4 vezes**, cria 4 agendamentos.
+
+Se algum agendamento da série cair em um horário em que o usuário já tem outro compromisso em aberto, ele é criado mesmo assim e o Ducke mostra um aviso com as datas em conflito.
+
+### Editar ou cancelar uma série
+
+Ao salvar uma alteração ou cancelar um agendamento que faz parte de uma série, o Ducke pergunta:
+
+- **Só esta**: a alteração vale apenas para o agendamento aberto.
+- **Esta e as seguintes**: vale para este e para os próximos da série que ainda estão em aberto. Ao editar, a nova data e o novo horário deslocam os próximos na mesma medida. Por exemplo, cancelar **Esta e as seguintes** a partir do 3º agendamento de uma série de 4 cancela o 3º e o 4º.
+
+Agendamentos já concluídos ou cancelados não são alterados.
 
 ## Campos obrigatórios
 
