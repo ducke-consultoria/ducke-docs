@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-05T03:36:40.685Z",
+  "capturedAt": "2026-11-05T04:07:28.947Z",
   "prints": [
     {
       "id": "sign",
@@ -585,6 +585,15 @@
       "printFile": "assistants-node-lead-edit.png",
       "kind": "assistants-node-lead-edit",
       "mdxPath": "/prints/assistants-node-lead-edit.png"
+    },
+    {
+      "id": "assistants-test-panel",
+      "module": "assistentes",
+      "title": "Painel Testar do assistente",
+      "crmRoute": "/assistants",
+      "printFile": "assistants-test-panel.png",
+      "kind": "assistants-test-panel",
+      "mdxPath": "/prints/assistants-test-panel.png"
     },
     {
       "id": "setup-tags",

@@ -5,8 +5,19 @@ order: 12
 
 # Testar e Simular o Assistente
 
-1. Selecione **Ambiente de Teste** no topo do editor para não afetar dados reais.
-2. Use o botão **Simular** (ícone de ▶️) para enviar mensagens de teste via WhatsApp de desenvolvimento.
-3. Confira na aba **Logs** as requisições, variáveis capturadas e respostas geradas.
-4. No histórico do CRM, confira tags automáticas (ex.: **Necessita de Ação**) e o ícone de handoff.
-5. Para ativar/desativar o agente, clique na bolinha de status (verde/vermelha) ao lado do nome. 
+Converse com o assistente como se fosse o contato, sem usar um WhatsApp real e sem alterar nenhuma oportunidade.
+
+<img src="/prints/assistants-test-panel.png" alt="Painel Testar aberto ao lado do editor do assistente, com a conversa de teste, a linha de ação simulada e as variáveis" />
+
+1. No editor do assistente, clique em **Testar** no cabeçalho. Um painel de chat abre ao lado do canvas.
+2. Escreva uma mensagem como se fosse o contato e envie. As mensagens dos blocos **Mensagem** e **Agente** aparecem no painel.
+3. O bloco em que o fluxo está parado fica destacado em verde no canvas.
+4. Ações em oportunidade, contato, tags, agendamento, passagem para uma pessoa e chamadas de API não são executadas: elas aparecem no painel como **Ação: …**, por exemplo "Ação: editar os campos name da oportunidade".
+5. A lista **Variáveis** mostra o valor de cada variável durante o teste.
+6. Clique em **Reiniciar** para limpar a conversa, as variáveis e voltar ao início do fluxo. Cada vez que você abre o painel, começa um teste novo.
+
+## O que você precisa saber
+
+- O teste **gasta créditos de IA** como uma conversa real. O painel mostra os créditos usados e avisa quando o saldo não é suficiente.
+- Nada é enviado por WhatsApp ou Instagram. É preciso ter pelo menos um canal conectado para usar o teste.
+- As conversas de teste não aparecem no **Atendimento** nem nos relatórios, e são apagadas depois de 24 horas.
