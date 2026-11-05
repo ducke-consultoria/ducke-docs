@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-05T06:26:42.753Z",
+  "capturedAt": "2026-11-05T07:45:59.856Z",
   "prints": [
     {
       "id": "sign",
@@ -765,6 +765,15 @@
       "printFile": "setup-booking-link-availability.png",
       "kind": "setup-booking-link-availability",
       "mdxPath": "/prints/setup-booking-link-availability.png"
+    },
+    {
+      "id": "setup-activity-type-scope",
+      "module": "configuracao",
+      "title": "Tipo de atividade por grupo e origem",
+      "crmRoute": "/setup?tab=SETUP_ACTIVITYTYPES",
+      "printFile": "setup-activity-type-scope.png",
+      "kind": "setup-activity-type-scope",
+      "mdxPath": "/prints/setup-activity-type-scope.png"
     },
     {
       "id": "setup-user-tokens",

@@ -34,6 +34,26 @@ O sistema oferece os seguintes tipos de atividades por padrão:
    - **Duração Padrão**: Tempo médio estimado
 4. Clique em **Salvar**
 
+## Limitar por Grupo e Origem
+
+Por padrão, um tipo de atividade pode ser usado em qualquer agendamento. Para restringi-lo, abra o tipo e use os campos **Grupos** e **Origens** (cada um tem um ícone de informação com a explicação):
+
+<img src="/prints/setup-activity-type-scope.png" alt="Modal do tipo de atividade com os campos Grupos e Origens" style={{ borderRadius: '0.5rem' }} />
+
+1. Escolha um ou mais grupos e/ou origens de oportunidades. O botão **Selecionar todos** marca todas as opções de uma vez; **Limpar seleção** desmarca.
+2. Clique em **Confirmar**.
+
+Como a restrição funciona:
+
+- **Vazio libera tudo.** Um campo sem nada selecionado não limita aquele critério, como era antes.
+- Com grupos e origens preenchidos, o tipo só vale para leads cujo grupo **e** origem estejam na lista.
+- Ao criar um agendamento ligado a uma oportunidade, a lista de tipos mostra só os liberados para o grupo e a origem dela.
+- Em um agendamento sem oportunidade, aparecem apenas os tipos sem restrição.
+- Em um link de agendamento, a lista considera a origem escolhida na opção de criar oportunidade; sem origem, só aparecem os tipos sem restrição.
+- Se alguém tentar salvar uma combinação não permitida, o sistema recusa com erro.
+
+Agendamentos já criados não são alterados quando você restringe um tipo depois.
+
 ## Campos Personalizados
 
 Para cada tipo de atividade, você pode adicionar campos personalizados:
