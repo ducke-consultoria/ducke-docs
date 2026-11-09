@@ -38,6 +38,24 @@ Quem tem permissão de **leitura** em Configurações → Links de Agendamento v
    - **Mensagem de Confirmação**: Texto personalizado
    - **Campos Adicionais**: Informações extras necessárias
 
+### Dados do visitante e criação da lead
+
+Marque **Criar Oportunidade e Contato** para que o link crie uma lead na origem escolhida. Logo abaixo, escolha quais campos a página pública pede ao visitante: **Incluir Nome**, **Incluir Empresa**, **Incluir Email**, **Incluir Telefone** e **Incluir CPF/CNPJ**. Cada campo marcado passa a ser obrigatório na página; os desmarcados não aparecem.
+
+<img src="/prints/setup-booking-link-lead-fields.png" alt="Link de agendamento com Criar Oportunidade e Contato e os campos Nome, Empresa e Email marcados" style={{ borderRadius: '0.5rem' }} />
+
+O nome da lead e do contato segue o que o link pede:
+
+| O link pede | Nome da lead | Nome do contato |
+|---|---|---|
+| Só **Nome** | Nome informado | Nome informado |
+| Só **Empresa** | Empresa informada | Empresa informada |
+| **Nome** e **Empresa** | Empresa informada | Nome informado |
+
+A lead só é criada quando o visitante informa também e-mail, telefone ou CPF/CNPJ. Se já existir uma lead com o mesmo CPF/CNPJ na origem, ela é reaproveitada e mantém o nome atual.
+
+Os dados preenchidos pelo visitante (nome, empresa, e-mail, telefone e CPF/CNPJ) também ficam na **descrição do agendamento**, logo abaixo do título, e aparecem ao abrir o agendamento no CRM.
+
 ## Configurações de Calendário
 
 ### Integração com Google Calendar
