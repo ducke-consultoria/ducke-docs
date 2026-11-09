@@ -43,7 +43,7 @@ O Ducke CRM oferece diferentes formas de visualizar sua agenda, adaptando-se às
 
 Quando você vincula sua conta Google em **Configurações → Perfil**, o Ducke CRM:
 
-1. **Envia** seus agendamentos abertos (OPEN) para o calendário principal do Google (título `Ducke CRM` ou `Ducke CRM: <descrição>`)
+1. **Envia** seus agendamentos abertos (OPEN) para o calendário principal do Google, com o nome da oportunidade no título e os detalhes do agendamento na descrição (veja abaixo)
 2. **Preserva** o evento no Google ao concluir o agendamento; **remove** ao cancelar ou excluir
 3. **Importa** eventos externos do Google como blocos **ocupados (somente leitura)** no quadro da agenda
 4. **Bloqueia** esses horários na disponibilidade de links públicos de agendamento
@@ -55,6 +55,23 @@ Os blocos do Google aparecem no board com visual distinto dos agendamentos edit�
 No mesmo cartão você pode **desativar a sincronização** sem desvincular a conta: o Ducke CRM deixa de enviar e importar eventos e remove os horários importados; ao ativar de novo, a sincronização recomeça. Use **Desvincular** para remover a conta Google do perfil; o acesso ao CRM por e-mail e senha não muda.
 
 Ao **desvincular**, os horários ocupados importados do Google são removidos do CRM. Seus agendamentos do CRM permanecem; eventos já criados no Google Calendar não são apagados automaticamente.
+
+### O que aparece no evento do Google
+
+O **título** do evento segue o formato `Ducke CRM: <assunto> - <oportunidade>`. O assunto é a primeira linha da descrição do agendamento (ou o tipo de atividade, quando não há descrição). A oportunidade aparece com o primeiro contato entre parênteses quando o nome dele é diferente. Exemplo: `Ducke CRM: Reunião de apresentação - Acme Ltda (João Silva)`. Sem oportunidade, o título fica só `Ducke CRM: <assunto>`.
+
+A **descrição** do evento traz a descrição do agendamento e, logo abaixo, os dados que estiverem preenchidos:
+
+- Oportunidade, nome secundário e CPF/CNPJ
+- Contatos da oportunidade, com telefone e e-mail
+- Tipo de atividade e origem do agendamento
+- Responsáveis e quem criou o agendamento
+- Link para ver o agendamento no Ducke CRM
+
+Campos vazios não aparecem. Sempre que você salva o agendamento (por exemplo, ao trocar a oportunidade ou a descrição), o evento no Google é atualizado com o novo título e a nova descrição. Data e horário ficam nos campos do próprio evento.
+
+Nos agendamentos feitos por um **link público com Google Meet**, o evento do Meet tem o título `<nome do link> - <empresa (nome do visitante)>` e a descrição lista as respostas do visitante (nome, empresa, e-mail, telefone, CPF/CNPJ) antes da descrição do link. Como o visitante é convidado desse evento, ele não leva dados internos do CRM.
+
 - Exibição de detalhes
 - Ordenação preferida
 
