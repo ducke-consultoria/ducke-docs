@@ -21,7 +21,14 @@ Converse com o assistente como se fosse o contato, sem usar um WhatsApp real e s
 ## O que você precisa saber
 
 - O teste **gasta créditos de IA** como uma conversa real e avisa quando o saldo não é suficiente. Os gastos do teste aparecem na tela de **Transações**.
-- Se o assistente não responder, o painel mostra uma linha de aviso com o motivo: créditos que não cobrem a resposta da IA (adicione créditos e envie de novo), modelo do bloco **Agente** que não está mais disponível (escolha outro modelo e salve) IA não configurada no ambiente (avise o suporte da Ducke) ou falha ao chamar a IA (envie de novo e, se continuar, revise o bloco).
+- Se o assistente não responder, o painel mostra uma linha de aviso com o motivo e o que fazer:
+  - créditos que não cobrem a resposta da IA: adicione créditos e envie de novo;
+  - modelo do bloco **Agente** que não está mais disponível: escolha outro modelo e salve;
+  - o provedor de IA recusou o pedido do bloco **Agente**: escolha outro modelo no bloco e salve;
+  - o provedor de IA limitou as chamadas ou não respondeu a tempo: envie de novo em alguns minutos;
+  - IA não configurada no ambiente ou chave recusada pelo provedor: avise o suporte da Ducke;
+  - outra falha de um bloco: envie de novo e, se continuar, revise o bloco.
+- Abaixo do aviso, o **Detalhe técnico** (como `HTTP 401 · invalid_api_key`) mostra o código que o provedor devolveu. Envie esse texto ao suporte da Ducke se o problema continuar.
 - Os valores do botão de custo servem só para você estimar quanto custa uma conversa completa naquele fluxo. A Meta cobra as mensagens do WhatsApp na sua conta WhatsApp, não em créditos Ducke.
 - A largura do painel vai de um mínimo que mantém os botões e o campo de mensagem usáveis até metade da janela, para o editor continuar à vista. No celular o painel ocupa a tela toda e não tem borda para arrastar.
 - Nada é enviado por WhatsApp ou Instagram. Você pode testar mesmo sem nenhum canal conectado.
