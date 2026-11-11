@@ -5,8 +5,31 @@ order: 12
 
 # Testar e Simular o Assistente
 
-1. Selecione **Ambiente de Teste** no topo do editor para não afetar dados reais.
-2. Use o botão **Simular** (ícone de ▶️) para enviar mensagens de teste via WhatsApp de desenvolvimento.
-3. Confira na aba **Logs** as requisições, variáveis capturadas e respostas geradas.
-4. No histórico do CRM, confira tags automáticas (ex.: **Necessita de Ação**) e o ícone de handoff.
-5. Para ativar/desativar o agente, clique na bolinha de status (verde/vermelha) ao lado do nome. 
+Converse com o assistente como se fosse o contato, sem usar um WhatsApp real e sem alterar nenhuma oportunidade.
+
+<img src="/prints/assistants-test-panel.png" alt="Painel Testar assistente aberto ao lado do editor, com a conversa de teste entre contato e assistente, a linha de ação simulada e as variáveis" />
+
+1. No editor do assistente, clique em **Testar** no cabeçalho. Um painel de chat abre ao lado do canvas.
+2. Escreva uma mensagem como se fosse o contato e envie. As mensagens dos blocos **Mensagem** e **Agente** aparecem no painel.
+3. O bloco em que o fluxo está parado fica destacado em verde no canvas, e o canvas se move até ele. Ao abrir o painel, o bloco **Começo** já aparece destacado.
+4. Ações em oportunidade, contato, tags, agendamento, passagem para uma pessoa e chamadas de API não são executadas: elas aparecem no painel como **Ação: …**, por exemplo "Ação: editar os campos name da oportunidade".
+5. A lista **Variáveis** mostra o valor de cada variável durante o teste.
+6. Clique no botão só com ícone de moeda no cabeçalho do painel para ver **quanto custa esta conversa**: os créditos de IA gastos no teste e quantas mensagens a mesma conversa enviaria no WhatsApp (respostas de serviço na janela de 24h e templates).
+7. Clique em **Reiniciar** para limpar a conversa, as variáveis e voltar ao início do fluxo; os valores de custo também voltam a zero. Cada vez que você abre o painel, começa um teste novo.
+8. Para deixar o painel mais largo ou mais estreito, arraste a borda esquerda dele. O painel guarda a largura escolhida para as próximas vezes; para voltar ao tamanho padrão, clique com o botão direito na borda e escolha **Restaurar tamanho padrão**.
+
+## O que você precisa saber
+
+- O teste **gasta créditos de IA** como uma conversa real e avisa quando o saldo não é suficiente. Os gastos do teste aparecem na tela de **Transações**.
+- Se o assistente não responder, o painel mostra uma linha de aviso com o motivo e o que fazer:
+  - créditos que não cobrem a resposta da IA: adicione créditos e envie de novo;
+  - modelo do bloco **Agente** que não está mais disponível: escolha outro modelo e salve;
+  - o provedor de IA recusou o pedido do bloco **Agente**: escolha outro modelo no bloco e salve;
+  - o provedor de IA limitou as chamadas ou não respondeu a tempo: envie de novo em alguns minutos;
+  - IA não configurada no ambiente ou chave recusada pelo provedor: avise o suporte da Ducke;
+  - outra falha de um bloco: envie de novo e, se continuar, revise o bloco.
+- Abaixo do aviso, o **Detalhe técnico** (como `HTTP 401 · invalid_api_key`) mostra o código que o provedor devolveu. Envie esse texto ao suporte da Ducke se o problema continuar.
+- Os valores do botão de custo servem só para você estimar quanto custa uma conversa completa naquele fluxo. A Meta cobra as mensagens do WhatsApp na sua conta WhatsApp, não em créditos Ducke.
+- A largura do painel vai de um mínimo que mantém os botões e o campo de mensagem usáveis até metade da janela, para o editor continuar à vista. No celular o painel ocupa a tela toda e não tem borda para arrastar.
+- Nada é enviado por WhatsApp ou Instagram. Você pode testar mesmo sem nenhum canal conectado.
+- As conversas de teste não aparecem no **Atendimento** nem nos relatórios, e são apagadas depois de 24 horas.

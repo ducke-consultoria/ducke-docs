@@ -38,6 +38,24 @@ Quem tem permissão de **leitura** em Configurações → Links de Agendamento v
    - **Mensagem de Confirmação**: Texto personalizado
    - **Campos Adicionais**: Informações extras necessárias
 
+### Dados do visitante e criação da lead
+
+Marque **Criar Oportunidade e Contato** para que o link crie uma lead na origem escolhida. Logo abaixo, escolha quais campos a página pública pede ao visitante: **Incluir Nome**, **Incluir Empresa**, **Incluir Email**, **Incluir Telefone** e **Incluir CPF/CNPJ**. Cada campo marcado passa a ser obrigatório na página; os desmarcados não aparecem.
+
+<img src="/prints/setup-booking-link-lead-fields.png" alt="Link de agendamento com Criar Oportunidade e Contato e os campos Nome, Empresa e Email marcados" style={{ borderRadius: '0.5rem' }} />
+
+O nome da lead e do contato segue o que o link pede:
+
+| O link pede | Nome da lead | Nome do contato |
+|---|---|---|
+| Só **Nome** | Nome informado | Nome informado |
+| Só **Empresa** | Empresa informada | Empresa informada |
+| **Nome** e **Empresa** | Empresa informada | Nome informado |
+
+A lead só é criada quando o visitante informa também e-mail, telefone ou CPF/CNPJ. Se já existir uma lead com o mesmo CPF/CNPJ na origem, ela é reaproveitada e mantém o nome atual.
+
+Os dados preenchidos pelo visitante (nome, empresa, e-mail, telefone e CPF/CNPJ) também ficam na **descrição do agendamento**, logo abaixo do título, e aparecem ao abrir o agendamento no CRM.
+
 ## Configurações de Calendário
 
 ### Integração com Google Calendar
@@ -58,6 +76,15 @@ Use **Sincronizar agora** no perfil após conectar (ou após muitos eventos novo
    - **Canais**: E-mail, SMS, WhatsApp
    - **Mensagens**: Templates personalizados
    - **Frequência**: Quantidade de lembretes
+
+### Confirmação do agendamento pelo WhatsApp
+
+Quando o link tem **Notificar por Email** marcado e pede **Telefone** ao visitante, a confirmação também sai pelo WhatsApp, para o telefone informado:
+
+- O envio usa o dispositivo e o template configurados no **tipo de atividade** do link (canal **WhatsApp**), com as mesmas variáveis de agendamento dos lembretes.
+- Se o link pedir e-mail e telefone, a confirmação sai pelos dois canais.
+- Se o tipo de atividade não tiver WhatsApp configurado, só o e-mail é enviado. Nesse caso, o ícone de informação ao lado de **Notificar por Email** avisa: configure a notificação por WhatsApp no tipo de atividade para confirmar por telefone.
+- Se o WhatsApp falhar, o agendamento é feito normalmente; o erro só fica registrado.
 
 ## Templates de E-mail
 

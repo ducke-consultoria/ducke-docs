@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-05T00:36:22.576Z",
+  "capturedAt": "2026-11-10T15:40:01.390Z",
   "prints": [
     {
       "id": "sign",
@@ -515,6 +515,15 @@
       "mdxPath": "/prints/report-lead-transition-by-status.png"
     },
     {
+      "id": "report-lead-details",
+      "module": "relatorios",
+      "title": "Desempenho de negócio detalhado",
+      "crmRoute": "/reports",
+      "printFile": "report-lead-details.png",
+      "kind": "report-view",
+      "mdxPath": "/prints/report-lead-details.png"
+    },
+    {
       "id": "report-leads-with-bookings-by-groups",
       "module": "relatorios",
       "title": "Agendamento de Oportunidades por Grupo",
@@ -576,6 +585,15 @@
       "printFile": "assistants-node-lead-edit.png",
       "kind": "assistants-node-lead-edit",
       "mdxPath": "/prints/assistants-node-lead-edit.png"
+    },
+    {
+      "id": "assistants-test-panel",
+      "module": "assistentes",
+      "title": "Painel Testar do assistente",
+      "crmRoute": "/assistants",
+      "printFile": "assistants-test-panel.png",
+      "kind": "assistants-test-panel",
+      "mdxPath": "/prints/assistants-test-panel.png"
     },
     {
       "id": "setup-tags",
@@ -747,6 +765,24 @@
       "printFile": "setup-booking-link-availability.png",
       "kind": "setup-booking-link-availability",
       "mdxPath": "/prints/setup-booking-link-availability.png"
+    },
+    {
+      "id": "setup-booking-link-lead-fields",
+      "module": "configuracao",
+      "title": "Campos de lead do link de agendamento",
+      "crmRoute": "/setup?tab=booking-types",
+      "printFile": "setup-booking-link-lead-fields.png",
+      "kind": "setup-booking-link-lead-fields",
+      "mdxPath": "/prints/setup-booking-link-lead-fields.png"
+    },
+    {
+      "id": "setup-activity-type-scope",
+      "module": "configuracao",
+      "title": "Tipo de atividade por grupo e origem",
+      "crmRoute": "/setup?tab=SETUP_ACTIVITYTYPES",
+      "printFile": "setup-activity-type-scope.png",
+      "kind": "setup-activity-type-scope",
+      "mdxPath": "/prints/setup-activity-type-scope.png"
     },
     {
       "id": "setup-user-tokens",

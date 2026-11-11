@@ -112,13 +112,14 @@ Na campanha de WhatsApp com template, o cabeçalho dos detalhes mostra um ícone
 
 ### Totais de entrega nos detalhes
 
-Abra os detalhes de uma campanha para ver, por contato (sem abrir o chat):
+Abra os detalhes de uma campanha para ver, por contato (sem abrir o chat). A lista de campanhas mostra também as enviadas e as respondidas de cada uma:
 
 <img src="/prints/campaign-detalhes-entrega.png" alt="Modal de detalhes da campanha com totais: enviadas, entregues, visualizadas, rejeitadas, falhas de envio e suprimidos" style={{ borderRadius: '0.5rem' }} />
 
 - **Enviadas** — a API do canal aceitou o envio e a mensagem ainda não foi rejeitada depois
 - **Entregues** — chegou ao aparelho (inclui as visualizadas)
 - **Visualizadas** — o destinatário leu a mensagem
+- **Respondidas** — o contato escreveu de volta depois do envio (no WhatsApp, uma mensagem do cliente na conversa depois do envio; no e-mail, uma resposta humana). Uma mensagem do cliente anterior ao envio não conta, e no SMS fica sempre em zero
 - **Rejeitadas** — o WhatsApp aceitou o envio e depois falhou no webhook; a mensagem sai de “enviadas” e **não** conta como falha de envio
 - **Falhas de envio** — o envio falhou antes do aceite (variável vazia, recusa transitória da API, etc.)
 - **Suprimidos** — o telefone está na lista do-not-contact da operação (opt-out, bloqueio ou rejeição permanente); o provedor **não** é chamado

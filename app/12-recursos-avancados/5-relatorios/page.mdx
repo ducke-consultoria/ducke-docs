@@ -41,10 +41,13 @@ Taxa de conversão agregada por cidade, segmento, faturamento, origem ou grupo.
 
 - Use o filtro **Por** para escolher a dimensão da tabela.
 - Combine com grupo, origem e tags quando precisar restringir o escopo.
+- O período filtra o **Total** pela data de criação (oportunidades criadas no período); **Ganhos** e **Perdidos** seguem a data do ganho e da perda. Por isso a taxa pode passar de 100% quando uma oportunidade criada antes do período é ganha dentro dele.
 
 ### Desempenho de Usuário
 
 Conversão e perda por usuário (e equipe, quando o filtro de equipe estiver ativo), incluindo a coluna de SLA atrasado.
+
+O cabeçalho do relatório mostra **Total convertidos**, a soma dos ganhos de todos os usuários listados; o valor acompanha os filtros aplicados.
 
 <img src="/prints/report-lead-conversion-by-user.png" alt="Relatório Desempenho de Usuário" style={{ borderRadius: '0.5rem' }} />
 
@@ -59,6 +62,17 @@ Lista oportunidades fora do SLA do estágio (dias sem interação ≥ dias confi
 - **Grupo** sozinho já restringe; **origem** é opcional após escolher o grupo.
 - **Estado** (aberta / ganha / perdida): padrão **OPEN** (abertas).
 - O período de datas é enviado pela tela, mas **não** limita quais oportunidades entram no atraso (snapshot atual).
+
+### Desempenho de negócio detalhado
+
+Lista as oportunidades com nome principal, nome secundário, CNPJ/CPF, valor, usuários, estágio e estado.
+
+<img src="/prints/report-lead-details.png" alt="Relatório Desempenho de negócio detalhado" style={{ borderRadius: '0.5rem' }} />
+
+- Use **Data do período** para escolher qual data o calendário filtra: **Criação**, **Ganho** ou **Perdido**. Por exemplo, escolha **Ganho** e o estado **WON** para ver as oportunidades ganhas no mês.
+- Filtre também por grupo, origem, estágio, estado (aberto, ganho ou perdido), usuário, equipe e tags.
+- Você vê apenas as oportunidades dos grupos e origens a que tem acesso.
+- Use o botão de exportar para baixar a planilha.
 
 ## Vendas
 
@@ -104,7 +118,7 @@ Movimentações entre estágios do funil no período selecionado.
 
 ### Transição de Oportunidades por Estado
 
-Movimentações entre estados (aberta, ganha, perdida) no período.
+Oportunidades que chegaram a um estado (aberta, ganha, perdida) no período. O calendário usa a data de fechamento da oportunidade: a data de ganho para as ganhas, a data de perdido para as perdidas e a data de criação para as abertas. Editar uma oportunidade depois não muda o mês em que ela aparece.
 
 <img src="/prints/report-lead-transition-by-status.png" alt="Relatório Transição de Oportunidades por Estado" style={{ borderRadius: '0.5rem' }} />
 
