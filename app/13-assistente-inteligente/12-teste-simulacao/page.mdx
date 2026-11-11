@@ -14,7 +14,7 @@ Converse com o assistente como se fosse o contato, sem usar um WhatsApp real e s
 3. O bloco em que o fluxo está parado fica destacado em verde no canvas, e o canvas se move até ele. Ao abrir o painel, o bloco **Começo** já aparece destacado.
 4. Ações em oportunidade, contato, tags, agendamento, passagem para uma pessoa e chamadas de API não são executadas: elas aparecem no painel como **Ação: …**, por exemplo "Ação: editar os campos name da oportunidade".
 5. A lista **Variáveis** mostra o valor de cada variável durante o teste.
-6. Clique no botão só com ícone de moeda no cabeçalho do painel para ver **quanto custa esta conversa**: os créditos de IA gastos no teste e quantas mensagens a mesma conversa enviaria no WhatsApp (respostas de serviço na janela de 24h e templates).
+6. Clique no botão só com ícone de moeda no cabeçalho do painel para ver **quanto custa esta conversa**: os créditos de IA gastos no teste e quanto a mesma conversa custaria no WhatsApp, em reais, com a quantidade e o valor das respostas de serviço na janela de 24h e dos templates.
 7. Clique em **Reiniciar** para limpar a conversa, as variáveis e voltar ao início do fluxo; os valores de custo também voltam a zero. Cada vez que você abre o painel, começa um teste novo.
 8. Para deixar o painel mais largo ou mais estreito, arraste a borda esquerda dele. O painel guarda a largura escolhida para as próximas vezes; para voltar ao tamanho padrão, clique com o botão direito na borda e escolha **Restaurar tamanho padrão**.
 
@@ -30,6 +30,7 @@ Converse com o assistente como se fosse o contato, sem usar um WhatsApp real e s
   - outra falha de um bloco: envie de novo e, se continuar, revise o bloco.
 - Abaixo do aviso, o **Detalhe técnico** (como `HTTP 401 · invalid_api_key`) mostra o código que o provedor devolveu. Envie esse texto ao suporte da Ducke se o problema continuar.
 - Os valores do botão de custo servem só para você estimar quanto custa uma conversa completa naquele fluxo. A Meta cobra as mensagens do WhatsApp na sua conta WhatsApp, não em créditos Ducke.
+- O valor do WhatsApp é uma estimativa pela tabela oficial da Meta para números do Brasil e conta **todas as mensagens como pagas**, pensando no maior alcance: as 1.000 mensagens de serviço grátis por mês de cada número só reduzem a conta real. Cada resposta de serviço ou template de utilidade conta R$ 0,035 e cada template de marketing, R$ 0,3217. Templates do bloco **Avisar por WhatsApp** usam a categoria aprovada pela Meta; se ela não puder ser lida, o template conta como marketing. Descontos por volume não entram na estimativa.
 - A largura do painel vai de um mínimo que mantém os botões e o campo de mensagem usáveis até metade da janela, para o editor continuar à vista. No celular o painel ocupa a tela toda e não tem borda para arrastar.
 - Nada é enviado por WhatsApp ou Instagram. Você pode testar mesmo sem nenhum canal conectado.
 - As conversas de teste não aparecem no **Atendimento** nem nos relatórios, e são apagadas depois de 24 horas.
