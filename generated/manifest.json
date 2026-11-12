@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-10T15:40:01.390Z",
+  "capturedAt": "2026-11-11T23:10:10.881Z",
   "prints": [
     {
       "id": "sign",
@@ -360,6 +360,15 @@
       "printFile": "campaign-instagram-comentarios.png",
       "kind": "instagram-campaign-comment-assistant",
       "mdxPath": "/prints/campaign-instagram-comentarios.png"
+    },
+    {
+      "id": "instagram-campaign-stories",
+      "module": "campanhas",
+      "title": "Compartilhar publicação do Instagram nos stories",
+      "crmRoute": "/campaign-instagram",
+      "printFile": "campaign-instagram-stories.png",
+      "kind": "instagram-campaign-stories",
+      "mdxPath": "/prints/campaign-instagram-stories.png"
     },
     {
       "id": "campaign-create-scheduled",
