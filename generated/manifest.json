@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-11T23:10:10.881Z",
+  "capturedAt": "2026-11-16T15:32:23.358Z",
   "prints": [
     {
       "id": "sign",
@@ -225,6 +225,24 @@
       "printFile": "setup-profile-notificacoes.png",
       "kind": "setup-profile-notifications",
       "mdxPath": "/prints/setup-profile-notificacoes.png"
+    },
+    {
+      "id": "setup-profile-push",
+      "module": "configuracao",
+      "title": "Perfil — notificações no celular e no computador",
+      "crmRoute": "/setup?tab=profile#notifications",
+      "printFile": "setup-profile-push.png",
+      "kind": "setup-profile-push",
+      "mdxPath": "/prints/setup-profile-push.png"
+    },
+    {
+      "id": "install-app-dialog",
+      "module": "configuracao",
+      "title": "Instalar o app",
+      "crmRoute": "/setup?tab=profile#notifications",
+      "printFile": "install-app-dialog.png",
+      "kind": "install-app-dialog",
+      "mdxPath": "/prints/install-app-dialog.png"
     },
     {
       "id": "celular-menu",
