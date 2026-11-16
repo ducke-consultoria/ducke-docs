@@ -1,5 +1,5 @@
 {
-  "version": "1.40.3",
+  "version": "1.40.4",
   "scripts": {
     "dev": "next --turbopack",
     "build": "next build",
