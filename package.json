@@ -1,5 +1,5 @@
 {
-  "version": "1.41.2",
+  "version": "1.41.3",
   "scripts": {
     "dev": "next --turbopack",
     "build": "next build",
@@ -7,7 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^16.4.3",
+    "next": "^16.4.6",
     "nextra": "4.6.1",
     "nextra-theme-docs": "4.6.1",
     "react": "^19.3.0",
