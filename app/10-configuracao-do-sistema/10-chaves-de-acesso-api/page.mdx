@@ -59,6 +59,7 @@ Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do t
 | Mover um card para outro estágio da origem (e, se quiser, trocar o responsável junto) | `move_lead` com `leadId`, `stageId` e `userIds` opcional | `POST /api/v2/leads/:id` com `stageId` (e `userIds`) |
 | Trocar o responsável sem mover o card | `set_lead_users` com `leadId` e `userIds` | `POST /api/v2/leads/:id` com `userIds` |
 | Reescrever as anotações | `set_lead_description` com `leadId` e `description` | `POST /api/v2/leads/:id` com `description` |
+| Copiar um card para outra origem | `copy_lead` com `leadId`, `originId`, `stageId` e, se quiser, `userIds` e `copyContacts` | `POST /api/v2/leads/copy` com `leads: [id]`, `originId`, `stageId` (e `userIds`, `copyContacts`) |
 | Listar as etiquetas, com busca pelo nome | `list_tags` com `search` opcional | `GET /api/v2/tags?search=…` |
 | Adicionar uma etiqueta a um card | `add_lead_tag` com `leadId` e `tagId` | `POST /api/v2/leads/:leadId/tags/:tagId` |
 | Remover uma etiqueta de um card | `remove_lead_tag` com `leadId` e `tagId` | `DELETE /api/v2/leads/:leadId/tags/:tagId` |
@@ -74,6 +75,15 @@ Para ler um estágio inteiro, comece na página `1` e peça a próxima até a li
 - **Reescrever as anotações:** o texto novo substitui o antigo, exatamente como foi enviado (não acrescenta uma linha no final). O estágio e o responsável não mudam.
 
 Os ids dos responsáveis são os do campo `users` de cada card na lista. Ao mover ou trocar o responsável, só valem o usuário da chave e as pessoas abaixo dele na hierarquia; um id fora disso, ou de quem não é da empresa, dá erro (`One or more user ids are invalid for this tenant`) e nada muda.
+
+### Copiar um card para outra origem
+
+- A cópia cria um card novo no estágio escolhido (`originId` e `stageId` de uma origem que o usuário da chave pode ver), com o nome, o documento, as anotações, a cidade, o estado, o país e as etiquetas do original. O card original continua na sua origem, sem mudança.
+- **As pessoas do card vão junto** (nome, telefone e e-mail). Para copiar sem elas, envie `copyContacts: false`.
+- **Responsável:** sem `userIds` (ou com uma lista vazia), o card novo fica sem responsável. Com `userIds`, ele fica só com essas pessoas, que precisam ser da empresa e ter acesso à origem de destino; senão dá erro e nada é copiado.
+- **A cópia não procura duplicado** e nunca junta dois cards: mesmo que a origem de destino já tenha um card com o mesmo documento, a cópia cria outro card. Se você não quer o card repetido, confira o documento na lista do estágio antes de copiar.
+- Um card que veio da Prospecção também pode ser copiado; o vínculo com o resultado da prospecção fica só no original.
+- A resposta é `{ "success": true, "message": "Leads copiados com sucesso" }`. Um card que o usuário da chave não enxerga dá `Lead not found`, uma origem que ele não acessa dá `Origin not found` e um estágio de outra origem dá `Stage not found`.
 
 ### Etiquetas
 
