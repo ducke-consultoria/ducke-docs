@@ -7,7 +7,7 @@ import { Callout } from 'nextra/components'
 
 # Chaves de Acesso API
 
-A aba **Chaves de Acesso API** permite criar tokens para integrações externas que consomem a API do Ducke CRM em nome da operação. Novas chaves usam o prefixo `ducke_` (ex.: `ducke_a1b2…`).
+A aba **Chaves de Acesso API** permite criar as chaves de acesso da empresa para integrações externas. Cada chave é da empresa, e não de uma pessoa: a mesma chave vale para a ferramenta MCP e para a API e alcança todas as origens, cards e etiquetas da empresa. Novas chaves usam o prefixo `ducke_` (ex.: `ducke_a1b2…`).
 
 <img src="/prints/setup-user-tokens.png" alt="Tela de chaves de acesso API no setup" style={{ borderRadius: '0.5rem' }} />
 
@@ -24,7 +24,7 @@ A aba **Chaves de Acesso API** permite criar tokens para integrações externas 
 4. Use **Copiar** no diálogo, guarde em local seguro e confirme **Já copiei**.
 
 <Callout type="warning">
-  Trate cada chave como senha. Depois de fechar o diálogo, o secret completo não pode ser recuperado. Se perder a chave, exclua-a e crie outra. Não compartilhe em chats públicos nem commite em repositórios.
+  A chave alcança todas as origens da empresa, inclusive as que só algumas pessoas veem no CRM. Só perfis com a permissão **Chaves de Acesso API** veem esta aba e podem criar, editar ou excluir chaves. Trate cada chave como senha. Depois de fechar o diálogo, o secret completo não pode ser recuperado. Se perder a chave, exclua-a e crie outra. Não compartilhe em chats públicos nem commite em repositórios.
 </Callout>
 
 ## Gerenciar chaves existentes
@@ -44,7 +44,7 @@ Não há botão para copiar o secret completo a partir da lista — apenas o pre
 
 ## Ferramenta MCP e API
 
-Cada ação existe em par: a ferramenta MCP (para assistentes de IA que falam o protocolo MCP) e a API fazem a mesma coisa e devolvem os mesmos dados. As duas usam a mesma chave de acesso e só enxergam as origens que o usuário da chave pode ver.
+Cada ação existe em par: a ferramenta MCP (para assistentes de IA que falam o protocolo MCP) e a API fazem a mesma coisa e devolvem os mesmos dados. As duas usam a mesma chave de acesso da empresa, que enxerga todas as origens da empresa: listar, criar, mover, reescrever anotações, definir o responsável, etiquetar e copiar funcionam em qualquer origem, para qualquer card. Não existe chave por pessoa nem chave separada para a API, e a chave continua funcionando se quem a criou sair da empresa. Ela nunca enxerga dados de outra empresa.
 
 Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do tipo HTTP com:
 
@@ -90,24 +90,24 @@ As anotações voltam caractere por caractere como foram gravadas, ao criar o ca
 - **Trocar o responsável:** a lista nova substitui a antiga, e uma lista vazia deixa o card sem responsável. O card continua no mesmo estágio.
 - **Reescrever as anotações:** o texto novo substitui o antigo, exatamente como foi enviado (não acrescenta uma linha no final). O estágio e o responsável não mudam.
 
-Os ids dos responsáveis são os do campo `users` de cada card na lista. Ao mover ou trocar o responsável, só valem o usuário da chave e as pessoas abaixo dele na hierarquia; um id fora disso, ou de quem não é da empresa, dá erro (`One or more user ids are invalid for this tenant`) e nada muda.
+Os ids dos responsáveis são os do campo `users` de cada card na lista. Ao mover ou trocar o responsável, vale qualquer usuário da empresa; um id de quem não é da empresa dá erro (`One or more user ids are invalid for this tenant`) e nada muda.
 
 ### Copiar um card para outra origem
 
-- A cópia cria um card novo no estágio escolhido (`originId` e `stageId` de uma origem que o usuário da chave pode ver), com o nome, o documento, as anotações, a cidade, o estado, o país e as etiquetas do original. O card original continua na sua origem, sem mudança.
+- A cópia cria um card novo no estágio escolhido (`originId` e `stageId` de qualquer origem da empresa), com o nome, o documento, as anotações, a cidade, o estado, o país e as etiquetas do original. O card original continua na sua origem, sem mudança.
 - **As pessoas do card vão junto** (nome, telefone e e-mail). Para copiar sem elas, envie `copyContacts: false`.
 - **Responsável:** sem `userIds` (ou com uma lista vazia), o card novo fica sem responsável. Com `userIds`, ele fica só com essas pessoas, que precisam ser da empresa e ter acesso à origem de destino; senão dá erro e nada é copiado.
 - **A cópia não procura duplicado** e nunca junta dois cards: mesmo que a origem de destino já tenha um card com o mesmo documento, a cópia cria outro card. Se você não quer o card repetido, confira o documento na lista do estágio antes de copiar.
 - Um card que veio da Prospecção também pode ser copiado; o vínculo com o resultado da prospecção fica só no original.
-- A resposta é `{ "success": true, "message": "Leads copiados com sucesso" }`. Um card que o usuário da chave não enxerga dá `Lead not found`, uma origem que ele não acessa dá `Origin not found` e um estágio de outra origem dá `Stage not found`.
+- A resposta é `{ "success": true, "message": "Leads copiados com sucesso" }`. Um card que não existe na empresa dá `Lead not found`, uma origem que não é da empresa dá `Origin not found` e um estágio de outra origem dá `Stage not found`.
 
 ### Etiquetas
 
-- **Listar etiquetas** mostra as etiquetas usadas nos cards das origens que o usuário da chave pode ver, em ordem alfabética. A busca (`search`) acha parte do nome, sem diferenciar maiúsculas de minúsculas.
+- **Listar etiquetas** mostra as etiquetas da empresa, em ordem alfabética. A busca (`search`) acha parte do nome, sem diferenciar maiúsculas de minúsculas.
 - **Adicionar** e **remover** mexem numa etiqueta por vez, pelo id (`tagId`, da lista de etiquetas ou do campo `tags` do card). As outras etiquetas do card ficam como estão.
 - **Colocar etiquetas pelo nome** acrescenta ao card só os nomes enviados: uma etiqueta que ainda não existe é criada, uma que o card já tem não dá erro nem aparece duas vezes, e as outras etiquetas do card ficam. Não é preciso mandar a lista inteira. O nome é comparado sem diferenciar maiúsculas, então `cliente` usa a etiqueta `Cliente` que já existe.
 - Cada nome de etiqueta tem até 30 caracteres. Um nome maior dá erro (`Tag name must be at most 30 characters`) e nada é criado, nem ao criar o card.
-- As respostas de adicionar, remover e colocar pelo nome trazem as etiquetas do card (`tags`). Um card que o usuário da chave não enxerga dá `Lead not found`, e uma etiqueta de outra empresa dá `Tag not found`.
+- As respostas de adicionar, remover e colocar pelo nome trazem as etiquetas do card (`tags`). Um card que não existe na empresa dá `Lead not found`, e uma etiqueta de outra empresa dá `Tag not found`.
 
 ### Chamadas demais de uma vez
 
