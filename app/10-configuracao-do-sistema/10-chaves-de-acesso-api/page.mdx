@@ -67,9 +67,25 @@ Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do t
 
 Para ler um estágio inteiro, comece na página `1` e peça a próxima até a lista vir vazia: aí o estágio acabou. Cada página traz até 100 cards, na ordem do quadro, e cada card aparece uma vez só. Um estágio que não é da origem informada dá erro (`Stage not found`), em vez de uma página vazia.
 
+### O que cada card da lista traz
+
+A ferramenta MCP e a API devolvem os mesmos dados de cada card, então a lista basta para decidir se vai copiar, mover, etiquetar ou mandar mensagem, sem abrir o card de novo:
+
+| Dado | Campo |
+|---|---|
+| Qual card é | `id` e `name` |
+| Em qual estágio da origem está | `stageId` e `stage` (com o nome do estágio), `originId` e `origin` |
+| Documento | `tin`, sem pontuação |
+| Anotações, exatamente como foram salvas | `description` |
+| Etiquetas, com os nomes dados | `tags` (cada uma com `id` e `name`) |
+| Pessoas do card | `contacts` (cada uma com `name`, `phoneNumber` e `email`) |
+| Responsável | `users` (cada um com `id`, `username` e `email`) |
+
+As anotações voltam caractere por caractere como foram gravadas, ao criar o card ou ao reescrevê-las, inclusive espaços, quebras de linha e acentos: uma marca que você deixa ali para ler depois volta igual. O documento é o jeito de conferir se a empresa já existe na origem antes de criar ou copiar um card.
+
 ### Criar, mover, trocar o responsável e reescrever as anotações
 
-- **Criar um card** aceita o nome, a origem e o estágio onde ele entra (`name`, `originId`, `stageId`), as anotações (`description`), o documento (`tin`, sem pontuação ao salvar), `city`, `state`, `country`, as etiquetas pelo nome (`tagNames`; uma etiqueta que ainda não existe é criada com o nome enviado), os responsáveis (`userIds`) e as pessoas do card (`contacts`, cada uma com `name`, `phoneNumber` e `email`).
+- **Criar um card** aceita o nome, a origem e o estágio onde ele entra (`name`, `originId`, `stageId`), as anotações (`description`, gravadas exatamente como enviadas), o documento (`tin`, sem pontuação ao salvar), `city`, `state`, `country`, as etiquetas pelo nome (`tagNames`; uma etiqueta que ainda não existe é criada com o nome enviado), os responsáveis (`userIds`) e as pessoas do card (`contacts`, cada uma com `name`, `phoneNumber` e `email`).
 - **Mover** sem informar `userIds` mantém o responsável atual. Com `userIds`, o card muda de estágio e de responsável no mesmo passo.
 - **Trocar o responsável:** a lista nova substitui a antiga, e uma lista vazia deixa o card sem responsável. O card continua no mesmo estágio.
 - **Reescrever as anotações:** o texto novo substitui o antigo, exatamente como foi enviado (não acrescenta uma linha no final). O estágio e o responsável não mudam.
