@@ -109,6 +109,21 @@ Os ids dos responsáveis são os do campo `users` de cada card na lista. Ao move
 - Cada nome de etiqueta tem até 30 caracteres. Um nome maior dá erro (`Tag name must be at most 30 characters`) e nada é criado, nem ao criar o card.
 - As respostas de adicionar, remover e colocar pelo nome trazem as etiquetas do card (`tags`). Um card que o usuário da chave não enxerga dá `Lead not found`, e uma etiqueta de outra empresa dá `Tag not found`.
 
+### Chamadas demais de uma vez
+
+A ferramenta MCP e a API dividem um limite de **60 chamadas por minuto** por endereço IP de quem chama. Quando você passa dele, por exemplo ao atualizar muitos cards seguidos, a chamada é recusada antes de fazer qualquer coisa:
+
+- **O card fica onde está.** Nada muda: nem o estágio, nem o responsável, nem as anotações, nem as etiquetas, e nenhuma cópia é criada.
+- **Não é uma falha do card.** A resposta tem `code: "RATE_LIMITED"` e pede para ir mais devagar. Não mande o card para um estágio de erro: espere e mande a mesma chamada de novo.
+- **Quando tentar de novo:** `retryAfter` diz em quantos segundos.
+
+| Onde | Como a recusa chega |
+|---|---|
+| API | Status `429`, cabeçalho `Retry-After` e o corpo `{ "error": "Too many requests: slow down and send it again in 30 seconds. Nothing was changed.", "code": "RATE_LIMITED", "retryAfter": 30 }` |
+| Ferramenta MCP | Resultado da ferramenta com `isError: true` e, no texto, o mesmo corpo da API. Outras chamadas do protocolo (como `tools/list`) recebem `429` com um erro JSON-RPC que traz esse corpo em `data` |
+
+As chamadas pela ferramenta MCP e pela API contam juntas: gastar o limite numa delas também segura a outra até o tempo de `retryAfter` passar. Os outros erros (`Lead not found`, `Stage not found`…) continuam com a mensagem deles e nunca trazem `RATE_LIMITED`.
+
 ## Segurança
 
 - Revogue chaves não utilizadas.
