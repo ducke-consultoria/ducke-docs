@@ -42,6 +42,22 @@ Não há botão para copiar o secret completo a partir da lista — apenas o pre
 - Integrações com ERP, BI ou ferramentas internas.
 - Scripts de migração ou sincronização sob demanda.
 
+## Ferramenta MCP e API
+
+Cada ação existe em par: a ferramenta MCP (para assistentes de IA que falam o protocolo MCP) e a API fazem a mesma coisa e devolvem os mesmos dados. As duas usam a mesma chave de acesso e só enxergam as origens que o usuário da chave pode ver.
+
+Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do tipo HTTP com:
+
+- **Endereço:** o mesmo endereço da API que sua integração já usa, no caminho `/mcp`.
+- **Cabeçalho:** `Authorization: Bearer ducke_…` (a sua chave de acesso).
+
+| O que fazer | Ferramenta MCP | API |
+|---|---|---|
+| Listar as origens e os estágios de cada uma | `list_origins` | `GET /api/v2/origins` |
+| Listar os cards de um estágio da origem, uma página por vez | `list_stage_leads` com `originId`, `stageId` e `page` | `GET /api/v2/leads?originId=…&stageId=…&page=…` |
+
+Para ler um estágio inteiro, comece na página `1` e peça a próxima até a lista vir vazia: aí o estágio acabou. Cada página traz até 100 cards, na ordem do quadro, e cada card aparece uma vez só. Um estágio que não é da origem informada dá erro (`Stage not found`), em vez de uma página vazia.
+
 ## Segurança
 
 - Revogue chaves não utilizadas.
