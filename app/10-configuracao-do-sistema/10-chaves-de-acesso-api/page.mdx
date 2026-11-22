@@ -67,6 +67,12 @@ Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do t
 | Ler o guia curto dos dispositivos de WhatsApp | `whatsapp_guide` | `GET /api/v2/whatsapp/guide` |
 | Listar os dispositivos de WhatsApp | `list_whatsapp_devices` | `GET /api/v2/whatsapp/devices` |
 | Listar os números de telefone (salvos, ou ao vivo de uma conta) | `list_whatsapp_phone_numbers` com `businessId` opcional | `GET /api/v2/whatsapp/phone-numbers?businessId=…` |
+| Listar os modelos de mensagem de um dispositivo (só os aprovados, ou outro status) | `list_whatsapp_templates` com `deviceId` e `status` opcional | `GET /api/v2/whatsapp/devices/:deviceId/templates?status=…` |
+| Abrir um modelo | `get_whatsapp_template` com `deviceId` e `templateId` | `GET /api/v2/whatsapp/devices/:deviceId/templates/:templateId` |
+| Criar um modelo | `create_whatsapp_template` com `deviceId`, `name`, `body` e o resto do modelo | `POST /api/v2/whatsapp/devices/:deviceId/templates` |
+| Editar um modelo | `update_whatsapp_template` com `deviceId`, `templateId` e o conteúdo novo | `POST /api/v2/whatsapp/devices/:deviceId/templates/:templateId` |
+| Enviar a imagem do topo de um modelo | `upload_whatsapp_template_header_image` com `deviceId` e `imageUrl` | `POST /api/v2/whatsapp/devices/:deviceId/template-header-images` com `imageUrl` |
+| Apagar um modelo pelo nome | `delete_whatsapp_template` com `deviceId` e `name` | `DELETE /api/v2/whatsapp/devices/:deviceId/templates?name=…` |
 
 Para ler um estágio inteiro, comece na página `1` e peça a próxima até a lista vir vazia: aí o estágio acabou. Cada página traz até 100 cards, na ordem do quadro, e cada card aparece uma vez só. Um estágio que não é da origem informada dá erro (`Stage not found`), em vez de uma página vazia.
 
@@ -121,6 +127,20 @@ Na Ducke, uma conta conectada é um **dispositivo**. Um dispositivo de WhatsApp 
 - **Listar os números sem escolher conta** mostra a lista salva na Ducke (`source: "saved"`): as linhas dos dispositivos, cada uma com `phoneId`, `phoneNumber`, `name`, `businessId` e `deviceId`. Não consulta o WhatsApp.
 - **Listar os números escolhendo uma conta** (`businessId` de um dispositivo da lista) busca ao vivo no WhatsApp os números dessa conta (`source: "live"`), cada um com `phoneId`, `phoneNumber`, `name` (o nome verificado no WhatsApp), `qualityRating`, `businessId` e `deviceId`, o dispositivo da Ducke que é essa linha, ou `null` quando o número ainda não foi conectado na Ducke.
 - Uma conta que não é de nenhum dispositivo da empresa dá `WhatsApp account not found`. Quando o WhatsApp recusa a consulta (por exemplo, a conexão do dispositivo expirou), a resposta traz a mensagem do WhatsApp, em vez de uma lista vazia; reconecte o dispositivo em **Configuração → Dispositivos**.
+
+### Modelos de mensagem do WhatsApp
+
+Os modelos pertencem à conta de WhatsApp Business, não a uma linha só: todos os dispositivos com o mesmo `businessId` enxergam os mesmos modelos. Cada ação recebe o `id` de um dispositivo dessa conta (`deviceId`, da lista de dispositivos). São os mesmos modelos que aparecem em **Configuração → Dispositivos**.
+
+- **Listar** traz só os modelos aprovados (`APPROVED`), que são os que podem ser enviados. Com `status=ALL` vêm todos; com outro status (`PENDING`, `REJECTED`, `PAUSED`…) vêm só os desse status. Cada modelo traz `id`, `name`, `language`, `category`, `status` e `components` (cabeçalho, corpo, rodapé e botões, como o WhatsApp devolve).
+- **Abrir** um modelo pelo `id` (da lista) mostra os mesmos campos. Quando ele ainda espera aprovação, a Ducke consulta o WhatsApp de novo para mostrar o status atual.
+- **Criar** pede o nome (`name`; a Ducke deixa só letras minúsculas, números e `_`, então `Retorno Cliente` vira `retorno_cliente`) e o texto (`body`, com as variáveis `{{1}}`, `{{2}}`… em ordem). Também aceita o idioma (`language`, padrão `pt_BR`), a categoria (`category`: `UTILITY`, que é o padrão, `MARKETING` ou `AUTHENTICATION`), um exemplo para cada variável (`bodyExamples`), o rodapé (`footer`), os botões (`buttons`: `QUICK_REPLY`, `URL` com `url` e `PHONE_NUMBER` com `phoneNumber`) e o cabeçalho (`header`). O modelo novo fica **esperando a aprovação do WhatsApp** (`status: "PENDING"`).
+- **Editar** pelo `id` troca o cabeçalho, o corpo, o rodapé e os botões (o nome e o idioma ficam). O modelo precisa ser **aprovado de novo** pelo WhatsApp e volta a `PENDING`. O WhatsApp limita quantas vezes um modelo aprovado pode ser editado; quando ele recusa, a resposta traz a mensagem dele.
+- **Apagar** pelo nome remove o modelo em todos os idiomas, como o WhatsApp faz. Um nome que não existe dá `Template "<nome>" not found`.
+- Um botão de link pode terminar com `{{1}}`, a parte do endereço que muda (`https://loja.com/pedido/{{1}}`); mande junto `example` com um endereço completo de exemplo.
+- Um modelo fora das regras (variáveis fora de ordem, no início ou no fim do texto, sem exemplo, ou poucas palavras para as variáveis) dá erro com a explicação e não é enviado ao WhatsApp, igual à tela de criar modelo.
+
+**A imagem do topo.** O cabeçalho pode ser um texto (`{ "format": "TEXT", "text": "…" }`) ou uma imagem. A imagem é um link `https` normal, que qualquer pessoa consegue abrir: a Ducke baixa a imagem, envia ao WhatsApp e ela fica salva junto com o modelo, como exemplo do cabeçalho. Use `{ "format": "IMAGE", "imageUrl": "https://…" }` ao criar ou editar. Se preferir mandar a imagem antes, **enviar a imagem do topo** recebe o mesmo `imageUrl` e devolve `{ "headerHandle": "…" }`; depois use `{ "format": "IMAGE", "headerHandle": "…" }`. A imagem precisa ser JPEG ou PNG de até 5 MB; um link que não é `https`, que não abre, que aponta para um endereço interno ou que não é uma imagem dá erro e nada é criado.
 
 ### Chamadas demais de uma vez
 
