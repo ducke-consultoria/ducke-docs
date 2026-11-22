@@ -55,8 +55,21 @@ Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do t
 |---|---|---|
 | Listar as origens e os estágios de cada uma | `list_origins` | `GET /api/v2/origins` |
 | Listar os cards de um estágio da origem, uma página por vez | `list_stage_leads` com `originId`, `stageId` e `page` | `GET /api/v2/leads?originId=…&stageId=…&page=…` |
+| Criar um card | `create_lead` | `POST /api/v2/leads` |
+| Mover um card para outro estágio da origem (e, se quiser, trocar o responsável junto) | `move_lead` com `leadId`, `stageId` e `userIds` opcional | `POST /api/v2/leads/:id` com `stageId` (e `userIds`) |
+| Trocar o responsável sem mover o card | `set_lead_users` com `leadId` e `userIds` | `POST /api/v2/leads/:id` com `userIds` |
+| Reescrever as anotações | `set_lead_description` com `leadId` e `description` | `POST /api/v2/leads/:id` com `description` |
 
 Para ler um estágio inteiro, comece na página `1` e peça a próxima até a lista vir vazia: aí o estágio acabou. Cada página traz até 100 cards, na ordem do quadro, e cada card aparece uma vez só. Um estágio que não é da origem informada dá erro (`Stage not found`), em vez de uma página vazia.
+
+### Criar, mover, trocar o responsável e reescrever as anotações
+
+- **Criar um card** aceita o nome, a origem e o estágio onde ele entra (`name`, `originId`, `stageId`), as anotações (`description`), o documento (`tin`, sem pontuação ao salvar), `city`, `state`, `country`, as etiquetas pelo nome (`tagNames`; uma etiqueta que ainda não existe é criada), os responsáveis (`userIds`) e as pessoas do card (`contacts`, cada uma com `name`, `phoneNumber` e `email`).
+- **Mover** sem informar `userIds` mantém o responsável atual. Com `userIds`, o card muda de estágio e de responsável no mesmo passo.
+- **Trocar o responsável:** a lista nova substitui a antiga, e uma lista vazia deixa o card sem responsável. O card continua no mesmo estágio.
+- **Reescrever as anotações:** o texto novo substitui o antigo, exatamente como foi enviado (não acrescenta uma linha no final). O estágio e o responsável não mudam.
+
+Os ids dos responsáveis são os do campo `users` de cada card na lista. Ao mover ou trocar o responsável, só valem o usuário da chave e as pessoas abaixo dele na hierarquia; um id fora disso, ou de quem não é da empresa, dá erro (`One or more user ids are invalid for this tenant`) e nada muda.
 
 ## Segurança
 
