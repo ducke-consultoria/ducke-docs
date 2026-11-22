@@ -73,6 +73,8 @@ Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do t
 | Editar um modelo | `update_whatsapp_template` com `deviceId`, `templateId` e o conteúdo novo | `POST /api/v2/whatsapp/devices/:deviceId/templates/:templateId` |
 | Enviar a imagem do topo de um modelo | `upload_whatsapp_template_header_image` com `deviceId` e `imageUrl` | `POST /api/v2/whatsapp/devices/:deviceId/template-header-images` com `imageUrl` |
 | Apagar um modelo pelo nome | `delete_whatsapp_template` com `deviceId` e `name` | `DELETE /api/v2/whatsapp/devices/:deviceId/templates?name=…` |
+| Enviar um modelo aprovado | `send_whatsapp_template` com `deviceId`, `to`, `templateId` e os valores do modelo | `POST /api/v2/whatsapp/devices/:deviceId/template-messages` |
+| Enviar uma mensagem normal | `send_whatsapp_message` com `deviceId`, `to` e `text` | `POST /api/v2/whatsapp/devices/:deviceId/messages` |
 
 Para ler um estágio inteiro, comece na página `1` e peça a próxima até a lista vir vazia: aí o estágio acabou. Cada página traz até 100 cards, na ordem do quadro, e cada card aparece uma vez só. Um estágio que não é da origem informada dá erro (`Stage not found`), em vez de uma página vazia.
 
@@ -141,6 +143,19 @@ Os modelos pertencem à conta de WhatsApp Business, não a uma linha só: todos 
 - Um modelo fora das regras (variáveis fora de ordem, no início ou no fim do texto, sem exemplo, ou poucas palavras para as variáveis) dá erro com a explicação e não é enviado ao WhatsApp, igual à tela de criar modelo.
 
 **A imagem do topo.** O cabeçalho pode ser um texto (`{ "format": "TEXT", "text": "…" }`) ou uma imagem. A imagem é um link `https` normal, que qualquer pessoa consegue abrir: a Ducke baixa a imagem, envia ao WhatsApp e ela fica salva junto com o modelo, como exemplo do cabeçalho. Use `{ "format": "IMAGE", "imageUrl": "https://…" }` ao criar ou editar. Se preferir mandar a imagem antes, **enviar a imagem do topo** recebe o mesmo `imageUrl` e devolve `{ "headerHandle": "…" }`; depois use `{ "format": "IMAGE", "headerHandle": "…" }`. A imagem precisa ser JPEG ou PNG de até 5 MB; um link que não é `https`, que não abre, que aponta para um endereço interno ou que não é uma imagem dá erro e nada é criado.
+
+### Enviar mensagens pelo WhatsApp
+
+As mensagens saem da **linha de telefone** de um dispositivo (`deviceId`, da lista de dispositivos) para o telefone da pessoa (`to`), com DDI e DDD, como vem nas pessoas do card (`5511999999999`; espaços, `+`, parênteses e traços são ignorados). A mensagem entra na mesma conversa dessa linha com esse número que aparece no **Chat** do CRM, junto das respostas da pessoa, e fica ligada ao card que tem esse telefone. As duas ações respondem `{ "messageId", "conversationId", "status", "errorMessage" }`: `status` `SENT` quando o WhatsApp aceitou, ou `ERROR` com o motivo em `errorMessage` quando ele recusou, como no Chat.
+
+- **Enviar um modelo aprovado** funciona mesmo se a pessoa não escreveu há pouco, ou nunca escreveu. Use o `templateId` de um modelo `APPROVED` da lista; um modelo esperando aprovação, rejeitado ou pausado dá erro com o status. Os espaços do modelo são preenchidos assim:
+  - `bodyVariables`: as palavras do corpo, uma por variável, em ordem (`["Ana", "1234"]` para `Olá {{1}}, seu pedido {{2}} saiu`);
+  - `headerVariables`: o `{{1}}` de um cabeçalho de texto;
+  - `buttonVariables`: em cada botão de link que termina com `{{1}}`, **só a parte que muda**, não o endereço inteiro (`["abc-1234"]` para `https://loja.com/pedido/{{1}}`).
+  
+  Um espaço sem valor dá erro e nada é enviado.
+- **A imagem do modelo.** Num modelo com imagem no cabeçalho, vai a imagem salva junto com o modelo. Para mandar outra imagem só nesse envio, use `headerImageUrl` com um link `https` público de uma imagem JPEG ou PNG de até 5 MB. A imagem vai como cabeçalho da mensagem: o link nunca é colado no texto.
+- **Enviar uma mensagem normal** (`text`, até 4.096 caracteres) só funciona enquanto não passou **um dia** desde a última mensagem que essa pessoa mandou para essa linha. Depois disso, ou se ela nunca escreveu, nada é enviado e a resposta é `400` com `{ "error": "…", "code": "WINDOW_CLOSED" }` (na ferramenta, `isError` com o mesmo texto), dizendo para enviar um modelo aprovado. Mensagens que a própria linha mandou não abrem esse prazo.
 
 ### Chamadas demais de uma vez
 
