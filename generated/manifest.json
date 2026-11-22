@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-22T15:51:44.025Z",
+  "capturedAt": "2026-11-22T16:26:02.700Z",
   "prints": [
     {
       "id": "sign",
@@ -180,6 +180,15 @@
       "printFile": "leads-instrucoes-do-estagio.png",
       "kind": "leads-stage-instructions",
       "mdxPath": "/prints/leads-instrucoes-do-estagio.png"
+    },
+    {
+      "id": "leads-extra-fields",
+      "module": "leads",
+      "title": "Campos extras na aba Dados da oportunidade",
+      "crmRoute": "/leads",
+      "printFile": "leads-campos-extras.png",
+      "kind": "leads-extra-fields",
+      "mdxPath": "/prints/leads-campos-extras.png"
     },
     {
       "id": "leads-bulk-bar",

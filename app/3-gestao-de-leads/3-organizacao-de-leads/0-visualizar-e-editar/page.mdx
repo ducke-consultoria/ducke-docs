@@ -26,7 +26,7 @@ Se o estágio atual tiver checklist configurado, as **Tarefas** ficam ao lado do
 
 | Aba | Uso |
 |-----|-----|
-| **Dados** | Nome, descrição, segmento, estágio e demais campos do negócio |
+| **Dados** | Nome, descrição, segmento, estágio, demais campos do negócio e campos extras |
 | **Contatos** | Telefones, e-mails e contatos vinculados |
 | **Agendamentos** | Compromissos ligados à oportunidade |
 | **Histórico** | Alterações e interações registradas |
@@ -39,6 +39,24 @@ Se o estágio atual tiver checklist configurado, as **Tarefas** ficam ao lado do
 3. Ajuste tags, responsáveis ou estágio conforme o fluxo da operação (o estágio também muda pelo botão no cabeçalho).
 4. O card no quadro mostra tags e responsáveis novos na hora, sem recarregar o quadro.
 4. Use notas e anexos para registrar contexto; o [histórico](/3-gestao-de-leads/3-organizacao-de-leads/3-historico) guarda as mudanças relevantes. [Criar uma nota](/6-notas-e-arquivos/1-adicionando-notas) também conta como atividade e reinicia o SLA (dias sem interação) da oportunidade.
+
+## Campos extras
+
+Quando a informação não cabe em nenhum campo da ficha, crie os seus próprios pares de **nome** e **valor** no fim da aba **Dados**, em **Campos extras**. Não há formulário fixo: cada oportunidade tem a sua lista.
+
+<img src="/prints/leads-campos-extras.png" alt="Seção Campos extras na aba Dados, com três pares de nome e valor" style={{ borderRadius: '0.5rem' }} />
+
+1. Clique no **+** ao lado de **Campos extras**. Aparece uma linha com **Nome** e **Valor**.
+2. Preencha a linha. Para mais um par, clique no **+** de novo.
+3. Para tirar um par, clique na lixeira da linha.
+4. Clique em **Salvar** e confirme. Os pares só ficam gravados depois de salvar.
+
+- A lista fica na ordem em que você digitou, e duas linhas podem ter o mesmo nome (por exemplo, dois **Contato financeiro**).
+- Toda linha com valor precisa de nome; uma linha totalmente vazia é descartada ao salvar.
+- Cada oportunidade aceita até 50 pares, com nome de até 100 e valor de até 1.000 caracteres.
+- Os campos extras não entram na busca nem nos filtros: o quadro e a lista continuam filtrando por estágio, tags, documento e nome.
+- Ao [copiar a oportunidade](/3-gestao-de-leads/3-organizacao-de-leads/4-acoes-em-massa) para outra origem, os campos extras vão junto. As integrações leem os pares pela [ferramenta MCP e pela API](/10-configuracao-do-sistema/10-chaves-de-acesso-api#o-que-cada-card-da-lista-traz).
+- Mudar os campos extras fica registrado no [histórico](/3-gestao-de-leads/3-organizacao-de-leads/3-historico). Só quem pode editar oportunidades salva os pares; quem só pode ver a oportunidade também vê os pares.
 
 ## Preencher o endereço pelo CEP
 

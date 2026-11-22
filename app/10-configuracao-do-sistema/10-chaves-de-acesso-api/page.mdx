@@ -91,8 +91,11 @@ A ferramenta MCP e a API devolvem os mesmos dados de cada card, então a lista b
 | Etiquetas, com os nomes dados | `tags` (cada uma com `id` e `name`) |
 | Pessoas do card | `contacts` (cada uma com `name`, `phoneNumber` e `email`) |
 | Responsável | `users` (cada um com `id`, `username` e `email`) |
+| Campos extras criados no card | `extraFields` (cada um com `name` e `value`, na ordem em que foram digitados; um nome pode se repetir) |
 
 As anotações voltam caractere por caractere como foram gravadas, ao criar o card ou ao reescrevê-las, inclusive espaços, quebras de linha e acentos: uma marca que você deixa ali para ler depois volta igual. O documento é o jeito de conferir se a empresa já existe na origem antes de criar ou copiar um card.
+
+Os [campos extras](/3-gestao-de-leads/3-organizacao-de-leads/0-visualizar-e-editar#campos-extras) são criados e editados na aba **Dados** do card, no CRM; a ferramenta MCP e a API só os leem. Um card sem campos extras traz `extraFields: []`.
 
 ### Criar, mover, trocar o responsável e reescrever as anotações
 
@@ -105,7 +108,7 @@ Os ids dos responsáveis são os do campo `users` de cada card na lista. Ao move
 
 ### Copiar um card para outra origem
 
-- A cópia cria um card novo no estágio escolhido (`originId` e `stageId` de qualquer origem da empresa), com o nome, o documento, as anotações, a cidade, o estado, o país e as etiquetas do original. O card original continua na sua origem, sem mudança.
+- A cópia cria um card novo no estágio escolhido (`originId` e `stageId` de qualquer origem da empresa), com o nome, o documento, as anotações, a cidade, o estado, o país, as etiquetas e os campos extras do original (na mesma ordem). O card original continua na sua origem, sem mudança.
 - **As pessoas do card vão junto** (nome, telefone e e-mail). Para copiar sem elas, envie `copyContacts: false`.
 - **Responsável:** sem `userIds` (ou com uma lista vazia), o card novo fica sem responsável. Com `userIds`, ele fica só com essas pessoas, que precisam ser da empresa e ter acesso à origem de destino; senão dá erro e nada é copiado.
 - **A cópia não procura duplicado** e nunca junta dois cards: mesmo que a origem de destino já tenha um card com o mesmo documento, a cópia cria outro card. Se você não quer o card repetido, confira o documento na lista do estágio antes de copiar.
