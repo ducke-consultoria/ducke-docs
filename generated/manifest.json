@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-22T14:11:59.400Z",
+  "capturedAt": "2026-11-22T15:51:44.025Z",
   "prints": [
     {
       "id": "sign",
@@ -171,6 +171,15 @@
       "printFile": "leads-painel.png",
       "kind": "leads-panel",
       "mdxPath": "/prints/leads-painel.png"
+    },
+    {
+      "id": "leads-stage-instructions",
+      "module": "leads",
+      "title": "Instruções do estágio na configuração da origem",
+      "crmRoute": "/leads",
+      "printFile": "leads-instrucoes-do-estagio.png",
+      "kind": "leads-stage-instructions",
+      "mdxPath": "/prints/leads-instrucoes-do-estagio.png"
     },
     {
       "id": "leads-bulk-bar",

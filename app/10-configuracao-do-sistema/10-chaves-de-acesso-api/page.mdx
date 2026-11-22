@@ -53,7 +53,7 @@ Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do t
 
 | O que fazer | Ferramenta MCP | API |
 |---|---|---|
-| Listar as origens e os estágios de cada uma | `list_origins` | `GET /api/v2/origins` |
+| Listar as origens e os estágios de cada uma, com as [instruções do estágio](/3-gestao-de-leads/4-tarefas-da-etapa/3-instrucoes-do-estagio) (`instructions`, `instructionsTrigger` e `instructionsTools`) | `list_origins` | `GET /api/v2/origins` |
 | Listar os cards de um estágio da origem, uma página por vez | `list_stage_leads` com `originId`, `stageId` e `page` | `GET /api/v2/leads?originId=…&stageId=…&page=…` |
 | Criar um card | `create_lead` | `POST /api/v2/leads` |
 | Mover um card para outro estágio da origem (e, se quiser, trocar o responsável junto) | `move_lead` com `leadId`, `stageId` e `userIds` opcional | `POST /api/v2/leads/:id` com `stageId` (e `userIds`) |

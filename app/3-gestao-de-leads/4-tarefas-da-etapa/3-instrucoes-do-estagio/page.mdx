@@ -1,0 +1,61 @@
+---
+title: 'Instruções do estágio'
+order: 3
+---
+
+import { Callout } from 'nextra/components'
+
+# Instruções do estágio
+
+Cada estágio da origem pode ter **instruções** para o que deve acontecer com a oportunidade nele, **quando** essas instruções disparam e **quais ferramentas da Ducke** podem ser usadas. Dois estágios da mesma origem podem ter instruções, momentos e ferramentas diferentes.
+
+Quem segue as instruções é a **integração da sua empresa** ligada pela ferramenta MCP ou pela API (veja [Chaves de acesso à API](/10-configuracao-do-sistema/10-chaves-de-acesso-api)). A Ducke guarda e mostra as instruções; ela não executa nada sozinha.
+
+## Configurar as instruções
+
+1. Na tela de **Leads**, passe o mouse sobre a origem na barra lateral e clique em **Configurar origem** (lápis).
+2. Abra a aba **Estágios** e, no estágio desejado, clique em **Configurar estágio**.
+3. Na seção **Instruções**, escreva o que deve acontecer com a oportunidade nesse estágio.
+4. Em **Quando as instruções disparam**, escolha o momento.
+5. Em **Ferramentas da Ducke**, marque o que esse estágio pode usar.
+6. Clique em **Aplicar alterações** e depois em **Salvar pipeline**.
+
+<img src="/prints/leads-instrucoes-do-estagio.png" alt="Janela Configurar estágio com a seção Instruções: texto, momento de disparo, ferramentas da Ducke e outras ferramentas em breve" style={{ borderRadius: '0.5rem' }} />
+
+O cartão do estágio na aba **Estágios** mostra **Instruções** quando o estágio tem instruções salvas.
+
+### Quando as instruções disparam
+
+| Momento | Quando vale |
+| --- | --- |
+| **Quando a oportunidade é movida para o estágio** | A oportunidade chega ao estágio. Chegar pela primeira vez, inclusive quando ela é criada nesse estágio, conta como movida. |
+| **Quando a oportunidade é atualizada (toda vez)** | Cada vez que algo muda na oportunidade enquanto ela está no estágio. |
+| **Quando a oportunidade é atualizada (só na primeira vez)** | Só na primeira atualização da oportunidade no estágio. |
+
+### Ferramentas da Ducke
+
+| Ferramenta | O que libera |
+| --- | --- |
+| **CRM: origens, oportunidades e etiquetas** | Listar origens e oportunidades, criar, mover, trocar o responsável, reescrever as anotações, etiquetar e copiar. |
+| **Dispositivos de WhatsApp: números, modelos e envio** | Ver dispositivos e números, cuidar dos modelos de mensagem e enviar mensagens. |
+
+**Outras ferramentas** (imagens, planilhas e e-mail) aparece como **Em breve**: o lugar já está reservado no estágio, mas ainda não há o que escolher.
+
+<Callout type="info">
+  Se você apagar o texto das instruções, o momento volta para **movida para o estágio** e nenhuma ferramenta fica marcada. Ao criar uma origem copiando os estágios de outra, as instruções vão junto.
+</Callout>
+
+## Ver as instruções na oportunidade
+
+Ao abrir uma oportunidade, o bloco **Instruções do estágio** aparece logo abaixo do cabeçalho com o texto, quando ele dispara e as ferramentas liberadas do estágio atual. Ao mudar a oportunidade de estágio, o bloco passa a mostrar as instruções do novo estágio. Estágios sem instruções não mostram o bloco.
+
+<img src="/prints/leads-painel.png" alt="Ficha da oportunidade com o bloco Instruções do estágio abaixo do cabeçalho" style={{ borderRadius: '0.5rem' }} />
+
+## Quem pode configurar
+
+Só perfis com permissão de **editar** oportunidades veem **Configurar origem** e salvam as instruções. Quem só pode ver oportunidades lê as instruções ao abrir a oportunidade.
+
+## Próximos passos
+
+- [Configurar tarefas no funil](/3-gestao-de-leads/4-tarefas-da-etapa/1-configurar-tarefas)
+- [Usar o checklist no lead](/3-gestao-de-leads/4-tarefas-da-etapa/2-checklist-do-lead)
