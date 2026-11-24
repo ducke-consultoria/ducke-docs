@@ -7,7 +7,7 @@ import { Callout } from 'nextra/components'
 
 # Chaves de Acesso API
 
-A aba **Chaves de Acesso API** permite criar tokens para integrações externas que consomem a API do Ducke CRM em nome da operação. Novas chaves usam o prefixo `ducke_` (ex.: `ducke_a1b2…`).
+A aba **Chaves de Acesso API** permite criar as chaves de acesso da empresa para integrações externas. Cada chave é da empresa, e não de uma pessoa: a mesma chave vale para a ferramenta MCP e para a API e alcança todas as origens, cards e etiquetas da empresa. Novas chaves usam o prefixo `ducke_` (ex.: `ducke_a1b2…`).
 
 <img src="/prints/setup-user-tokens.png" alt="Tela de chaves de acesso API no setup" style={{ borderRadius: '0.5rem' }} />
 
@@ -24,7 +24,7 @@ A aba **Chaves de Acesso API** permite criar tokens para integrações externas 
 4. Use **Copiar** no diálogo, guarde em local seguro e confirme **Já copiei**.
 
 <Callout type="warning">
-  Trate cada chave como senha. Depois de fechar o diálogo, o secret completo não pode ser recuperado. Se perder a chave, exclua-a e crie outra. Não compartilhe em chats públicos nem commite em repositórios.
+  A chave alcança todas as origens da empresa, inclusive as que só algumas pessoas veem no CRM. Só perfis com a permissão **Chaves de Acesso API** veem esta aba e podem criar, editar ou excluir chaves. Trate cada chave como senha. Depois de fechar o diálogo, o secret completo não pode ser recuperado. Se perder a chave, exclua-a e crie outra. Não compartilhe em chats públicos nem commite em repositórios.
 </Callout>
 
 ## Gerenciar chaves existentes
@@ -41,6 +41,139 @@ Não há botão para copiar o secret completo a partir da lista — apenas o pre
 - Automações que criam ou atualizam leads via API.
 - Integrações com ERP, BI ou ferramentas internas.
 - Scripts de migração ou sincronização sob demanda.
+
+## Ferramenta MCP e API
+
+Cada ação existe em par: a ferramenta MCP (para assistentes de IA que falam o protocolo MCP) e a API fazem a mesma coisa e devolvem os mesmos dados. As duas usam a mesma chave de acesso da empresa, que enxerga todas as origens da empresa: listar, criar, mover, reescrever anotações, definir o responsável, etiquetar e copiar funcionam em qualquer origem, para qualquer card. Não existe chave por pessoa nem chave separada para a API, e a chave continua funcionando se quem a criou sair da empresa. Ela nunca enxerga dados de outra empresa.
+
+Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do tipo HTTP com:
+
+- **Endereço:** o mesmo endereço da API que sua integração já usa, no caminho `/mcp`.
+- **Cabeçalho:** `Authorization: Bearer ducke_…` (a sua chave de acesso).
+
+| O que fazer | Ferramenta MCP | API |
+|---|---|---|
+| Listar as origens e os estágios de cada uma, com as [instruções do estágio](/3-gestao-de-leads/4-tarefas-da-etapa/3-instrucoes-do-estagio) (`instructions`, `instructionsTrigger` e `instructionsTools`) | `list_origins` | `GET /api/v2/origins` |
+| Listar os cards de um estágio da origem, uma página por vez | `list_stage_leads` com `originId`, `stageId` e `page` | `GET /api/v2/leads?originId=…&stageId=…&page=…` |
+| Criar um card | `create_lead` | `POST /api/v2/leads` |
+| Mover um card para outro estágio da origem (e, se quiser, trocar o responsável junto) | `move_lead` com `leadId`, `stageId` e `userIds` opcional | `POST /api/v2/leads/:id` com `stageId` (e `userIds`) |
+| Trocar o responsável sem mover o card | `set_lead_users` com `leadId` e `userIds` | `POST /api/v2/leads/:id` com `userIds` |
+| Reescrever as anotações | `set_lead_description` com `leadId` e `description` | `POST /api/v2/leads/:id` com `description` |
+| Copiar um card para outra origem | `copy_lead` com `leadId`, `originId`, `stageId` e, se quiser, `userIds` e `copyContacts` | `POST /api/v2/leads/copy` com `leads: [id]`, `originId`, `stageId` (e `userIds`, `copyContacts`) |
+| Listar as etiquetas, com busca pelo nome | `list_tags` com `search` opcional | `GET /api/v2/tags?search=…` |
+| Adicionar uma etiqueta a um card | `add_lead_tag` com `leadId` e `tagId` | `POST /api/v2/leads/:leadId/tags/:tagId` |
+| Remover uma etiqueta de um card | `remove_lead_tag` com `leadId` e `tagId` | `DELETE /api/v2/leads/:leadId/tags/:tagId` |
+| Colocar etiquetas pelo nome num card | `add_lead_tags_by_name` com `leadId` e `tagNames` | `POST /api/v2/leads/:leadId/tags` com `tagNames` |
+| Ler o guia curto dos dispositivos de WhatsApp | `whatsapp_guide` | `GET /api/v2/whatsapp/guide` |
+| Listar os dispositivos de WhatsApp | `list_whatsapp_devices` | `GET /api/v2/whatsapp/devices` |
+| Listar os números de telefone (salvos, ou ao vivo de uma conta) | `list_whatsapp_phone_numbers` com `businessId` opcional | `GET /api/v2/whatsapp/phone-numbers?businessId=…` |
+| Listar os modelos de mensagem de um dispositivo (só os aprovados, ou outro status) | `list_whatsapp_templates` com `deviceId` e `status` opcional | `GET /api/v2/whatsapp/devices/:deviceId/templates?status=…` |
+| Abrir um modelo | `get_whatsapp_template` com `deviceId` e `templateId` | `GET /api/v2/whatsapp/devices/:deviceId/templates/:templateId` |
+| Criar um modelo | `create_whatsapp_template` com `deviceId`, `name`, `body` e o resto do modelo | `POST /api/v2/whatsapp/devices/:deviceId/templates` |
+| Editar um modelo | `update_whatsapp_template` com `deviceId`, `templateId` e o conteúdo novo | `POST /api/v2/whatsapp/devices/:deviceId/templates/:templateId` |
+| Enviar a imagem do topo de um modelo | `upload_whatsapp_template_header_image` com `deviceId` e `imageUrl` | `POST /api/v2/whatsapp/devices/:deviceId/template-header-images` com `imageUrl` |
+| Apagar um modelo pelo nome | `delete_whatsapp_template` com `deviceId` e `name` | `DELETE /api/v2/whatsapp/devices/:deviceId/templates?name=…` |
+| Enviar um modelo aprovado | `send_whatsapp_template` com `deviceId`, `to`, `templateId` e os valores do modelo | `POST /api/v2/whatsapp/devices/:deviceId/template-messages` |
+| Enviar uma mensagem normal | `send_whatsapp_message` com `deviceId`, `to` e `text` | `POST /api/v2/whatsapp/devices/:deviceId/messages` |
+
+Para ler um estágio inteiro, comece na página `1` e peça a próxima até a lista vir vazia: aí o estágio acabou. Cada página traz até 100 cards, na ordem do quadro, e cada card aparece uma vez só. Um estágio que não é da origem informada dá erro (`Stage not found`), em vez de uma página vazia.
+
+### O que cada card da lista traz
+
+A ferramenta MCP e a API devolvem os mesmos dados de cada card, então a lista basta para decidir se vai copiar, mover, etiquetar ou mandar mensagem, sem abrir o card de novo:
+
+| Dado | Campo |
+|---|---|
+| Qual card é | `id` e `name` |
+| Em qual estágio da origem está | `stageId` e `stage` (com o nome do estágio), `originId` e `origin` |
+| Documento | `tin`, sem pontuação |
+| Anotações, exatamente como foram salvas | `description` |
+| Etiquetas, com os nomes dados | `tags` (cada uma com `id` e `name`) |
+| Pessoas do card | `contacts` (cada uma com `name`, `phoneNumber` e `email`) |
+| Responsável | `users` (cada um com `id`, `username` e `email`) |
+| Campos extras criados no card | `extraFields` (cada um com `name` e `value`, na ordem em que foram digitados; um nome pode se repetir) |
+
+As anotações voltam caractere por caractere como foram gravadas, ao criar o card ou ao reescrevê-las, inclusive espaços, quebras de linha e acentos: uma marca que você deixa ali para ler depois volta igual. O documento é o jeito de conferir se a empresa já existe na origem antes de criar ou copiar um card.
+
+Os [campos extras](/3-gestao-de-leads/3-organizacao-de-leads/0-visualizar-e-editar#campos-extras) são criados e editados na aba **Dados** do card, no CRM; a ferramenta MCP e a API só os leem. Um card sem campos extras traz `extraFields: []`.
+
+### Criar, mover, trocar o responsável e reescrever as anotações
+
+- **Criar um card** aceita o nome, a origem e o estágio onde ele entra (`name`, `originId`, `stageId`), as anotações (`description`, gravadas exatamente como enviadas), o documento (`tin`, sem pontuação ao salvar), `city`, `state`, `country`, as etiquetas pelo nome (`tagNames`; uma etiqueta que ainda não existe é criada com o nome enviado), os responsáveis (`userIds`) e as pessoas do card (`contacts`, cada uma com `name`, `phoneNumber` e `email`).
+- **Mover** sem informar `userIds` mantém o responsável atual. Com `userIds`, o card muda de estágio e de responsável no mesmo passo.
+- **Trocar o responsável:** a lista nova substitui a antiga, e uma lista vazia deixa o card sem responsável. O card continua no mesmo estágio.
+- **Reescrever as anotações:** o texto novo substitui o antigo, exatamente como foi enviado (não acrescenta uma linha no final). O estágio e o responsável não mudam.
+
+Os ids dos responsáveis são os do campo `users` de cada card na lista. Ao mover ou trocar o responsável, vale qualquer usuário da empresa; um id de quem não é da empresa dá erro (`One or more user ids are invalid for this tenant`) e nada muda.
+
+### Copiar um card para outra origem
+
+- A cópia cria um card novo no estágio escolhido (`originId` e `stageId` de qualquer origem da empresa), com o nome, o documento, as anotações, a cidade, o estado, o país, as etiquetas e os campos extras do original (na mesma ordem). O card original continua na sua origem, sem mudança.
+- **As pessoas do card vão junto** (nome, telefone e e-mail). Para copiar sem elas, envie `copyContacts: false`.
+- **Responsável:** sem `userIds` (ou com uma lista vazia), o card novo fica sem responsável. Com `userIds`, ele fica só com essas pessoas, que precisam ser da empresa e ter acesso à origem de destino; senão dá erro e nada é copiado.
+- **A cópia não procura duplicado** e nunca junta dois cards: mesmo que a origem de destino já tenha um card com o mesmo documento, a cópia cria outro card. Se você não quer o card repetido, confira o documento na lista do estágio antes de copiar.
+- Um card que veio da Prospecção também pode ser copiado; o vínculo com o resultado da prospecção fica só no original.
+- A resposta é `{ "success": true, "message": "Leads copiados com sucesso" }`. Um card que não existe na empresa dá `Lead not found`, uma origem que não é da empresa dá `Origin not found` e um estágio de outra origem dá `Stage not found`.
+
+### Etiquetas
+
+- **Listar etiquetas** mostra as etiquetas da empresa, em ordem alfabética. A busca (`search`) acha parte do nome, sem diferenciar maiúsculas de minúsculas.
+- **Adicionar** e **remover** mexem numa etiqueta por vez, pelo id (`tagId`, da lista de etiquetas ou do campo `tags` do card). As outras etiquetas do card ficam como estão.
+- **Colocar etiquetas pelo nome** acrescenta ao card só os nomes enviados: uma etiqueta que ainda não existe é criada, uma que o card já tem não dá erro nem aparece duas vezes, e as outras etiquetas do card ficam. Não é preciso mandar a lista inteira. O nome é comparado sem diferenciar maiúsculas, então `cliente` usa a etiqueta `Cliente` que já existe.
+- Cada nome de etiqueta tem até 30 caracteres. Um nome maior dá erro (`Tag name must be at most 30 characters`) e nada é criado, nem ao criar o card.
+- As respostas de adicionar, remover e colocar pelo nome trazem as etiquetas do card (`tags`). Um card que não existe na empresa dá `Lead not found`, e uma etiqueta de outra empresa dá `Tag not found`.
+
+### Dispositivos de WhatsApp
+
+Na Ducke, uma conta conectada é um **dispositivo**. Um dispositivo de WhatsApp é uma linha de telefone da empresa, com um nome e um número, e pertence a uma conta de WhatsApp Business (`businessId`); uma conta pode ter várias linhas. O segredo da conta nunca sai da Ducke: nenhuma resposta traz o token do dispositivo.
+
+- **Guia curto:** `whatsapp_guide` devolve `{ "guide": "…" }`, um texto curto (em inglês, como as descrições das ferramentas) que explica o que é um dispositivo e qual ação chamar. É um bom primeiro passo para um assistente de IA.
+- **Listar os dispositivos** mostra os dispositivos de WhatsApp da empresa, em ordem de nome, cada um com `id`, `name`, `phoneNumber`, `phoneId`, `businessId` e `active`. Dispositivos arquivados, de Instagram e de e-mail não aparecem.
+- **Listar os números sem escolher conta** mostra a lista salva na Ducke (`source: "saved"`): as linhas dos dispositivos, cada uma com `phoneId`, `phoneNumber`, `name`, `businessId` e `deviceId`. Não consulta o WhatsApp.
+- **Listar os números escolhendo uma conta** (`businessId` de um dispositivo da lista) busca ao vivo no WhatsApp os números dessa conta (`source: "live"`), cada um com `phoneId`, `phoneNumber`, `name` (o nome verificado no WhatsApp), `qualityRating`, `businessId` e `deviceId`, o dispositivo da Ducke que é essa linha, ou `null` quando o número ainda não foi conectado na Ducke.
+- Uma conta que não é de nenhum dispositivo da empresa dá `WhatsApp account not found`. Quando o WhatsApp recusa a consulta (por exemplo, a conexão do dispositivo expirou), a resposta traz a mensagem do WhatsApp, em vez de uma lista vazia; reconecte o dispositivo em **Configuração → Dispositivos**.
+
+### Modelos de mensagem do WhatsApp
+
+Os modelos pertencem à conta de WhatsApp Business, não a uma linha só: todos os dispositivos com o mesmo `businessId` enxergam os mesmos modelos. Cada ação recebe o `id` de um dispositivo dessa conta (`deviceId`, da lista de dispositivos). São os mesmos modelos que aparecem em **Configuração → Dispositivos**.
+
+- **Listar** traz só os modelos aprovados (`APPROVED`), que são os que podem ser enviados. Com `status=ALL` vêm todos; com outro status (`PENDING`, `REJECTED`, `PAUSED`…) vêm só os desse status. Cada modelo traz `id`, `name`, `language`, `category`, `status` e `components` (cabeçalho, corpo, rodapé e botões, como o WhatsApp devolve).
+- **Abrir** um modelo pelo `id` (da lista) mostra os mesmos campos. Quando ele ainda espera aprovação, a Ducke consulta o WhatsApp de novo para mostrar o status atual.
+- **Criar** pede o nome (`name`; a Ducke deixa só letras minúsculas, números e `_`, então `Retorno Cliente` vira `retorno_cliente`) e o texto (`body`, com as variáveis `{{1}}`, `{{2}}`… em ordem). Também aceita o idioma (`language`, padrão `pt_BR`), a categoria (`category`: `UTILITY`, que é o padrão, `MARKETING` ou `AUTHENTICATION`), um exemplo para cada variável (`bodyExamples`), o rodapé (`footer`), os botões (`buttons`: `QUICK_REPLY`, `URL` com `url` e `PHONE_NUMBER` com `phoneNumber`) e o cabeçalho (`header`). O modelo novo fica **esperando a aprovação do WhatsApp** (`status: "PENDING"`).
+- **Editar** pelo `id` troca o cabeçalho, o corpo, o rodapé e os botões (o nome e o idioma ficam). O modelo precisa ser **aprovado de novo** pelo WhatsApp e volta a `PENDING`. O WhatsApp limita quantas vezes um modelo aprovado pode ser editado; quando ele recusa, a resposta traz a mensagem dele.
+- **Apagar** pelo nome remove o modelo em todos os idiomas, como o WhatsApp faz. Um nome que não existe dá `Template "<nome>" not found`.
+- Um botão de link pode terminar com `{{1}}`, a parte do endereço que muda (`https://loja.com/pedido/{{1}}`); mande junto `example` com um endereço completo de exemplo.
+- Um modelo fora das regras (variáveis fora de ordem, no início ou no fim do texto, sem exemplo, ou poucas palavras para as variáveis) dá erro com a explicação e não é enviado ao WhatsApp, igual à tela de criar modelo.
+
+**A imagem do topo.** O cabeçalho pode ser um texto (`{ "format": "TEXT", "text": "…" }`) ou uma imagem. A imagem é um link `https` normal, que qualquer pessoa consegue abrir: a Ducke baixa a imagem, envia ao WhatsApp e ela fica salva junto com o modelo, como exemplo do cabeçalho. Use `{ "format": "IMAGE", "imageUrl": "https://…" }` ao criar ou editar. Se preferir mandar a imagem antes, **enviar a imagem do topo** recebe o mesmo `imageUrl` e devolve `{ "headerHandle": "…" }`; depois use `{ "format": "IMAGE", "headerHandle": "…" }`. A imagem precisa ser JPEG ou PNG de até 5 MB; um link que não é `https`, que não abre, que aponta para um endereço interno ou que não é uma imagem dá erro e nada é criado.
+
+### Enviar mensagens pelo WhatsApp
+
+As mensagens saem da **linha de telefone** de um dispositivo (`deviceId`, da lista de dispositivos) para o telefone da pessoa (`to`), com DDI e DDD, como vem nas pessoas do card (`5511999999999`; espaços, `+`, parênteses e traços são ignorados). A mensagem entra na mesma conversa dessa linha com esse número que aparece no **Chat** do CRM, junto das respostas da pessoa, e fica ligada ao card que tem esse telefone. As duas ações respondem `{ "messageId", "conversationId", "status", "errorMessage" }`: `status` `SENT` quando o WhatsApp aceitou, ou `ERROR` com o motivo em `errorMessage` quando ele recusou, como no Chat.
+
+- **Enviar um modelo aprovado** funciona mesmo se a pessoa não escreveu há pouco, ou nunca escreveu. Use o `templateId` de um modelo `APPROVED` da lista; um modelo esperando aprovação, rejeitado ou pausado dá erro com o status. Os espaços do modelo são preenchidos assim:
+  - `bodyVariables`: as palavras do corpo, uma por variável, em ordem (`["Ana", "1234"]` para `Olá {{1}}, seu pedido {{2}} saiu`);
+  - `headerVariables`: o `{{1}}` de um cabeçalho de texto;
+  - `buttonVariables`: em cada botão de link que termina com `{{1}}`, **só a parte que muda**, não o endereço inteiro (`["abc-1234"]` para `https://loja.com/pedido/{{1}}`).
+  
+  Um espaço sem valor dá erro e nada é enviado.
+- **A imagem do modelo.** Num modelo com imagem no cabeçalho, vai a imagem salva junto com o modelo. Para mandar outra imagem só nesse envio, use `headerImageUrl` com um link `https` público de uma imagem JPEG ou PNG de até 5 MB. A imagem vai como cabeçalho da mensagem: o link nunca é colado no texto.
+- **Enviar uma mensagem normal** (`text`, até 4.096 caracteres) só funciona enquanto não passou **um dia** desde a última mensagem que essa pessoa mandou para essa linha. Depois disso, ou se ela nunca escreveu, nada é enviado e a resposta é `400` com `{ "error": "…", "code": "WINDOW_CLOSED" }` (na ferramenta, `isError` com o mesmo texto), dizendo para enviar um modelo aprovado. Mensagens que a própria linha mandou não abrem esse prazo.
+
+### Chamadas demais de uma vez
+
+A ferramenta MCP e a API dividem um limite de **60 chamadas por minuto** por endereço IP de quem chama. Quando você passa dele, por exemplo ao atualizar muitos cards seguidos, a chamada é recusada antes de fazer qualquer coisa:
+
+- **O card fica onde está.** Nada muda: nem o estágio, nem o responsável, nem as anotações, nem as etiquetas, e nenhuma cópia é criada.
+- **Não é uma falha do card.** A resposta tem `code: "RATE_LIMITED"` e pede para ir mais devagar. Não mande o card para um estágio de erro: espere e mande a mesma chamada de novo.
+- **Quando tentar de novo:** `retryAfter` diz em quantos segundos.
+
+| Onde | Como a recusa chega |
+|---|---|
+| API | Status `429`, cabeçalho `Retry-After` e o corpo `{ "error": "Too many requests: slow down and send it again in 30 seconds. Nothing was changed.", "code": "RATE_LIMITED", "retryAfter": 30 }` |
+| Ferramenta MCP | Resultado da ferramenta com `isError: true` e, no texto, o mesmo corpo da API. Outras chamadas do protocolo (como `tools/list`) recebem `429` com um erro JSON-RPC que traz esse corpo em `data` |
+
+As chamadas pela ferramenta MCP e pela API contam juntas: gastar o limite numa delas também segura a outra até o tempo de `retryAfter` passar. Os outros erros (`Lead not found`, `Stage not found`…) continuam com a mensagem deles e nunca trazem `RATE_LIMITED`.
 
 ## Segurança
 
