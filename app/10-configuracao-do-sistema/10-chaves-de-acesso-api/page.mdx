@@ -46,6 +46,8 @@ Não há botão para copiar o secret completo a partir da lista — apenas o pre
 
 Cada ação existe em par: a ferramenta MCP (para assistentes de IA que falam o protocolo MCP) e a API fazem a mesma coisa e devolvem os mesmos dados. As duas usam a mesma chave de acesso da empresa, que enxerga todas as origens da empresa: listar, criar, mover, reescrever anotações, definir o responsável, etiquetar e copiar funcionam em qualquer origem, para qualquer card. Não existe chave por pessoa nem chave separada para a API, e a chave continua funcionando se quem a criou sair da empresa. Ela nunca enxerga dados de outra empresa.
 
+Os agentes da própria Ducke usam as mesmas ferramentas sem precisar de chave: o bloco **Agente** dos assistentes (veja [Configurar Bloco Agente](/13-assistente-inteligente/06-configurar-agente)) e as instruções do estágio da origem.
+
 Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do tipo HTTP com:
 
 - **Endereço:** o mesmo endereço da API que sua integração já usa, no caminho `/mcp`.
