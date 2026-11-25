@@ -61,6 +61,8 @@ A IA só recebe as ferramentas marcadas: num estágio só com **CRM**, ela conse
 
 A execução termina como **Falhou**, com o motivo e sem mudar nada, quando a empresa não tem créditos, a IA não está disponível, a oportunidade saiu do estágio antes de a execução começar ou as instruções foram apagadas.
 
+O saldo é conferido antes de cada passo da IA. Se os créditos acabam no meio da execução, ela para antes do passo seguinte e termina como **Falhou** por falta de créditos: o que os passos anteriores já fizeram na oportunidade continua feito, e só esses passos são cobrados. O mesmo vale quando a IA falha no meio: os passos já feitos são cobrados. O saldo nunca fica negativo.
+
 <Callout type="info">
   O que a própria execução muda na oportunidade não dispara as instruções de **atualizada** de novo. Se a execução move a oportunidade para outro estágio com instruções de **movida**, as instruções desse estágio também rodam (até três estágios seguidos).
 </Callout>
