@@ -46,6 +46,8 @@ Não há botão para copiar o secret completo a partir da lista — apenas o pre
 
 Cada ação existe em par: a ferramenta MCP (para assistentes de IA que falam o protocolo MCP) e a API fazem a mesma coisa e devolvem os mesmos dados. As duas usam a mesma chave de acesso da empresa, que enxerga todas as origens da empresa: listar, criar, mover, reescrever anotações, definir o responsável, etiquetar e copiar funcionam em qualquer origem, para qualquer card. Não existe chave por pessoa nem chave separada para a API, e a chave continua funcionando se quem a criou sair da empresa. Ela nunca enxerga dados de outra empresa.
 
+Os agentes da própria Ducke usam as mesmas ferramentas sem precisar de chave: o bloco **Agente** dos assistentes (veja [Configurar Bloco Agente](/13-assistente-inteligente/06-configurar-agente)) e as instruções do estágio da origem.
+
 Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do tipo HTTP com:
 
 - **Endereço:** o mesmo endereço da API que sua integração já usa, no caminho `/mcp`.
@@ -53,12 +55,13 @@ Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do t
 
 | O que fazer | Ferramenta MCP | API |
 |---|---|---|
-| Listar as origens e os estágios de cada uma, com as [instruções do estágio](/3-gestao-de-leads/4-tarefas-da-etapa/3-instrucoes-do-estagio) (`instructions`, `instructionsTrigger` e `instructionsTools`) | `list_origins` | `GET /api/v2/origins` |
+| Listar as origens e os estágios de cada uma, com as [instruções do estágio](/3-gestao-de-leads/4-tarefas-da-etapa/3-instrucoes-do-estagio) (`instructions`, `instructionsTrigger` e `instructionsTools`), que a própria IA da Ducke executa: a integração não precisa repeti-las | `list_origins` | `GET /api/v2/origins` |
 | Listar os cards de um estágio da origem, uma página por vez | `list_stage_leads` com `originId`, `stageId` e `page` | `GET /api/v2/leads?originId=…&stageId=…&page=…` |
 | Criar um card | `create_lead` | `POST /api/v2/leads` |
 | Mover um card para outro estágio da origem (e, se quiser, trocar o responsável junto) | `move_lead` com `leadId`, `stageId` e `userIds` opcional | `POST /api/v2/leads/:id` com `stageId` (e `userIds`) |
 | Trocar o responsável sem mover o card | `set_lead_users` com `leadId` e `userIds` | `POST /api/v2/leads/:id` com `userIds` |
 | Reescrever as anotações | `set_lead_description` com `leadId` e `description` | `POST /api/v2/leads/:id` com `description` |
+| Substituir os campos extras do card | `set_lead_extra_fields` com `leadId` e `extraFields` | `POST /api/v2/leads/:id` com `extraFields` |
 | Copiar um card para outra origem | `copy_lead` com `leadId`, `originId`, `stageId` e, se quiser, `userIds` e `copyContacts` | `POST /api/v2/leads/copy` com `leads: [id]`, `originId`, `stageId` (e `userIds`, `copyContacts`) |
 | Listar as etiquetas, com busca pelo nome | `list_tags` com `search` opcional | `GET /api/v2/tags?search=…` |
 | Adicionar uma etiqueta a um card | `add_lead_tag` com `leadId` e `tagId` | `POST /api/v2/leads/:leadId/tags/:tagId` |
@@ -95,14 +98,16 @@ A ferramenta MCP e a API devolvem os mesmos dados de cada card, então a lista b
 
 As anotações voltam caractere por caractere como foram gravadas, ao criar o card ou ao reescrevê-las, inclusive espaços, quebras de linha e acentos: uma marca que você deixa ali para ler depois volta igual. O documento é o jeito de conferir se a empresa já existe na origem antes de criar ou copiar um card.
 
-Os [campos extras](/3-gestao-de-leads/3-organizacao-de-leads/0-visualizar-e-editar#campos-extras) são criados e editados na aba **Dados** do card, no CRM; a ferramenta MCP e a API só os leem. Um card sem campos extras traz `extraFields: []`.
+Os [campos extras](/3-gestao-de-leads/3-organizacao-de-leads/0-visualizar-e-editar#campos-extras) são criados na aba **Dados** do card, no CRM, e também pela ferramenta MCP e pela API, ao criar o card ou ao substituir a lista (veja abaixo). Um card sem campos extras traz `extraFields: []`.
 
-### Criar, mover, trocar o responsável e reescrever as anotações
+### Criar, mover, trocar o responsável, reescrever as anotações e os campos extras
 
-- **Criar um card** aceita o nome, a origem e o estágio onde ele entra (`name`, `originId`, `stageId`), as anotações (`description`, gravadas exatamente como enviadas), o documento (`tin`, sem pontuação ao salvar), `city`, `state`, `country`, as etiquetas pelo nome (`tagNames`; uma etiqueta que ainda não existe é criada com o nome enviado), os responsáveis (`userIds`) e as pessoas do card (`contacts`, cada uma com `name`, `phoneNumber` e `email`).
+- **Criar um card** aceita o nome, a origem e o estágio onde ele entra (`name`, `originId`, `stageId`), as anotações (`description`, gravadas exatamente como enviadas), o documento (`tin`, sem pontuação ao salvar), `city`, `state`, `country`, as etiquetas pelo nome (`tagNames`; uma etiqueta que ainda não existe é criada com o nome enviado), os responsáveis (`userIds`), as pessoas do card (`contacts`, cada uma com `name`, `phoneNumber` e `email`) e os campos extras (`extraFields`, cada um com `name` e `value`, gravados na ordem enviada).
 - **Mover** sem informar `userIds` mantém o responsável atual. Com `userIds`, o card muda de estágio e de responsável no mesmo passo.
 - **Trocar o responsável:** a lista nova substitui a antiga, e uma lista vazia deixa o card sem responsável. O card continua no mesmo estágio.
 - **Reescrever as anotações:** o texto novo substitui o antigo, exatamente como foi enviado (não acrescenta uma linha no final). O estágio e o responsável não mudam.
+- **Substituir os campos extras:** a lista enviada em `extraFields` passa a ser a lista inteira do card, na ordem enviada; um nome pode se repetir, e uma lista vazia remove todos os pares. Para mudar um par, leia a lista do card, altere e envie a lista toda. O estágio, o responsável e as anotações não mudam, e mover, trocar o responsável ou reescrever as anotações sem `extraFields` mantém os pares.
+- Cada campo extra precisa de um nome (até 100 caracteres, sem espaços nas pontas); o valor pode ficar vazio e tem até 1.000 caracteres; cada card tem até 50 pares. Fora disso a resposta é um erro (por exemplo, `Each extra field needs a name`) e nada é criado nem alterado. Diferente da tela, essa mudança pela integração não gera linha no histórico do card.
 
 Os ids dos responsáveis são os do campo `users` de cada card na lista. Ao mover ou trocar o responsável, vale qualquer usuário da empresa; um id de quem não é da empresa dá erro (`One or more user ids are invalid for this tenant`) e nada muda.
 

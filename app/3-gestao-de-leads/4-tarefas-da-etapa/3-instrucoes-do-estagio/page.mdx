@@ -9,7 +9,11 @@ import { Callout } from 'nextra/components'
 
 Cada estágio da origem pode ter **instruções** para o que deve acontecer com a oportunidade nele, **quando** essas instruções disparam e **quais ferramentas da Ducke** podem ser usadas. Dois estágios da mesma origem podem ter instruções, momentos e ferramentas diferentes.
 
-Quem segue as instruções é a **integração da sua empresa** ligada pela ferramenta MCP ou pela API (veja [Chaves de acesso à API](/10-configuracao-do-sistema/10-chaves-de-acesso-api)). A Ducke guarda e mostra as instruções; ela não executa nada sozinha.
+Quem segue as instruções é a **IA da Ducke**: no momento escolhido, ela lê as instruções e a oportunidade e age usando só as ferramentas marcadas no estágio, as mesmas que a ferramenta MCP e a API oferecem (veja [Chaves de acesso à API](/10-configuracao-do-sistema/10-chaves-de-acesso-api)). Cada execução usa **créditos** da empresa.
+
+<Callout type="warning">
+  Estágios que já tinham instruções salvas também passam a ser executados pela IA da Ducke. Se uma integração da sua empresa seguia essas instruções por conta própria, desligue essa parte dela para a ação não acontecer duas vezes.
+</Callout>
 
 ## Configurar as instruções
 
@@ -28,9 +32,11 @@ O cartão do estágio na aba **Estágios** mostra **Instruções** quando o est�
 
 | Momento | Quando vale |
 | --- | --- |
-| **Quando a oportunidade é movida para o estágio** | A oportunidade chega ao estágio. Chegar pela primeira vez, inclusive quando ela é criada nesse estágio, conta como movida. |
-| **Quando a oportunidade é atualizada (toda vez)** | Cada vez que algo muda na oportunidade enquanto ela está no estágio. |
-| **Quando a oportunidade é atualizada (só na primeira vez)** | Só na primeira atualização da oportunidade no estágio. |
+| **Quando a oportunidade é movida para o estágio** | A oportunidade chega ao estágio por qualquer caminho: arrastar, mudar etapa, mover em massa, campanha, assistente, API ou MCP. Chegar pela primeira vez, inclusive quando ela é criada, copiada, importada ou chega pelo WhatsApp nesse estágio, conta como movida. |
+| **Quando a oportunidade é atualizada (toda vez)** | Cada vez que algo é salvo na oportunidade enquanto ela está no estágio: dados, anotações, campos extras, responsáveis, contatos, status ou etiquetas. |
+| **Quando a oportunidade é atualizada (só na primeira vez)** | Só na primeira atualização depois que a oportunidade chega ao estágio. Se ela sai e volta, a próxima atualização dispara de novo. |
+
+Mover oportunidades para outro estágio ao **excluir** um estágio, uma origem ou um grupo não dispara instruções.
 
 ### Ferramentas da Ducke
 
@@ -39,21 +45,35 @@ O cartão do estágio na aba **Estágios** mostra **Instruções** quando o est�
 | **CRM: origens, oportunidades e etiquetas** | Listar origens e oportunidades, criar, mover, trocar o responsável, reescrever as anotações, etiquetar e copiar. |
 | **Dispositivos de WhatsApp: números, modelos e envio** | Ver dispositivos e números, cuidar dos modelos de mensagem e enviar mensagens. |
 
+A IA só recebe as ferramentas marcadas: num estágio só com **CRM**, ela consegue mover ou etiquetar, mas não envia WhatsApp. Sem nenhuma ferramenta marcada, ela só lê a oportunidade e não muda nada.
+
 **Outras ferramentas** (imagens, planilhas e e-mail) aparece como **Em breve**: o lugar já está reservado no estágio, mas ainda não há o que escolher.
 
 <Callout type="info">
   Se você apagar o texto das instruções, o momento volta para **movida para o estágio** e nenhuma ferramenta fica marcada. Ao criar uma origem copiando os estágios de outra, as instruções vão junto.
 </Callout>
 
+## Como a IA da Ducke executa
+
+1. Quando o momento escolhido acontece, a execução entra na fila (**Na fila**) e começa em poucos segundos (**Executando**).
+2. A IA segue as instruções com as ferramentas liberadas e termina com um resumo do que fez (**Concluída**).
+3. O valor gasto aparece no extrato de créditos como **Instruções do estágio**, e a execução também entra no histórico da oportunidade.
+
+A execução termina como **Falhou**, com o motivo e sem mudar nada, quando a empresa não tem créditos, a IA não está disponível, a oportunidade saiu do estágio antes de a execução começar ou as instruções foram apagadas.
+
+<Callout type="info">
+  O que a própria execução muda na oportunidade não dispara as instruções de **atualizada** de novo. Se a execução move a oportunidade para outro estágio com instruções de **movida**, as instruções desse estágio também rodam (até três estágios seguidos).
+</Callout>
+
 ## Ver as instruções na oportunidade
 
-Ao abrir uma oportunidade, o bloco **Instruções do estágio** aparece logo abaixo do cabeçalho com o texto, quando ele dispara e as ferramentas liberadas do estágio atual. Ao mudar a oportunidade de estágio, o bloco passa a mostrar as instruções do novo estágio. Estágios sem instruções não mostram o bloco.
+Ao abrir uma oportunidade, o bloco **Instruções do estágio** aparece logo abaixo do cabeçalho com o texto, quando ele dispara, as ferramentas liberadas do estágio atual e as **Execuções da IA da Ducke**: as últimas três execuções nesse estágio, com a situação, a data, as ferramentas usadas e o resumo ou o motivo da falha. Enquanto uma execução está na fila ou executando, o bloco se atualiza sozinho. Ao mudar a oportunidade de estágio, o bloco passa a mostrar as instruções e as execuções do novo estágio. Estágios sem instruções não mostram o bloco.
 
-<img src="/prints/leads-painel.png" alt="Ficha da oportunidade com o bloco Instruções do estágio abaixo do cabeçalho" style={{ borderRadius: '0.5rem' }} />
+<img src="/prints/leads-painel.png" alt="Ficha da oportunidade com o bloco Instruções do estágio abaixo do cabeçalho e uma execução concluída da IA da Ducke" style={{ borderRadius: '0.5rem' }} />
 
 ## Quem pode configurar
 
-Só perfis com permissão de **editar** oportunidades veem **Configurar origem** e salvam as instruções. Quem só pode ver oportunidades lê as instruções ao abrir a oportunidade.
+Só perfis com permissão de **editar** oportunidades veem **Configurar origem** e salvam as instruções. Quem pode abrir a oportunidade lê as instruções e as execuções dela.
 
 ## Próximos passos
 

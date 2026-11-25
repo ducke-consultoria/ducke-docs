@@ -16,3 +16,25 @@ order: 6
 ## Mensagem fixa antes do agente
 
 Você pode colocar um bloco **Enviar Mensagem** antes do agente, no começo do fluxo ou entre dois agentes. O assistente envia a mensagem e o agente espera a resposta do contato. Ele só responde depois que a pessoa escrever, então o contato não recebe duas mensagens seguidas. Se um agente leva direto a outro, sem mensagem no meio, o segundo agente responde na hora.
+
+## Ferramentas da Ducke
+
+O agente pode usar as mesmas ferramentas do MCP da Ducke que o Claude e o GPT usam por fora, com o acesso da própria empresa. Ninguém precisa criar chave de API para ele.
+
+<img src="/prints/assistants-node-agent-tools.png" alt="Janela do bloco Agente com a seção Ferramentas da Ducke e a opção CRM marcada" />
+
+1. Na janela do agente, em **Ferramentas da Ducke**, marque o que ele pode usar:
+   - **CRM: origens, oportunidades e etiquetas**: listar origens e cards de um estágio, criar card, mover de estágio, trocar o responsável, reescrever as anotações, etiquetas, campos extras e copiar card.
+   - **Dispositivos de WhatsApp: números, modelos e envio**: guia, dispositivos, números, modelos de mensagem e envio de modelo ou mensagem.
+2. Escreva nas instruções quando usar, por exemplo: "Quando o cliente pedir orçamento, mova o card para o estágio Proposta e adicione a etiqueta Orçamento."
+3. Salve. Na conversa, o agente já sabe qual é o card do contato e o telefone dele, e chama a ferramenta quando as instruções pedem. O resultado é o mesmo da ferramenta MCP de mesmo nome: o card movido aparece no novo estágio da origem.
+
+O que você precisa saber:
+
+- Sem nenhuma opção marcada, o agente responde como antes, sem ferramentas. Agentes que já existiam começam assim.
+- Cada chamada à IA, inclusive as que usam ferramentas, gasta créditos como as respostas do assistente (até 5 rodadas de ferramenta por resposta).
+- Com **Somente Leitura** ligado, o agente também pode usar as ferramentas marcadas, mas não manda mensagem ao contato. Serve, por exemplo, para só mover ou etiquetar o card.
+- Se uma ferramenta falha (card não encontrado, estágio de outra origem), o agente recebe o motivo e continua a conversa.
+- Mudanças feitas pelo agente valem como as feitas pela API: um card movido dispara as instruções do estágio de destino.
+- No painel **Testar**, as ferramentas que só leem respondem com os dados reais, e as que alteram dados não são executadas: aparecem como **Ação: usar a ferramenta …**.
+- Só quem tem acesso à tela **Assistentes** vê e altera essa configuração.

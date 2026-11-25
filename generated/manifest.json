@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-22T16:26:02.700Z",
+  "capturedAt": "2026-11-24T17:09:38.052Z",
   "prints": [
     {
       "id": "sign",
@@ -630,6 +630,15 @@
       "printFile": "assistants-node-lead-edit.png",
       "kind": "assistants-node-lead-edit",
       "mdxPath": "/prints/assistants-node-lead-edit.png"
+    },
+    {
+      "id": "assistants-node-agent-tools",
+      "module": "assistentes",
+      "title": "Ferramentas da Ducke no bloco Agente",
+      "crmRoute": "/assistants",
+      "printFile": "assistants-node-agent-tools.png",
+      "kind": "assistants-node-agent-tools",
+      "mdxPath": "/prints/assistants-node-agent-tools.png"
     },
     {
       "id": "assistants-test-panel",
