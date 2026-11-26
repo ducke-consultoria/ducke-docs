@@ -7,7 +7,7 @@ import { Callout } from 'nextra/components'
 
 # Chaves de Acesso API
 
-A aba **Chaves de Acesso API** permite criar as chaves de acesso da empresa para integrações externas. Cada chave é da empresa, e não de uma pessoa: a mesma chave vale para a ferramenta MCP e para a API e alcança todas as origens, cards e etiquetas da empresa. Novas chaves usam o prefixo `ducke_` (ex.: `ducke_a1b2…`).
+A aba **Chaves de Acesso API** permite criar as chaves de acesso da empresa para integrações externas e ver os chats de IA conectados por login (como o Claude web e o app do Claude), com a opção de revogá-los. Cada chave é da empresa, e não de uma pessoa: a mesma chave vale para a ferramenta MCP e para a API e alcança todas as origens, cards e etiquetas da empresa. Novas chaves usam o prefixo `ducke_` (ex.: `ducke_a1b2…`).
 
 <img src="/prints/setup-user-tokens.png" alt="Tela de chaves de acesso API no setup" style={{ borderRadius: '0.5rem' }} />
 
@@ -48,10 +48,42 @@ Cada ação existe em par: a ferramenta MCP (para assistentes de IA que falam o 
 
 Os agentes da própria Ducke usam as mesmas ferramentas sem precisar de chave: o bloco **Agente** dos assistentes (veja [Configurar Bloco Agente](/13-assistente-inteligente/06-configurar-agente)) e as instruções do estágio da origem.
 
-Para conectar a ferramenta MCP, configure no seu assistente um servidor MCP do tipo HTTP com:
+Há dois jeitos de conectar a ferramenta MCP: **por login**, nos chats de IA que têm conectores (Claude web, app do Claude e outros), ou **com a chave no cabeçalho**, nas ferramentas que aceitam cabeçalho (Claude Code, Cursor, Grok Build…). Os dois usam o mesmo endereço e as mesmas ferramentas.
+
+### Conectar o Claude (web e app) por login
+
+O Claude web e o app do Claude não deixam colocar a chave no cabeçalho `Authorization`. Neles, o conector entra pelo login do Ducke CRM:
+
+1. No Claude, abra **Configurações → Conectores → Adicionar conector personalizado** (*Add custom connector*).
+2. Dê um nome (ex.: *Ducke CRM*) e informe a URL `https://crm-api-prod.ducke.com.br/mcp`.
+3. Em **Authentication**, deixe **Sign in now** (o Claude mostra *Detected*). Em **OAuth client**, deixe **Use Claude's published identity**, a opção recomendada; **Register automatically** também funciona. Não é preciso adicionar cabeçalho.
+4. Clique em **Conectar**. Abre a tela **Autorizar conector** do Ducke CRM. Se você não estiver logado, entre com sua conta (e escolha a empresa, se tiver mais de uma); depois do login, a tela volta sozinha.
+5. Confira o nome do chat e a empresa e clique em **Permitir**. Você volta ao Claude com o conector conectado e as ferramentas listadas. **Cancelar** volta ao Claude sem dar acesso.
+
+<img src="/prints/mcp-oauth-authorize.png" alt="Tela Autorizar conector do Ducke CRM pedindo para permitir o acesso do Claude" style={{ borderRadius: '0.5rem' }} />
+
+O conector vale para a **empresa ativa** de quem autorizou e alcança o mesmo que uma chave de acesso: todas as origens, cards, etiquetas e dispositivos de WhatsApp da empresa. Por isso, só quem tem permissão de criar **Chaves de Acesso API** nesta empresa consegue autorizar; para os outros perfis a tela mostra **Sem permissão para conectar**.
+
+O acesso dura uma hora e o Claude o renova sozinho, sem você fazer nada. O conector para de funcionar, e o Claude pede para entrar de novo, quando:
+
+- alguém clica em **Revogar** na lista **Conectores autorizados** (abaixo);
+- quem autorizou perde a permissão de Chaves de Acesso API ou sai da empresa;
+- o conector fica 30 dias sem ser usado.
+
+Outros chats de IA com conectores por login (OAuth) seguem os mesmos passos, com a mesma URL.
+
+### Conectores autorizados
+
+Abaixo das chaves, a lista **Conectores autorizados** mostra os chats conectados por login: o **Conector** (ex.: *Claude*), quem autorizou, quando e o **Último uso**. **Revogar** desliga o conector na hora; para usar de novo, é preciso conectar e autorizar outra vez. Só perfis com permissão de exclusão em Chaves de Acesso API veem o botão.
+
+### Conectar com a chave no cabeçalho
+
+Nas ferramentas que aceitam cabeçalho, configure um servidor MCP do tipo HTTP com:
 
 - **Endereço:** o mesmo endereço da API que sua integração já usa, no caminho `/mcp`.
 - **Cabeçalho:** `Authorization: Bearer ducke_…` (a sua chave de acesso).
+
+### O que cada ferramenta faz
 
 | O que fazer | Ferramenta MCP | API |
 |---|---|---|
@@ -182,6 +214,6 @@ As chamadas pela ferramenta MCP e pela API contam juntas: gastar o limite numa d
 
 ## Segurança
 
-- Revogue chaves não utilizadas.
+- Revogue chaves e conectores não utilizados.
 - Crie uma chave por integração para facilitar auditoria.
 - Restrinja quem tem permissão de escrita nesta aba.

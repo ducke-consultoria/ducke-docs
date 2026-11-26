@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-11-24T17:09:38.052Z",
+  "capturedAt": "2026-11-26T13:54:03.271Z",
   "prints": [
     {
       "id": "sign",
@@ -846,6 +846,15 @@
       "printFile": "setup-user-tokens.png",
       "kind": "page",
       "mdxPath": "/prints/setup-user-tokens.png"
+    },
+    {
+      "id": "mcp-oauth-authorize",
+      "module": "configuracao",
+      "title": "Autorizar conector (Claude web/app no MCP)",
+      "crmRoute": "/oauth/authorize",
+      "printFile": "mcp-oauth-authorize.png",
+      "kind": "mcp-oauth-authorize",
+      "mdxPath": "/prints/mcp-oauth-authorize.png"
     },
     {
       "id": "setup-integrations",
